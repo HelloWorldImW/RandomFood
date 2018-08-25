@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE4EFEE48A377D0A42387BFA /* Pods_RandomFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32291C488AB180ADBA95CCB9 /* Pods_RandomFood.framework */; };
 		BE64E13E21311995009E6BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E13D21311995009E6BF6 /* AppDelegate.swift */; };
 		BE64E14021311995009E6BF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E13F21311995009E6BF6 /* ViewController.swift */; };
 		BE64E14321311995009E6BF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14121311995009E6BF6 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32291C488AB180ADBA95CCB9 /* Pods_RandomFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF4B565849C8ACCB1BA223F /* Pods-RandomFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomFood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood.debug.xcconfig"; sourceTree = "<group>"; };
+		B4A0ED4A3736E9E11C38A886 /* Pods-RandomFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood.release.xcconfig"; sourceTree = "<group>"; };
 		BE64E13A21311995009E6BF6 /* RandomFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE64E13D21311995009E6BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE64E13F21311995009E6BF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4EFEE48A377D0A42387BFA /* Pods_RandomFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840E56614A0449A8E4F82E07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DF4B565849C8ACCB1BA223F /* Pods-RandomFood.debug.xcconfig */,
+				B4A0ED4A3736E9E11C38A886 /* Pods-RandomFood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A074193C9E997BEE11E281FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32291C488AB180ADBA95CCB9 /* Pods_RandomFood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BE64E13121311994009E6BF6 = {
 			isa = PBXGroup;
 			children = (
 				BE64E13C21311995009E6BF6 /* RandomFood */,
 				BE64E13B21311995009E6BF6 /* Products */,
+				840E56614A0449A8E4F82E07 /* Pods */,
+				A074193C9E997BEE11E281FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE64E14C21311996009E6BF6 /* Build configuration list for PBXNativeTarget "RandomFood" */;
 			buildPhases = (
+				382961B737EB023A6BB99B9F /* [CP] Check Pods Manifest.lock */,
 				BE64E13621311995009E6BF6 /* Sources */,
 				BE64E13721311995009E6BF6 /* Frameworks */,
 				BE64E13821311995009E6BF6 /* Resources */,
@@ -129,6 +154,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		382961B737EB023A6BB99B9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RandomFood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE64E13621311995009E6BF6 /* Sources */ = {
@@ -278,6 +328,7 @@
 		};
 		BE64E14D21311996009E6BF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DF4B565849C8ACCB1BA223F /* Pods-RandomFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +348,7 @@
 		};
 		BE64E14E21311996009E6BF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4A0ED4A3736E9E11C38A886 /* Pods-RandomFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
