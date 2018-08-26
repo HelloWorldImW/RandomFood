@@ -108,9 +108,10 @@
 		BE64E152213285B9009E6BF6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				BE64E1562132875D009E6BF6 /* Setting */,
-				BE64E155213286FA009E6BF6 /* ChooseRestaurant */,
 				BE64E154213286EF009E6BF6 /* ChooseFood */,
+				BE64E155213286FA009E6BF6 /* ChooseRestaurant */,
+				BE64E1562132875D009E6BF6 /* Setting */,
+				BE64E16321328840009E6BF6 /* Common */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -149,6 +150,13 @@
 				BE64E160213287ED009E6BF6 /* ZHSettingController.xib */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		BE64E16321328840009E6BF6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
