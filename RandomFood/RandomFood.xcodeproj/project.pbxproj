@@ -19,7 +19,7 @@
 		BE64E161213287ED009E6BF6 /* ZHSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E15F213287ED009E6BF6 /* ZHSettingController.swift */; };
 		BE64E162213287ED009E6BF6 /* ZHSettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64E160213287ED009E6BF6 /* ZHSettingController.xib */; };
 		BE64E16521328D7D009E6BF6 /* ZHSearchRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E16421328D7D009E6BF6 /* ZHSearchRestaurant.swift */; };
-		BE64E16721328D89009E6BF6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E16621328D89009E6BF6 /* MapKit.framework */; };
+		BE64E16B2132936A009E6BF6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E16A2132936A009E6BF6 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +40,7 @@
 		BE64E160213287ED009E6BF6 /* ZHSettingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHSettingController.xib; sourceTree = "<group>"; };
 		BE64E16421328D7D009E6BF6 /* ZHSearchRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHSearchRestaurant.swift; sourceTree = "<group>"; };
 		BE64E16621328D89009E6BF6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BE64E16A2132936A009E6BF6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE64E16721328D89009E6BF6 /* MapKit.framework in Frameworks */,
+				BE64E16B2132936A009E6BF6 /* CoreLocation.framework in Frameworks */,
 				BE4EFEE48A377D0A42387BFA /* Pods_RandomFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +68,7 @@
 		A074193C9E997BEE11E281FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE64E16A2132936A009E6BF6 /* CoreLocation.framework */,
 				BE64E16621328D89009E6BF6 /* MapKit.framework */,
 				32291C488AB180ADBA95CCB9 /* Pods_RandomFood.framework */,
 			);

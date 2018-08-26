@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import RxSwift
+import CoreLocation
+
+class ZHSearchRestaurantHelper: NSObject {
+    
+}
