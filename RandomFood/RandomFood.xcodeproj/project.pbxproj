@@ -13,6 +13,7 @@
 		BE64E14321311995009E6BF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14121311995009E6BF6 /* Main.storyboard */; };
 		BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14421311996009E6BF6 /* Assets.xcassets */; };
 		BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14621311996009E6BF6 /* LaunchScreen.storyboard */; };
+		BE64E151213271BB009E6BF6 /* ZHDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E150213271BB009E6BF6 /* ZHDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BE64E14421311996009E6BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE64E14721311996009E6BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE64E14921311996009E6BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE64E150213271BB009E6BF6 /* ZHDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		BE64E13C21311995009E6BF6 /* RandomFood */ = {
 			isa = PBXGroup;
 			children = (
+				BE64E14F2132718C009E6BF6 /* DAO */,
 				BE64E13D21311995009E6BF6 /* AppDelegate.swift */,
 				BE64E13F21311995009E6BF6 /* ViewController.swift */,
 				BE64E14121311995009E6BF6 /* Main.storyboard */,
@@ -86,6 +89,14 @@
 				BE64E14921311996009E6BF6 /* Info.plist */,
 			);
 			path = RandomFood;
+			sourceTree = "<group>";
+		};
+		BE64E14F2132718C009E6BF6 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				BE64E150213271BB009E6BF6 /* ZHDataStore.swift */,
+			);
+			path = DAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +127,7 @@
 		BE64E13221311994009E6BF6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZH;
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Darren;
@@ -182,19 +194,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/WCDB.swift/WCDBSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCDBSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -209,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE64E14021311995009E6BF6 /* ViewController.swift in Sources */,
+				BE64E151213271BB009E6BF6 /* ZHDataStore.swift in Sources */,
 				BE64E13E21311995009E6BF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
