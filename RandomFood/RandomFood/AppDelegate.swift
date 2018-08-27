@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GoogleMobileAds
 
 let ZHScreenWidth = UIScreen.main.bounds.size.width
 let ZHScreenHeight = UIScreen.main.bounds.size.height
@@ -25,8 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let homeVC = ZHChooseFoodController()
         window?.rootViewController = homeVC
         window?.makeKeyAndVisible()
-        
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-7111287347276273~8640846855")
 
         return true
     }

@@ -1,5 +1,4 @@
 PODS:
-  - Google-Mobile-Ads-SDK (7.32.0)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
@@ -8,24 +7,21 @@ PODS:
   - WCDB.swift/sqlcipher (1.0.6.2)
 
 DEPENDENCIES:
-  - Google-Mobile-Ads-SDK
   - RxCocoa
   - RxSwift
   - WCDB.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Google-Mobile-Ads-SDK
     - RxCocoa
     - RxSwift
     - WCDB.swift
 
 SPEC CHECKSUMS:
-  Google-Mobile-Ads-SDK: 2aca87e46e860f1e1fc0fdc1201dd9caa4be9ba6
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   WCDB.swift: 4f0f3e19085546ef85a69b5087ec5e1dec0f88b1
 
-PODFILE CHECKSUM: 80e5f86b9c7652855cbd437dd24103a48ba145a3
+PODFILE CHECKSUM: 322ab5ea2a141128d5893c10252e84acb5ba394c
 
 COCOAPODS: 1.5.3
