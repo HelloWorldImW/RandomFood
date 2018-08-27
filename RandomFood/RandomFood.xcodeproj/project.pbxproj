@@ -43,7 +43,6 @@
 		BE64E61E21343DDF009E6BF6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E61D21343DDF009E6BF6 /* QuartzCore.framework */; };
 		BE64E62021343DEB009E6BF6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E61F21343DEB009E6BF6 /* SystemConfiguration.framework */; };
 		BE64E62221343DF5009E6BF6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E62121343DF5009E6BF6 /* CoreTelephony.framework */; };
-		BE64E62421343E01009E6BF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E62321343E00009E6BF6 /* StoreKit.framework */; };
 		BE64E62621343E08009E6BF6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E62521343E08009E6BF6 /* Security.framework */; };
 		BE64E62821343E1A009E6BF6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E62721343E1A009E6BF6 /* CFNetwork.framework */; };
 		BE64E62A21343E27009E6BF6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E62921343E27009E6BF6 /* ImageIO.framework */; };
@@ -51,7 +50,6 @@
 		BE64E62E21343ED9009E6BF6 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E62D21343ED9009E6BF6 /* Metal.framework */; };
 		BE64E62F21343EE4009E6BF6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E16621328D89009E6BF6 /* MapKit.framework */; };
 		BE64E63121343EF1009E6BF6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E63021343EF1009E6BF6 /* MobileCoreServices.framework */; };
-		BE64E63321343EFC009E6BF6 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E63221343EFB009E6BF6 /* PassKit.framework */; };
 		BE64E63521343F04009E6BF6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E63421343F04009E6BF6 /* Social.framework */; };
 		BE64E63721343F0C009E6BF6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E63621343F0C009E6BF6 /* AudioToolbox.framework */; };
 		BE64E63921343F1C009E6BF6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E63821343F1C009E6BF6 /* AVFoundation.framework */; };
@@ -69,6 +67,7 @@
 		BE64E65121343F8A009E6BF6 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65021343F8A009E6BF6 /* Accounts.framework */; };
 		BE64E65321343F92009E6BF6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65221343F92009E6BF6 /* WebKit.framework */; };
 		BE64E65521343F9F009E6BF6 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65421343F9F009E6BF6 /* libz.1.2.5.tbd */; };
+		BE64E65E213446C1009E6BF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65D213446C1009E6BF6 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,14 +161,12 @@
 		BE64E61D21343DDF009E6BF6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BE64E61F21343DEB009E6BF6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BE64E62121343DF5009E6BF6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		BE64E62321343E00009E6BF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BE64E62521343E08009E6BF6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BE64E62721343E1A009E6BF6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BE64E62921343E27009E6BF6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		BE64E62B21343E35009E6BF6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		BE64E62D21343ED9009E6BF6 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		BE64E63021343EF1009E6BF6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		BE64E63221343EFB009E6BF6 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		BE64E63421343F04009E6BF6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BE64E63621343F0C009E6BF6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BE64E63821343F1C009E6BF6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -188,6 +185,7 @@
 		BE64E65221343F92009E6BF6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BE64E65421343F9F009E6BF6 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		BE64E659213440E2009E6BF6 /* Swift-Bridge-Objective-C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge-Objective-C.h"; sourceTree = "<group>"; };
+		BE64E65D213446C1009E6BF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,15 +212,14 @@
 				BE64E61421343DA7009E6BF6 /* AddressBook.framework in Frameworks */,
 				BE64E63721343F0C009E6BF6 /* AudioToolbox.framework in Frameworks */,
 				BE64E63521343F04009E6BF6 /* Social.framework in Frameworks */,
-				BE64E63321343EFC009E6BF6 /* PassKit.framework in Frameworks */,
 				BE64E63121343EF1009E6BF6 /* MobileCoreServices.framework in Frameworks */,
 				BE64E62F21343EE4009E6BF6 /* MapKit.framework in Frameworks */,
 				BE64E62E21343ED9009E6BF6 /* Metal.framework in Frameworks */,
 				BE64E62C21343E35009E6BF6 /* CoreMotion.framework in Frameworks */,
 				BE64E62A21343E27009E6BF6 /* ImageIO.framework in Frameworks */,
+				BE64E65E213446C1009E6BF6 /* StoreKit.framework in Frameworks */,
 				BE64E62821343E1A009E6BF6 /* CFNetwork.framework in Frameworks */,
 				BE64E62621343E08009E6BF6 /* Security.framework in Frameworks */,
-				BE64E62421343E01009E6BF6 /* StoreKit.framework in Frameworks */,
 				BE64E62221343DF5009E6BF6 /* CoreTelephony.framework in Frameworks */,
 				BE64E62021343DEB009E6BF6 /* SystemConfiguration.framework in Frameworks */,
 				BE64E61C21343DCB009E6BF6 /* libz.tbd in Frameworks */,
@@ -253,6 +250,7 @@
 		A074193C9E997BEE11E281FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE64E65D213446C1009E6BF6 /* StoreKit.framework */,
 				BE64E65421343F9F009E6BF6 /* libz.1.2.5.tbd */,
 				BE64E65221343F92009E6BF6 /* WebKit.framework */,
 				BE64E65021343F8A009E6BF6 /* Accounts.framework */,
@@ -270,14 +268,12 @@
 				BE64E63821343F1C009E6BF6 /* AVFoundation.framework */,
 				BE64E63621343F0C009E6BF6 /* AudioToolbox.framework */,
 				BE64E63421343F04009E6BF6 /* Social.framework */,
-				BE64E63221343EFB009E6BF6 /* PassKit.framework */,
 				BE64E63021343EF1009E6BF6 /* MobileCoreServices.framework */,
 				BE64E62D21343ED9009E6BF6 /* Metal.framework */,
 				BE64E62B21343E35009E6BF6 /* CoreMotion.framework */,
 				BE64E62921343E27009E6BF6 /* ImageIO.framework */,
 				BE64E62721343E1A009E6BF6 /* CFNetwork.framework */,
 				BE64E62521343E08009E6BF6 /* Security.framework */,
-				BE64E62321343E00009E6BF6 /* StoreKit.framework */,
 				BE64E62121343DF5009E6BF6 /* CoreTelephony.framework */,
 				BE64E61F21343DEB009E6BF6 /* SystemConfiguration.framework */,
 				BE64E61D21343DDF009E6BF6 /* QuartzCore.framework */,
@@ -598,6 +594,17 @@
 				TargetAttributes = {
 					BE64E13921311995009E6BF6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Wallet = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -835,7 +842,7 @@
 			baseConfigurationReference = 7DF4B565849C8ACCB1BA223F /* Pods-RandomFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = PP6FP338VS;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -908,6 +915,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangzh.RandomFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ca6c2dae-9050-479f-bc7b-a8f3ea8c7f9b";
+				PROVISIONING_PROFILE_SPECIFIER = randomFood_dev_0827;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RandomFood/Resource/Swift-Bridge-Objective-C.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -919,7 +928,7 @@
 			baseConfigurationReference = B4A0ED4A3736E9E11C38A886 /* Pods-RandomFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = PP6FP338VS;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -992,6 +1001,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangzh.RandomFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ca6c2dae-9050-479f-bc7b-a8f3ea8c7f9b";
+				PROVISIONING_PROFILE_SPECIFIER = randomFood_dev_0827;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RandomFood/Resource/Swift-Bridge-Objective-C.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
