@@ -8,4 +8,5 @@ target 'RandomFood' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'WCDB.swift'
+    pod 'Google-Mobile-Ads-SDK'
 end
