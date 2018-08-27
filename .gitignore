@@ -55,6 +55,11 @@ Pods/
 
 Carthage/Build
 
+# Ad Library
+#
+ADLibrary/
+
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
