@@ -1,27 +1,39 @@
 PODS:
+  - AMapFoundation (1.5.3)
+  - AMapSearch (6.1.1):
+    - AMapFoundation (~> 1.4)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
+  - SnapKit (4.0.0)
   - WCDB.swift (1.0.6.2):
     - WCDB.swift/sqlcipher (= 1.0.6.2)
   - WCDB.swift/sqlcipher (1.0.6.2)
 
 DEPENDENCIES:
+  - AMapSearch
   - RxCocoa
   - RxSwift
+  - SnapKit
   - WCDB.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AMapFoundation
+    - AMapSearch
     - RxCocoa
     - RxSwift
+    - SnapKit
     - WCDB.swift
 
 SPEC CHECKSUMS:
+  AMapFoundation: 58f883c80754c659cf626deb3150936bfe8f1772
+  AMapSearch: 3dcbf85c403a2a0fe0eda5318caabc272b31f5e1
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   WCDB.swift: 4f0f3e19085546ef85a69b5087ec5e1dec0f88b1
 
-PODFILE CHECKSUM: 322ab5ea2a141128d5893c10252e84acb5ba394c
+PODFILE CHECKSUM: 572e015bf9ce51c4e61d621c4909fc64c82115de
 
 COCOAPODS: 1.5.3

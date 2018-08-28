@@ -8,4 +8,6 @@ target 'RandomFood' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'WCDB.swift'
+    pod 'AMapSearch'
+    pod 'SnapKit'
 end

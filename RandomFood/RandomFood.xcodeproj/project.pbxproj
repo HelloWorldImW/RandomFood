@@ -12,13 +12,6 @@
 		BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14421311996009E6BF6 /* Assets.xcassets */; };
 		BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14621311996009E6BF6 /* LaunchScreen.storyboard */; };
 		BE64E151213271BB009E6BF6 /* ZHDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E150213271BB009E6BF6 /* ZHDataStore.swift */; };
-		BE64E159213287AA009E6BF6 /* ZHChooseFoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E157213287AA009E6BF6 /* ZHChooseFoodController.swift */; };
-		BE64E15A213287AA009E6BF6 /* ZHChooseFoodController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64E158213287AA009E6BF6 /* ZHChooseFoodController.xib */; };
-		BE64E15D213287E1009E6BF6 /* ZHChooseRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E15B213287E1009E6BF6 /* ZHChooseRestaurantController.swift */; };
-		BE64E15E213287E1009E6BF6 /* ZHChooseRestaurantController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64E15C213287E1009E6BF6 /* ZHChooseRestaurantController.xib */; };
-		BE64E161213287ED009E6BF6 /* ZHSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E15F213287ED009E6BF6 /* ZHSettingController.swift */; };
-		BE64E162213287ED009E6BF6 /* ZHSettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64E160213287ED009E6BF6 /* ZHSettingController.xib */; };
-		BE64E16521328D7D009E6BF6 /* ZHSearchRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E16421328D7D009E6BF6 /* ZHSearchRestaurant.swift */; };
 		BE64E16B2132936A009E6BF6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E16A2132936A009E6BF6 /* CoreLocation.framework */; };
 		BE64E59C21343A63009E6BF6 /* AdViewAdapterAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64E37121343A62009E6BF6 /* AdViewAdapterAdMob.m */; };
 		BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64E37221343A62009E6BF6 /* AdInstlAdapterAdMob.m */; };
@@ -28,9 +21,6 @@
 		BE64E5AD21343A63009E6BF6 /* sdk_v2.13_2015-05-14.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E3A121343A62009E6BF6 /* sdk_v2.13_2015-05-14.a */; };
 		BE64E60921343A63009E6BF6 /* AdViewToolX.mm in Sources */ = {isa = PBXBuildFile; fileRef = BE64E4A021343A62009E6BF6 /* AdViewToolX.mm */; };
 		BE64E60A21343A63009E6BF6 /* AdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64E4A121343A62009E6BF6 /* AdViewController.m */; };
-		BE64E60B21343A63009E6BF6 /* AdRunStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64E4A521343A62009E6BF6 /* AdRunStateManager.m */; };
-		BE64E60C21343A63009E6BF6 /* AdSingleTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64E4A621343A62009E6BF6 /* AdSingleTestViewController.m */; };
-		BE64E60D21343A63009E6BF6 /* AdSingleTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64E4A721343A62009E6BF6 /* AdSingleTestViewController.xib */; };
 		BE64E60E21343A63009E6BF6 /* SimMethod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE64E4AA21343A62009E6BF6 /* SimMethod.cpp */; };
 		BE64E60F21343A63009E6BF6 /* libAdViewSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E4CC21343A62009E6BF6 /* libAdViewSDK.a */; };
 		BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE64E4D121343A62009E6BF6 /* AdViewRes.bundle */; };
@@ -68,6 +58,13 @@
 		BE64E65321343F92009E6BF6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65221343F92009E6BF6 /* WebKit.framework */; };
 		BE64E65521343F9F009E6BF6 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65421343F9F009E6BF6 /* libz.1.2.5.tbd */; };
 		BE64E65E213446C1009E6BF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65D213446C1009E6BF6 /* StoreKit.framework */; };
+		BE64F3C5213530C1009E6BF6 /* ZHMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3C3213530C1009E6BF6 /* ZHMainViewController.swift */; };
+		BE64F3C6213530C1009E6BF6 /* ZHMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F3C4213530C1009E6BF6 /* ZHMainViewController.xib */; };
+		BE64F3D3213537DF009E6BF6 /* AdVideoAdapterInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3CD213537DE009E6BF6 /* AdVideoAdapterInMobi.m */; };
+		BE64F3D4213537DF009E6BF6 /* AdInstlAdapterInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3CE213537DE009E6BF6 /* AdInstlAdapterInMobi.m */; };
+		BE64F3D5213537DF009E6BF6 /* AdViewAdapterInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3CF213537DE009E6BF6 /* AdViewAdapterInMobi.m */; };
+		BE64F3D6213537DF009E6BF6 /* AdNativeAdapterInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3D0213537DE009E6BF6 /* AdNativeAdapterInMobi.m */; };
+		BE64F3D7213537DF009E6BF6 /* InMobiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64F3D2213537DE009E6BF6 /* InMobiSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,13 +77,6 @@
 		BE64E14721311996009E6BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE64E14921311996009E6BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE64E150213271BB009E6BF6 /* ZHDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDataStore.swift; sourceTree = "<group>"; };
-		BE64E157213287AA009E6BF6 /* ZHChooseFoodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHChooseFoodController.swift; sourceTree = "<group>"; };
-		BE64E158213287AA009E6BF6 /* ZHChooseFoodController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHChooseFoodController.xib; sourceTree = "<group>"; };
-		BE64E15B213287E1009E6BF6 /* ZHChooseRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHChooseRestaurantController.swift; sourceTree = "<group>"; };
-		BE64E15C213287E1009E6BF6 /* ZHChooseRestaurantController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHChooseRestaurantController.xib; sourceTree = "<group>"; };
-		BE64E15F213287ED009E6BF6 /* ZHSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHSettingController.swift; sourceTree = "<group>"; };
-		BE64E160213287ED009E6BF6 /* ZHSettingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHSettingController.xib; sourceTree = "<group>"; };
-		BE64E16421328D7D009E6BF6 /* ZHSearchRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHSearchRestaurant.swift; sourceTree = "<group>"; };
 		BE64E16621328D89009E6BF6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BE64E16A2132936A009E6BF6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BE64E36F21343A62009E6BF6 /* AdViewAdapterAdMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewAdapterAdMob.h; sourceTree = "<group>"; };
@@ -102,11 +92,6 @@
 		BE64E3A321343A62009E6BF6 /* NewWorldSpt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewWorldSpt.h; sourceTree = "<group>"; };
 		BE64E4A021343A62009E6BF6 /* AdViewToolX.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AdViewToolX.mm; sourceTree = "<group>"; };
 		BE64E4A121343A62009E6BF6 /* AdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewController.m; sourceTree = "<group>"; };
-		BE64E4A321343A62009E6BF6 /* AdRunStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdRunStateManager.h; sourceTree = "<group>"; };
-		BE64E4A421343A62009E6BF6 /* AdSingleTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSingleTestViewController.h; sourceTree = "<group>"; };
-		BE64E4A521343A62009E6BF6 /* AdRunStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdRunStateManager.m; sourceTree = "<group>"; };
-		BE64E4A621343A62009E6BF6 /* AdSingleTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdSingleTestViewController.m; sourceTree = "<group>"; };
-		BE64E4A721343A62009E6BF6 /* AdSingleTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdSingleTestViewController.xib; sourceTree = "<group>"; };
 		BE64E4A821343A62009E6BF6 /* AdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewController.h; sourceTree = "<group>"; };
 		BE64E4AA21343A62009E6BF6 /* SimMethod.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimMethod.cpp; sourceTree = "<group>"; };
 		BE64E4AB21343A62009E6BF6 /* AdViewToolX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewToolX.h; sourceTree = "<group>"; };
@@ -186,6 +171,17 @@
 		BE64E65421343F9F009E6BF6 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		BE64E659213440E2009E6BF6 /* Swift-Bridge-Objective-C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge-Objective-C.h"; sourceTree = "<group>"; };
 		BE64E65D213446C1009E6BF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BE64F3C3213530C1009E6BF6 /* ZHMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHMainViewController.swift; sourceTree = "<group>"; };
+		BE64F3C4213530C1009E6BF6 /* ZHMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHMainViewController.xib; sourceTree = "<group>"; };
+		BE64F3C9213537DE009E6BF6 /* AdInstlAdapterInMobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInstlAdapterInMobi.h; sourceTree = "<group>"; };
+		BE64F3CA213537DE009E6BF6 /* AdVideoAdapterInMobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdVideoAdapterInMobi.h; sourceTree = "<group>"; };
+		BE64F3CB213537DE009E6BF6 /* AdNativeAdapterInMobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdNativeAdapterInMobi.h; sourceTree = "<group>"; };
+		BE64F3CC213537DE009E6BF6 /* AdViewAdapterInMobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewAdapterInMobi.h; sourceTree = "<group>"; };
+		BE64F3CD213537DE009E6BF6 /* AdVideoAdapterInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdVideoAdapterInMobi.m; sourceTree = "<group>"; };
+		BE64F3CE213537DE009E6BF6 /* AdInstlAdapterInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInstlAdapterInMobi.m; sourceTree = "<group>"; };
+		BE64F3CF213537DE009E6BF6 /* AdViewAdapterInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewAdapterInMobi.m; sourceTree = "<group>"; };
+		BE64F3D0213537DE009E6BF6 /* AdNativeAdapterInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdNativeAdapterInMobi.m; sourceTree = "<group>"; };
+		BE64F3D2213537DE009E6BF6 /* InMobiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InMobiSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +220,7 @@
 				BE64E62021343DEB009E6BF6 /* SystemConfiguration.framework in Frameworks */,
 				BE64E61C21343DCB009E6BF6 /* libz.tbd in Frameworks */,
 				BE64E61A21343DC4009E6BF6 /* libxml2.tbd in Frameworks */,
+				BE64F3D7213537DF009E6BF6 /* InMobiSDK.framework in Frameworks */,
 				BE64E61821343DBC009E6BF6 /* libsqlite3.tbd in Frameworks */,
 				BE64E61621343DB4009E6BF6 /* libc++.tbd in Frameworks */,
 				BE64E61221343D9A009E6BF6 /* AdSupport.framework in Frameworks */,
@@ -332,10 +329,8 @@
 		BE64E152213285B9009E6BF6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				BE64E154213286EF009E6BF6 /* ChooseFood */,
-				BE64E155213286FA009E6BF6 /* ChooseRestaurant */,
-				BE64E1562132875D009E6BF6 /* Setting */,
-				BE64E16321328840009E6BF6 /* Common */,
+				BE64F3C3213530C1009E6BF6 /* ZHMainViewController.swift */,
+				BE64F3C4213530C1009E6BF6 /* ZHMainViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -348,41 +343,6 @@
 				BE64E659213440E2009E6BF6 /* Swift-Bridge-Objective-C.h */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		BE64E154213286EF009E6BF6 /* ChooseFood */ = {
-			isa = PBXGroup;
-			children = (
-				BE64E157213287AA009E6BF6 /* ZHChooseFoodController.swift */,
-				BE64E158213287AA009E6BF6 /* ZHChooseFoodController.xib */,
-			);
-			path = ChooseFood;
-			sourceTree = "<group>";
-		};
-		BE64E155213286FA009E6BF6 /* ChooseRestaurant */ = {
-			isa = PBXGroup;
-			children = (
-				BE64E15B213287E1009E6BF6 /* ZHChooseRestaurantController.swift */,
-				BE64E15C213287E1009E6BF6 /* ZHChooseRestaurantController.xib */,
-			);
-			path = ChooseRestaurant;
-			sourceTree = "<group>";
-		};
-		BE64E1562132875D009E6BF6 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				BE64E15F213287ED009E6BF6 /* ZHSettingController.swift */,
-				BE64E160213287ED009E6BF6 /* ZHSettingController.xib */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		BE64E16321328840009E6BF6 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				BE64E16421328D7D009E6BF6 /* ZHSearchRestaurant.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		BE64E1A021343A21009E6BF6 /* ADLibrary */ = {
@@ -406,6 +366,7 @@
 		BE64E1A221343A61009E6BF6 /* AdNetworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE64F3C7213537DE009E6BF6 /* InMobi */,
 				BE64E36D21343A62009E6BF6 /* GoogleAdMob */,
 				BE64E39C21343A62009E6BF6 /* YouMi */,
 			);
@@ -472,26 +433,13 @@
 		BE64E49F21343A62009E6BF6 /* AdViewToolLevel */ = {
 			isa = PBXGroup;
 			children = (
-				BE64E4A021343A62009E6BF6 /* AdViewToolX.mm */,
-				BE64E4A121343A62009E6BF6 /* AdViewController.m */,
-				BE64E4A221343A62009E6BF6 /* testsuit */,
-				BE64E4A821343A62009E6BF6 /* AdViewController.h */,
-				BE64E4A921343A62009E6BF6 /* unity3d */,
 				BE64E4AB21343A62009E6BF6 /* AdViewToolX.h */,
+				BE64E4A021343A62009E6BF6 /* AdViewToolX.mm */,
+				BE64E4A821343A62009E6BF6 /* AdViewController.h */,
+				BE64E4A121343A62009E6BF6 /* AdViewController.m */,
+				BE64E4A921343A62009E6BF6 /* unity3d */,
 			);
 			path = AdViewToolLevel;
-			sourceTree = "<group>";
-		};
-		BE64E4A221343A62009E6BF6 /* testsuit */ = {
-			isa = PBXGroup;
-			children = (
-				BE64E4A321343A62009E6BF6 /* AdRunStateManager.h */,
-				BE64E4A421343A62009E6BF6 /* AdSingleTestViewController.h */,
-				BE64E4A521343A62009E6BF6 /* AdRunStateManager.m */,
-				BE64E4A621343A62009E6BF6 /* AdSingleTestViewController.m */,
-				BE64E4A721343A62009E6BF6 /* AdSingleTestViewController.xib */,
-			);
-			path = testsuit;
 			sourceTree = "<group>";
 		};
 		BE64E4A921343A62009E6BF6 /* unity3d */ = {
@@ -557,6 +505,38 @@
 				BE64E4CA21343A62009E6BF6 /* AWNetworkReachabilityDelegate.h */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		BE64F3C7213537DE009E6BF6 /* InMobi */ = {
+			isa = PBXGroup;
+			children = (
+				BE64F3C8213537DE009E6BF6 /* adapter */,
+				BE64F3D1213537DE009E6BF6 /* lib */,
+			);
+			path = InMobi;
+			sourceTree = "<group>";
+		};
+		BE64F3C8213537DE009E6BF6 /* adapter */ = {
+			isa = PBXGroup;
+			children = (
+				BE64F3C9213537DE009E6BF6 /* AdInstlAdapterInMobi.h */,
+				BE64F3CA213537DE009E6BF6 /* AdVideoAdapterInMobi.h */,
+				BE64F3CB213537DE009E6BF6 /* AdNativeAdapterInMobi.h */,
+				BE64F3CC213537DE009E6BF6 /* AdViewAdapterInMobi.h */,
+				BE64F3CD213537DE009E6BF6 /* AdVideoAdapterInMobi.m */,
+				BE64F3CE213537DE009E6BF6 /* AdInstlAdapterInMobi.m */,
+				BE64F3CF213537DE009E6BF6 /* AdViewAdapterInMobi.m */,
+				BE64F3D0213537DE009E6BF6 /* AdNativeAdapterInMobi.m */,
+			);
+			path = adapter;
+			sourceTree = "<group>";
+		};
+		BE64F3D1213537DE009E6BF6 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				BE64F3D2213537DE009E6BF6 /* InMobiSDK.framework */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -631,14 +611,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE64E60D21343A63009E6BF6 /* AdSingleTestViewController.xib in Resources */,
 				BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */,
-				BE64E162213287ED009E6BF6 /* ZHSettingController.xib in Resources */,
 				BE64E59F21343A63009E6BF6 /* README.txt in Resources */,
-				BE64E15A213287AA009E6BF6 /* ZHChooseFoodController.xib in Resources */,
-				BE64E15E213287E1009E6BF6 /* ZHChooseRestaurantController.xib in Resources */,
 				BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */,
 				BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */,
+				BE64F3C6213530C1009E6BF6 /* ZHMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,12 +649,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/WCDB.swift/WCDBSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCDBSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,20 +671,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE64E16521328D7D009E6BF6 /* ZHSearchRestaurant.swift in Sources */,
+				BE64F3D3213537DF009E6BF6 /* AdVideoAdapterInMobi.m in Sources */,
 				BE64E60A21343A63009E6BF6 /* AdViewController.m in Sources */,
-				BE64E60C21343A63009E6BF6 /* AdSingleTestViewController.m in Sources */,
+				BE64F3D6213537DF009E6BF6 /* AdNativeAdapterInMobi.m in Sources */,
 				BE64E60921343A63009E6BF6 /* AdViewToolX.mm in Sources */,
 				BE64E59C21343A63009E6BF6 /* AdViewAdapterAdMob.m in Sources */,
-				BE64E161213287ED009E6BF6 /* ZHSettingController.swift in Sources */,
+				BE64F3C5213530C1009E6BF6 /* ZHMainViewController.swift in Sources */,
 				BE64E60E21343A63009E6BF6 /* SimMethod.cpp in Sources */,
-				BE64E60B21343A63009E6BF6 /* AdRunStateManager.m in Sources */,
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,
-				BE64E159213287AA009E6BF6 /* ZHChooseFoodController.swift in Sources */,
 				BE64E5AC21343A63009E6BF6 /* AdInstlAdapterYouMi.m in Sources */,
-				BE64E15D213287E1009E6BF6 /* ZHChooseRestaurantController.swift in Sources */,
 				BE64E151213271BB009E6BF6 /* ZHDataStore.swift in Sources */,
 				BE64E13E21311995009E6BF6 /* AppDelegate.swift in Sources */,
+				BE64F3D4213537DF009E6BF6 /* AdInstlAdapterInMobi.m in Sources */,
+				BE64F3D5213537DF009E6BF6 /* AdViewAdapterInMobi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
