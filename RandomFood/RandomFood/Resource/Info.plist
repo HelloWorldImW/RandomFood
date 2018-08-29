@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>饭点别墨迹</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,13 +22,21 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>需要使用您的位置搜索附近的餐馆</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>需要使用您的位置搜索附近的餐馆</string>
+	<key>NSLocationUsageDescription</key>
+	<string>需要使用您的位置搜索附近的餐馆</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>需要使用您的位置搜索附近的餐馆</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -44,13 +54,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>需要使用您的位置搜索附近的餐馆</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>需要使用您的位置搜索附近的餐馆</string>
-	<key>NSLocationUsageDescription</key>
-	<string>需要使用您的位置搜索附近的餐馆</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>需要使用您的位置搜索附近的餐馆</string>
 </dict>
 </plist>

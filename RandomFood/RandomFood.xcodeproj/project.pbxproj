@@ -60,11 +60,11 @@
 		BE64E65E213446C1009E6BF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65D213446C1009E6BF6 /* StoreKit.framework */; };
 		BE64F3C5213530C1009E6BF6 /* ZHMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3C3213530C1009E6BF6 /* ZHMainViewController.swift */; };
 		BE64F3C6213530C1009E6BF6 /* ZHMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F3C4213530C1009E6BF6 /* ZHMainViewController.xib */; };
-		BE64F3D3213537DF009E6BF6 /* AdVideoAdapterInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3CD213537DE009E6BF6 /* AdVideoAdapterInMobi.m */; };
-		BE64F3D4213537DF009E6BF6 /* AdInstlAdapterInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3CE213537DE009E6BF6 /* AdInstlAdapterInMobi.m */; };
-		BE64F3D5213537DF009E6BF6 /* AdViewAdapterInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3CF213537DE009E6BF6 /* AdViewAdapterInMobi.m */; };
-		BE64F3D6213537DF009E6BF6 /* AdNativeAdapterInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3D0213537DE009E6BF6 /* AdNativeAdapterInMobi.m */; };
-		BE64F3D7213537DF009E6BF6 /* InMobiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64F3D2213537DE009E6BF6 /* InMobiSDK.framework */; };
+		BE64F40B21359849009E6BF6 /* AdInstlAdapterGDTMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3FC21359849009E6BF6 /* AdInstlAdapterGDTMob.m */; };
+		BE64F40C21359849009E6BF6 /* AdNativeAdapterGDTMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3FD21359849009E6BF6 /* AdNativeAdapterGDTMob.m */; };
+		BE64F40D21359849009E6BF6 /* AdViewAdapterGDTMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3FE21359849009E6BF6 /* AdViewAdapterGDTMob.m */; };
+		BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3FF21359849009E6BF6 /* AdSplashAdapterGDTMob.m */; };
+		BE64F40F21359849009E6BF6 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,15 +173,20 @@
 		BE64E65D213446C1009E6BF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BE64F3C3213530C1009E6BF6 /* ZHMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHMainViewController.swift; sourceTree = "<group>"; };
 		BE64F3C4213530C1009E6BF6 /* ZHMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHMainViewController.xib; sourceTree = "<group>"; };
-		BE64F3C9213537DE009E6BF6 /* AdInstlAdapterInMobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInstlAdapterInMobi.h; sourceTree = "<group>"; };
-		BE64F3CA213537DE009E6BF6 /* AdVideoAdapterInMobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdVideoAdapterInMobi.h; sourceTree = "<group>"; };
-		BE64F3CB213537DE009E6BF6 /* AdNativeAdapterInMobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdNativeAdapterInMobi.h; sourceTree = "<group>"; };
-		BE64F3CC213537DE009E6BF6 /* AdViewAdapterInMobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewAdapterInMobi.h; sourceTree = "<group>"; };
-		BE64F3CD213537DE009E6BF6 /* AdVideoAdapterInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdVideoAdapterInMobi.m; sourceTree = "<group>"; };
-		BE64F3CE213537DE009E6BF6 /* AdInstlAdapterInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInstlAdapterInMobi.m; sourceTree = "<group>"; };
-		BE64F3CF213537DE009E6BF6 /* AdViewAdapterInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewAdapterInMobi.m; sourceTree = "<group>"; };
-		BE64F3D0213537DE009E6BF6 /* AdNativeAdapterInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdNativeAdapterInMobi.m; sourceTree = "<group>"; };
-		BE64F3D2213537DE009E6BF6 /* InMobiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InMobiSDK.framework; sourceTree = "<group>"; };
+		BE64F3FC21359849009E6BF6 /* AdInstlAdapterGDTMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInstlAdapterGDTMob.m; sourceTree = "<group>"; };
+		BE64F3FD21359849009E6BF6 /* AdNativeAdapterGDTMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdNativeAdapterGDTMob.m; sourceTree = "<group>"; };
+		BE64F3FE21359849009E6BF6 /* AdViewAdapterGDTMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewAdapterGDTMob.m; sourceTree = "<group>"; };
+		BE64F3FF21359849009E6BF6 /* AdSplashAdapterGDTMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdSplashAdapterGDTMob.m; sourceTree = "<group>"; };
+		BE64F40021359849009E6BF6 /* AdInstlAdapterGDTMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInstlAdapterGDTMob.h; sourceTree = "<group>"; };
+		BE64F40121359849009E6BF6 /* AdViewAdapterGDTMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewAdapterGDTMob.h; sourceTree = "<group>"; };
+		BE64F40221359849009E6BF6 /* AdNativeAdapterGDTMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdNativeAdapterGDTMob.h; sourceTree = "<group>"; };
+		BE64F40321359849009E6BF6 /* AdSplashAdapterGDTMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSplashAdapterGDTMob.h; sourceTree = "<group>"; };
+		BE64F40521359849009E6BF6 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		BE64F40621359849009E6BF6 /* GDTTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTTrack.h; sourceTree = "<group>"; };
+		BE64F40721359849009E6BF6 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		BE64F40821359849009E6BF6 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		BE64F40921359849009E6BF6 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
+		BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +197,7 @@
 				BE64E65521343F9F009E6BF6 /* libz.1.2.5.tbd in Frameworks */,
 				BE64E65321343F92009E6BF6 /* WebKit.framework in Frameworks */,
 				BE64E65121343F8A009E6BF6 /* Accounts.framework in Frameworks */,
+				BE64F40F21359849009E6BF6 /* libGDTMobSDK.a in Frameworks */,
 				BE64E64F21343F83009E6BF6 /* AssetsLibrary.framework in Frameworks */,
 				BE64E64D21343F7C009E6BF6 /* Twitter.framework in Frameworks */,
 				BE64E64B21343F75009E6BF6 /* UIKit.framework in Frameworks */,
@@ -220,7 +226,6 @@
 				BE64E62021343DEB009E6BF6 /* SystemConfiguration.framework in Frameworks */,
 				BE64E61C21343DCB009E6BF6 /* libz.tbd in Frameworks */,
 				BE64E61A21343DC4009E6BF6 /* libxml2.tbd in Frameworks */,
-				BE64F3D7213537DF009E6BF6 /* InMobiSDK.framework in Frameworks */,
 				BE64E61821343DBC009E6BF6 /* libsqlite3.tbd in Frameworks */,
 				BE64E61621343DB4009E6BF6 /* libc++.tbd in Frameworks */,
 				BE64E61221343D9A009E6BF6 /* AdSupport.framework in Frameworks */,
@@ -366,7 +371,7 @@
 		BE64E1A221343A61009E6BF6 /* AdNetworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE64F3C7213537DE009E6BF6 /* InMobi */,
+				BE64F3FA21359849009E6BF6 /* GDTMob */,
 				BE64E36D21343A62009E6BF6 /* GoogleAdMob */,
 				BE64E39C21343A62009E6BF6 /* YouMi */,
 			);
@@ -507,34 +512,39 @@
 			path = include;
 			sourceTree = "<group>";
 		};
-		BE64F3C7213537DE009E6BF6 /* InMobi */ = {
+		BE64F3FA21359849009E6BF6 /* GDTMob */ = {
 			isa = PBXGroup;
 			children = (
-				BE64F3C8213537DE009E6BF6 /* adapter */,
-				BE64F3D1213537DE009E6BF6 /* lib */,
+				BE64F3FB21359849009E6BF6 /* adapter */,
+				BE64F40421359849009E6BF6 /* lib */,
 			);
-			path = InMobi;
+			path = GDTMob;
 			sourceTree = "<group>";
 		};
-		BE64F3C8213537DE009E6BF6 /* adapter */ = {
+		BE64F3FB21359849009E6BF6 /* adapter */ = {
 			isa = PBXGroup;
 			children = (
-				BE64F3C9213537DE009E6BF6 /* AdInstlAdapterInMobi.h */,
-				BE64F3CA213537DE009E6BF6 /* AdVideoAdapterInMobi.h */,
-				BE64F3CB213537DE009E6BF6 /* AdNativeAdapterInMobi.h */,
-				BE64F3CC213537DE009E6BF6 /* AdViewAdapterInMobi.h */,
-				BE64F3CD213537DE009E6BF6 /* AdVideoAdapterInMobi.m */,
-				BE64F3CE213537DE009E6BF6 /* AdInstlAdapterInMobi.m */,
-				BE64F3CF213537DE009E6BF6 /* AdViewAdapterInMobi.m */,
-				BE64F3D0213537DE009E6BF6 /* AdNativeAdapterInMobi.m */,
+				BE64F3FC21359849009E6BF6 /* AdInstlAdapterGDTMob.m */,
+				BE64F3FD21359849009E6BF6 /* AdNativeAdapterGDTMob.m */,
+				BE64F3FE21359849009E6BF6 /* AdViewAdapterGDTMob.m */,
+				BE64F3FF21359849009E6BF6 /* AdSplashAdapterGDTMob.m */,
+				BE64F40021359849009E6BF6 /* AdInstlAdapterGDTMob.h */,
+				BE64F40121359849009E6BF6 /* AdViewAdapterGDTMob.h */,
+				BE64F40221359849009E6BF6 /* AdNativeAdapterGDTMob.h */,
+				BE64F40321359849009E6BF6 /* AdSplashAdapterGDTMob.h */,
 			);
 			path = adapter;
 			sourceTree = "<group>";
 		};
-		BE64F3D1213537DE009E6BF6 /* lib */ = {
+		BE64F40421359849009E6BF6 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				BE64F3D2213537DE009E6BF6 /* InMobiSDK.framework */,
+				BE64F40521359849009E6BF6 /* GDTMobBannerView.h */,
+				BE64F40621359849009E6BF6 /* GDTTrack.h */,
+				BE64F40721359849009E6BF6 /* GDTNativeAd.h */,
+				BE64F40821359849009E6BF6 /* GDTMobInterstitial.h */,
+				BE64F40921359849009E6BF6 /* GDTSplashAd.h */,
+				BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -671,19 +681,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE64F3D3213537DF009E6BF6 /* AdVideoAdapterInMobi.m in Sources */,
 				BE64E60A21343A63009E6BF6 /* AdViewController.m in Sources */,
-				BE64F3D6213537DF009E6BF6 /* AdNativeAdapterInMobi.m in Sources */,
 				BE64E60921343A63009E6BF6 /* AdViewToolX.mm in Sources */,
+				BE64F40D21359849009E6BF6 /* AdViewAdapterGDTMob.m in Sources */,
+				BE64F40C21359849009E6BF6 /* AdNativeAdapterGDTMob.m in Sources */,
 				BE64E59C21343A63009E6BF6 /* AdViewAdapterAdMob.m in Sources */,
 				BE64F3C5213530C1009E6BF6 /* ZHMainViewController.swift in Sources */,
 				BE64E60E21343A63009E6BF6 /* SimMethod.cpp in Sources */,
+				BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */,
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,
+				BE64F40B21359849009E6BF6 /* AdInstlAdapterGDTMob.m in Sources */,
 				BE64E5AC21343A63009E6BF6 /* AdInstlAdapterYouMi.m in Sources */,
 				BE64E151213271BB009E6BF6 /* ZHDataStore.swift in Sources */,
 				BE64E13E21311995009E6BF6 /* AppDelegate.swift in Sources */,
-				BE64F3D4213537DF009E6BF6 /* AdInstlAdapterInMobi.m in Sources */,
-				BE64F3D5213537DF009E6BF6 /* AdViewAdapterInMobi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
