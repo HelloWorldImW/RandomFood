@@ -58,13 +58,13 @@
 		BE64E65321343F92009E6BF6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65221343F92009E6BF6 /* WebKit.framework */; };
 		BE64E65521343F9F009E6BF6 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65421343F9F009E6BF6 /* libz.1.2.5.tbd */; };
 		BE64E65E213446C1009E6BF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64E65D213446C1009E6BF6 /* StoreKit.framework */; };
-		BE64F3C5213530C1009E6BF6 /* ZHMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3C3213530C1009E6BF6 /* ZHMainViewController.swift */; };
-		BE64F3C6213530C1009E6BF6 /* ZHMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F3C4213530C1009E6BF6 /* ZHMainViewController.xib */; };
 		BE64F40B21359849009E6BF6 /* AdInstlAdapterGDTMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3FC21359849009E6BF6 /* AdInstlAdapterGDTMob.m */; };
 		BE64F40C21359849009E6BF6 /* AdNativeAdapterGDTMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3FD21359849009E6BF6 /* AdNativeAdapterGDTMob.m */; };
 		BE64F40D21359849009E6BF6 /* AdViewAdapterGDTMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3FE21359849009E6BF6 /* AdViewAdapterGDTMob.m */; };
 		BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3FF21359849009E6BF6 /* AdSplashAdapterGDTMob.m */; };
 		BE64F40F21359849009E6BF6 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */; };
+		BE64F54921382C07009E6BF6 /* ZHRandomFoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F54721382C07009E6BF6 /* ZHRandomFoodController.swift */; };
+		BE64F54A21382C07009E6BF6 /* ZHRandomFoodController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F54821382C07009E6BF6 /* ZHRandomFoodController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,8 +171,6 @@
 		BE64E65421343F9F009E6BF6 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		BE64E659213440E2009E6BF6 /* Swift-Bridge-Objective-C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge-Objective-C.h"; sourceTree = "<group>"; };
 		BE64E65D213446C1009E6BF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		BE64F3C3213530C1009E6BF6 /* ZHMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHMainViewController.swift; sourceTree = "<group>"; };
-		BE64F3C4213530C1009E6BF6 /* ZHMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHMainViewController.xib; sourceTree = "<group>"; };
 		BE64F3FC21359849009E6BF6 /* AdInstlAdapterGDTMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInstlAdapterGDTMob.m; sourceTree = "<group>"; };
 		BE64F3FD21359849009E6BF6 /* AdNativeAdapterGDTMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdNativeAdapterGDTMob.m; sourceTree = "<group>"; };
 		BE64F3FE21359849009E6BF6 /* AdViewAdapterGDTMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewAdapterGDTMob.m; sourceTree = "<group>"; };
@@ -187,6 +185,8 @@
 		BE64F40821359849009E6BF6 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
 		BE64F40921359849009E6BF6 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
 		BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		BE64F54721382C07009E6BF6 /* ZHRandomFoodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomFoodController.swift; sourceTree = "<group>"; };
+		BE64F54821382C07009E6BF6 /* ZHRandomFoodController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHRandomFoodController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,8 +334,7 @@
 		BE64E152213285B9009E6BF6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				BE64F3C3213530C1009E6BF6 /* ZHMainViewController.swift */,
-				BE64F3C4213530C1009E6BF6 /* ZHMainViewController.xib */,
+				BE64F54621382BEA009E6BF6 /* Food */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -549,6 +548,15 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		BE64F54621382BEA009E6BF6 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				BE64F54721382C07009E6BF6 /* ZHRandomFoodController.swift */,
+				BE64F54821382C07009E6BF6 /* ZHRandomFoodController.xib */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -561,6 +569,7 @@
 				BE64E13721311995009E6BF6 /* Frameworks */,
 				BE64E13821311995009E6BF6 /* Resources */,
 				49905793DA5A4AE4D2C0DE83 /* [CP] Embed Pods Frameworks */,
+				FC98425715AD780988FD21FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -622,10 +631,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */,
+				BE64F54A21382C07009E6BF6 /* ZHRandomFoodController.xib in Resources */,
 				BE64E59F21343A63009E6BF6 /* README.txt in Resources */,
 				BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */,
 				BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */,
-				BE64F3C6213530C1009E6BF6 /* ZHMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +683,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FC98425715AD780988FD21FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood-resources.sh",
+				"${PODS_ROOT}/AMap2DMap/MAMapKit.framework/AMap.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -686,7 +713,7 @@
 				BE64F40D21359849009E6BF6 /* AdViewAdapterGDTMob.m in Sources */,
 				BE64F40C21359849009E6BF6 /* AdNativeAdapterGDTMob.m in Sources */,
 				BE64E59C21343A63009E6BF6 /* AdViewAdapterAdMob.m in Sources */,
-				BE64F3C5213530C1009E6BF6 /* ZHMainViewController.swift in Sources */,
+				BE64F54921382C07009E6BF6 /* ZHRandomFoodController.swift in Sources */,
 				BE64E60E21343A63009E6BF6 /* SimMethod.cpp in Sources */,
 				BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */,
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,

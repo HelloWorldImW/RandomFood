@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: CGRect(x: 0, y: 0, width: ZHScreenWidth, height: ZHScreenHeight))
         
-        let homeVC = ZHMainViewController()
+        let homeVC = ZHRandomFoodController()
         window?.rootViewController = homeVC
         window?.makeKeyAndVisible()
         
