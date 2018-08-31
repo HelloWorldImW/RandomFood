@@ -10,5 +10,9 @@
 #define Swift_Bridge_Objective_C_h
 
 #import "AdViewView.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
+
 
 #endif /* Swift_Bridge_Objective_C_h */

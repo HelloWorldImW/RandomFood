@@ -65,6 +65,11 @@
 		BE64F40F21359849009E6BF6 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */; };
 		BE64F54921382C07009E6BF6 /* ZHRandomFoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F54721382C07009E6BF6 /* ZHRandomFoodController.swift */; };
 		BE64F54A21382C07009E6BF6 /* ZHRandomFoodController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F54821382C07009E6BF6 /* ZHRandomFoodController.xib */; };
+		BE64F54D21391DE2009E6BF6 /* ZHLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F54C21391DE2009E6BF6 /* ZHLocationHelper.swift */; };
+		BE64F55221394280009E6BF6 /* ZHDiningRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F55021394280009E6BF6 /* ZHDiningRoomController.swift */; };
+		BE64F55321394280009E6BF6 /* ZHDiningRoomController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F55121394280009E6BF6 /* ZHDiningRoomController.xib */; };
+		BE64F556213942A1009E6BF6 /* ZHDiningRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */; };
+		BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,6 +192,11 @@
 		BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 		BE64F54721382C07009E6BF6 /* ZHRandomFoodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomFoodController.swift; sourceTree = "<group>"; };
 		BE64F54821382C07009E6BF6 /* ZHRandomFoodController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHRandomFoodController.xib; sourceTree = "<group>"; };
+		BE64F54C21391DE2009E6BF6 /* ZHLocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHLocationHelper.swift; sourceTree = "<group>"; };
+		BE64F55021394280009E6BF6 /* ZHDiningRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoomController.swift; sourceTree = "<group>"; };
+		BE64F55121394280009E6BF6 /* ZHDiningRoomController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHDiningRoomController.xib; sourceTree = "<group>"; };
+		BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoomView.swift; sourceTree = "<group>"; };
+		BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHDiningRoomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,7 +344,9 @@
 		BE64E152213285B9009E6BF6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BE64F54F2139425D009E6BF6 /* DiningRoom  */,
 				BE64F54621382BEA009E6BF6 /* Food */,
+				BE64F54B21391DC9009E6BF6 /* Helpers */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -551,10 +563,45 @@
 		BE64F54621382BEA009E6BF6 /* Food */ = {
 			isa = PBXGroup;
 			children = (
+				BE64F54E2139421A009E6BF6 /* view */,
 				BE64F54721382C07009E6BF6 /* ZHRandomFoodController.swift */,
 				BE64F54821382C07009E6BF6 /* ZHRandomFoodController.xib */,
 			);
 			path = Food;
+			sourceTree = "<group>";
+		};
+		BE64F54B21391DC9009E6BF6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BE64F54C21391DE2009E6BF6 /* ZHLocationHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BE64F54E2139421A009E6BF6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		BE64F54F2139425D009E6BF6 /* DiningRoom  */ = {
+			isa = PBXGroup;
+			children = (
+				BE64F55421394289009E6BF6 /* view */,
+				BE64F55021394280009E6BF6 /* ZHDiningRoomController.swift */,
+				BE64F55121394280009E6BF6 /* ZHDiningRoomController.xib */,
+			);
+			path = "DiningRoom ";
+			sourceTree = "<group>";
+		};
+		BE64F55421394289009E6BF6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */,
+				BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,7 +616,6 @@
 				BE64E13721311995009E6BF6 /* Frameworks */,
 				BE64E13821311995009E6BF6 /* Resources */,
 				49905793DA5A4AE4D2C0DE83 /* [CP] Embed Pods Frameworks */,
-				FC98425715AD780988FD21FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -633,7 +679,9 @@
 				BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */,
 				BE64F54A21382C07009E6BF6 /* ZHRandomFoodController.xib in Resources */,
 				BE64E59F21343A63009E6BF6 /* README.txt in Resources */,
+				BE64F55321394280009E6BF6 /* ZHDiningRoomController.xib in Resources */,
 				BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */,
+				BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */,
 				BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,24 +731,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FC98425715AD780988FD21FE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood-resources.sh",
-				"${PODS_ROOT}/AMap2DMap/MAMapKit.framework/AMap.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -711,11 +741,14 @@
 				BE64E60A21343A63009E6BF6 /* AdViewController.m in Sources */,
 				BE64E60921343A63009E6BF6 /* AdViewToolX.mm in Sources */,
 				BE64F40D21359849009E6BF6 /* AdViewAdapterGDTMob.m in Sources */,
+				BE64F556213942A1009E6BF6 /* ZHDiningRoomView.swift in Sources */,
 				BE64F40C21359849009E6BF6 /* AdNativeAdapterGDTMob.m in Sources */,
+				BE64F54D21391DE2009E6BF6 /* ZHLocationHelper.swift in Sources */,
 				BE64E59C21343A63009E6BF6 /* AdViewAdapterAdMob.m in Sources */,
 				BE64F54921382C07009E6BF6 /* ZHRandomFoodController.swift in Sources */,
 				BE64E60E21343A63009E6BF6 /* SimMethod.cpp in Sources */,
 				BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */,
+				BE64F55221394280009E6BF6 /* ZHDiningRoomController.swift in Sources */,
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,
 				BE64F40B21359849009E6BF6 /* AdInstlAdapterGDTMob.m in Sources */,
 				BE64E5AC21343A63009E6BF6 /* AdInstlAdapterYouMi.m in Sources */,

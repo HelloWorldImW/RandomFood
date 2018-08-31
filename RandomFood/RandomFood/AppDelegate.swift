@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import AMapSearchKit
+
+
 
 let ZHScreenWidth = UIScreen.main.bounds.size.width
 let ZHScreenHeight = UIScreen.main.bounds.size.height
@@ -22,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: CGRect(x: 0, y: 0, width: ZHScreenWidth, height: ZHScreenHeight))
         
-        let homeVC = ZHRandomFoodController()
+        let homeVC = ZHDiningRoomController()
         window?.rootViewController = homeVC
         window?.makeKeyAndVisible()
         
@@ -33,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func configThirdLib() {
-        
+        AMapServices.shared().apiKey = "3f8c688ca34735a2eda4332699e0ca82"
     }
     
     func applicationWillTerminate(_ application: UIApplication) {

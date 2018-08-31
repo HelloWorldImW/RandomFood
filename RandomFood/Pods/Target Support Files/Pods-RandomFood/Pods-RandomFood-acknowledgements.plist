@@ -19,7 +19,7 @@
 			<key>License</key>
 			<string>Copyright</string>
 			<key>Title</key>
-			<string>AMap2DMap</string>
+			<string>AMapFoundation</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
@@ -30,7 +30,7 @@
 			<key>License</key>
 			<string>Copyright</string>
 			<key>Title</key>
-			<string>AMapFoundation</string>
+			<string>AMapLocation</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

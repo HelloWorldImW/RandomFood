@@ -1,12 +1,12 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## AMap2DMap
+## AMapFoundation
 
 Copyright © 2014 AutoNavi. All Rights Reserved.
 
 
-## AMapFoundation
+## AMapLocation
 
 Copyright © 2014 AutoNavi. All Rights Reserved.
 
