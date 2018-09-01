@@ -14,26 +14,8 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZHDiningRoomView" customModule="RandomFood" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="467" height="105"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="teststs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtA-bF-0zx">
-                    <rect key="frame" x="0.0" y="0.0" width="467" height="105"/>
-                    <color key="backgroundColor" red="0.14117647059999999" green="0.64705882349999999" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-            </subviews>
-            <color key="backgroundColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
-            <constraints>
-                <constraint firstItem="MtA-bF-0zx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cbL-ml-ws5"/>
-                <constraint firstItem="MtA-bF-0zx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="d0i-En-m4p"/>
-                <constraint firstAttribute="bottom" secondItem="MtA-bF-0zx" secondAttribute="bottom" id="dhb-Eq-o7V"/>
-                <constraint firstAttribute="trailing" secondItem="MtA-bF-0zx" secondAttribute="trailing" id="w8O-tU-QiP"/>
-            </constraints>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="titleLabel" destination="MtA-bF-0zx" id="vAr-mk-VE7"/>
-            </connections>
             <point key="canvasLocation" x="80.5" y="-227.5"/>
         </view>
     </objects>

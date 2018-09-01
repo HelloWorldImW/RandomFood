@@ -28,7 +28,7 @@ class ZHDataStore: NSObject {
     /// 食物表
     private let FoodTable = "FoodTable"
     /// 餐馆表
-    private let RestaurantTable = "RestaurantTable"
+    private let DiningRoomTable = "DiningRoomTable"
     
 }
 
@@ -38,7 +38,7 @@ extension ZHDataStore {
     /// 创建食物表
     func createFoodTable() {
         do {
-            try db.create(table: FoodTable, of: Food.self)
+            try db.create(table: FoodTable, of: ZHFood.self)
         } catch  {
             print("创建数据表Food失败")
         }
@@ -47,43 +47,9 @@ extension ZHDataStore {
     /// 创建餐馆表
     func createRestaurantTable() {
         do {
-            try db.create(table: RestaurantTable, of: Restaurant.self)
+            try db.create(table: DiningRoomTable, of: ZHDiningRoom.self)
         } catch  {
             print("创建数据表Restaurant失败")
         }
     }
 }
-
-// MARK:数据表对象
-/// 食物表
-class Food: WCDBSwift.TableCodable {
-    
-    var name: String?
-    var eatTime: Int?
-    
-    
-    enum CodingKeys: String, CodingTableKey {
-        typealias Root = Food
-        
-        case name
-        case eatTime
-        
-        static let objectRelationalMapping = TableBinding(CodingKeys.self)
-        
-    }
-}
-
-/// 餐馆表
-class Restaurant: WCDBSwift.TableCodable {
-    
-    var name: String?
-    
-    enum CodingKeys: String, CodingTableKey {
-        typealias Root = Restaurant
-        
-        case name
-        
-        static let objectRelationalMapping = TableBinding(CodingKeys.self)
-    }
-}
-

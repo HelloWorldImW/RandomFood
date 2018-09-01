@@ -105,6 +105,9 @@ extension ZHLocationHelper: AMapSearchDelegate {
         var poiNames:Array<String> = []
         pois?.forEach({ poi in
             poiNames.append(poi.name)
+            let info = poi.extensionInfo
+            print("人均消费\(info?.cost)")
+            print("评分\(info?.rating)")
         })
         searchObser?.onNext(poiNames)
         searchObser?.onCompleted()

@@ -11,8 +11,6 @@ import RxSwift
 
 class ZHDiningRoomView: UIView {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    
     class func createView() -> ZHDiningRoomView {
         let diningRoom = Bundle.main.loadNibNamed("ZHDiningRoomView", owner: nil, options: nil)
         let diningRoomView = diningRoom?.first as! ZHDiningRoomView
