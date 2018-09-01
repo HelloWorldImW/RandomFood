@@ -64,14 +64,13 @@
 		BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3FF21359849009E6BF6 /* AdSplashAdapterGDTMob.m */; };
 		BE64F40F21359849009E6BF6 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */; };
 		BE64F54921382C07009E6BF6 /* ZHRandomFoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F54721382C07009E6BF6 /* ZHRandomFoodController.swift */; };
-		BE64F54A21382C07009E6BF6 /* ZHRandomFoodController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F54821382C07009E6BF6 /* ZHRandomFoodController.xib */; };
 		BE64F54D21391DE2009E6BF6 /* ZHLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F54C21391DE2009E6BF6 /* ZHLocationHelper.swift */; };
 		BE64F55221394280009E6BF6 /* ZHDiningRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F55021394280009E6BF6 /* ZHDiningRoomController.swift */; };
-		BE64F55321394280009E6BF6 /* ZHDiningRoomController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F55121394280009E6BF6 /* ZHDiningRoomController.xib */; };
 		BE64F556213942A1009E6BF6 /* ZHDiningRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */; };
 		BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */; };
 		BE996EF9213AD5FD00B2D450 /* ZHDiningRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */; };
 		BE996EFB213AD63700B2D450 /* ZHFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EFA213AD63700B2D450 /* ZHFood.swift */; };
+		BE996EFE213ADE3900B2D450 /* ZHRandomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -193,14 +192,13 @@
 		BE64F40921359849009E6BF6 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
 		BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 		BE64F54721382C07009E6BF6 /* ZHRandomFoodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomFoodController.swift; sourceTree = "<group>"; };
-		BE64F54821382C07009E6BF6 /* ZHRandomFoodController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHRandomFoodController.xib; sourceTree = "<group>"; };
 		BE64F54C21391DE2009E6BF6 /* ZHLocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHLocationHelper.swift; sourceTree = "<group>"; };
 		BE64F55021394280009E6BF6 /* ZHDiningRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoomController.swift; sourceTree = "<group>"; };
-		BE64F55121394280009E6BF6 /* ZHDiningRoomController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHDiningRoomController.xib; sourceTree = "<group>"; };
 		BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoomView.swift; sourceTree = "<group>"; };
 		BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHDiningRoomView.xib; sourceTree = "<group>"; };
 		BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoom.swift; sourceTree = "<group>"; };
 		BE996EFA213AD63700B2D450 /* ZHFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHFood.swift; sourceTree = "<group>"; };
+		BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +348,7 @@
 		BE64E152213285B9009E6BF6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BE996EFC213ADE1900B2D450 /* Random */,
 				BE64F54F2139425D009E6BF6 /* DiningRoom  */,
 				BE64F54621382BEA009E6BF6 /* Food */,
 				BE64F54B21391DC9009E6BF6 /* Helpers */,
@@ -569,9 +568,8 @@
 		BE64F54621382BEA009E6BF6 /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				BE64F54E2139421A009E6BF6 /* view */,
+				BE64F54E2139421A009E6BF6 /* View */,
 				BE64F54721382C07009E6BF6 /* ZHRandomFoodController.swift */,
-				BE64F54821382C07009E6BF6 /* ZHRandomFoodController.xib */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -584,30 +582,37 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		BE64F54E2139421A009E6BF6 /* view */ = {
+		BE64F54E2139421A009E6BF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		BE64F54F2139425D009E6BF6 /* DiningRoom  */ = {
 			isa = PBXGroup;
 			children = (
-				BE64F55421394289009E6BF6 /* view */,
+				BE64F55421394289009E6BF6 /* View */,
 				BE64F55021394280009E6BF6 /* ZHDiningRoomController.swift */,
-				BE64F55121394280009E6BF6 /* ZHDiningRoomController.xib */,
 			);
 			path = "DiningRoom ";
 			sourceTree = "<group>";
 		};
-		BE64F55421394289009E6BF6 /* view */ = {
+		BE64F55421394289009E6BF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */,
 				BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */,
 			);
-			path = view;
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE996EFC213ADE1900B2D450 /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */,
+			);
+			path = Random;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -683,9 +688,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */,
-				BE64F54A21382C07009E6BF6 /* ZHRandomFoodController.xib in Resources */,
 				BE64E59F21343A63009E6BF6 /* README.txt in Resources */,
-				BE64F55321394280009E6BF6 /* ZHDiningRoomController.xib in Resources */,
 				BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */,
 				BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */,
 				BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */,
@@ -747,6 +750,7 @@
 				BE64E60A21343A63009E6BF6 /* AdViewController.m in Sources */,
 				BE996EFB213AD63700B2D450 /* ZHFood.swift in Sources */,
 				BE64E60921343A63009E6BF6 /* AdViewToolX.mm in Sources */,
+				BE996EFE213ADE3900B2D450 /* ZHRandomController.swift in Sources */,
 				BE64F40D21359849009E6BF6 /* AdViewAdapterGDTMob.m in Sources */,
 				BE64F556213942A1009E6BF6 /* ZHDiningRoomView.swift in Sources */,
 				BE64F40C21359849009E6BF6 /* AdNativeAdapterGDTMob.m in Sources */,
