@@ -11,15 +11,10 @@ import RxSwift
 
 class ZHRandomFoodController: UIViewController {
     
-    let disposeBag = DisposeBag()
+    let disposebag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        ZHLocationHelper.share.searchAround().subscribe(onNext: { names in
-//            print(names)
-//        }, onError: { error in
-//            print(error)
-//        }).disposed(by: disposeBag)
     }
 
 }

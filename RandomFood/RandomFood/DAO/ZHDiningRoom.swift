@@ -15,8 +15,8 @@ class ZHDiningRoom: WCDBSwift.TableCodable {
     var tel: String? //!< 联系电话
     var distance: Int? //!< 距离
     var image: String? //!< 图片
-    var rating: CGFloat? //!< 评分
-    var cost: CGFloat? //!< 人均消费
+    var rating: Float? //!< 评分
+    var cost: Float? //!< 人均消费
     
     enum CodingKeys: String, CodingTableKey {
         typealias Root = ZHDiningRoom
@@ -44,8 +44,8 @@ extension ZHDiningRoom {
         self.tel = poi.tel
         self.distance = poi.distance
         self.image = poi.images.first?.url
-        self.rating = poi.extensionInfo.rating
-        self.cost = poi.extensionInfo.cost
+        self.rating = Float(poi.extensionInfo.rating)
+        self.cost = Float(poi.extensionInfo.cost)
     }
     
 }

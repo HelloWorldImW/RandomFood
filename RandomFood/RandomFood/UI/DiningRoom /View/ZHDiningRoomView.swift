@@ -17,5 +17,4 @@ class ZHDiningRoomView: UIView {
         return diningRoomView
     }
     
-    
 }

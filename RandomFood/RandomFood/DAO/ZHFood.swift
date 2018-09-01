@@ -13,6 +13,7 @@ class ZHFood: WCDBSwift.TableCodable {
     var name: String?
     /// 0:早餐   1：午餐  2：晚餐  3：宵夜
     var eatTime: Int?
+    var image: String?
     
     
     enum CodingKeys: String, CodingTableKey {
@@ -20,6 +21,7 @@ class ZHFood: WCDBSwift.TableCodable {
         
         case name
         case eatTime
+        case image
         
         static let objectRelationalMapping = TableBinding(CodingKeys.self)
         

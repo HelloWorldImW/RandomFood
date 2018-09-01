@@ -71,6 +71,7 @@
 		BE996EF9213AD5FD00B2D450 /* ZHDiningRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */; };
 		BE996EFB213AD63700B2D450 /* ZHFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EFA213AD63700B2D450 /* ZHFood.swift */; };
 		BE996EFE213ADE3900B2D450 /* ZHRandomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */; };
+		BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -199,6 +200,7 @@
 		BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoom.swift; sourceTree = "<group>"; };
 		BE996EFA213AD63700B2D450 /* ZHFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHFood.swift; sourceTree = "<group>"; };
 		BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomController.swift; sourceTree = "<group>"; };
+		BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDK20181227120814372t7f1vq4n2ehu.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 		BE64E13121311994009E6BF6 = {
 			isa = PBXGroup;
 			children = (
+				BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */,
 				BE64E13C21311995009E6BF6 /* RandomFood */,
 				BE64E13B21311995009E6BF6 /* Products */,
 				840E56614A0449A8E4F82E07 /* Pods */,
@@ -691,6 +694,7 @@
 				BE64E59F21343A63009E6BF6 /* README.txt in Resources */,
 				BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */,
 				BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */,
+				BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */,
 				BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

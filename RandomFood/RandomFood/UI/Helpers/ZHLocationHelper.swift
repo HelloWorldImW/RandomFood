@@ -40,7 +40,7 @@ class ZHLocationHelper: NSObject {
         return searchAPI!
     }()
     
-    var searchObser: AnyObserver<ZHDiningRoom>?
+    var searchObser: AnyObserver<[ZHDiningRoom]>?
     
     let disposeBag = DisposeBag()
     
@@ -48,14 +48,14 @@ class ZHLocationHelper: NSObject {
         super.init()
     }
     
-    func searchAround() -> Observable<ZHDiningRoom> {
+    func searchAround() -> Observable<[ZHDiningRoom]> {
         getLocation().subscribe(onNext: {[weak self] location in
             self?.searchAround(location: location)
         }, onError: { error in
-            print("Error")
+            self.searchObser?.onError(error)
         }).disposed(by: disposeBag)
         
-        return Observable<ZHDiningRoom>.create({ (observer) -> Disposable in
+        return Observable<[ZHDiningRoom]>.create({ (observer) -> Disposable in
             self.searchObser = observer
             return Disposables.create()
         })
@@ -65,7 +65,11 @@ class ZHLocationHelper: NSObject {
         return Observable<ZHLocation>.create({ (observer) -> Disposable in
             self.locationManager.requestLocation(withReGeocode: true, completionBlock: {(location: CLLocation?, reGeocode: AMapLocationReGeocode?, error: Error?) in
                 guard error == nil else {
-                    observer.onError(ZHLocationError.locationError)
+                    if location != nil {
+                        observer.onError(ZHLocationError.reGeocodeError)
+                    } else {
+                        observer.onError(ZHLocationError.locationError)
+                    }
                     return
                 }
                 
@@ -102,10 +106,12 @@ extension ZHLocationHelper: AMapSearchDelegate {
             return
         }
         let pois = response.pois
+        var drooms:Array<ZHDiningRoom> = []
         pois?.forEach({ poi in
             let diningroom = ZHDiningRoom(poi: poi)
-            searchObser?.onNext(diningroom)
+            drooms.append(diningroom)
         })
+        searchObser?.onNext(drooms)
         searchObser?.onCompleted()
         searchObser = nil
     }

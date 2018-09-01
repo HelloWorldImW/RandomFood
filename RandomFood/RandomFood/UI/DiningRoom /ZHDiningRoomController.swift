@@ -14,10 +14,9 @@ class ZHDiningRoomController: UIViewController {
     
     let disposebag = DisposeBag()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ZHLocationHelper.share.searchAround().subscribe(onNext: { (diningroom) in
-            print(diningroom)
-        }).disposed(by: disposebag)
+        view.backgroundColor = UIColor.white
     }
 }

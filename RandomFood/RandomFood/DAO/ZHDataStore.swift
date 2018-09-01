@@ -7,6 +7,7 @@
 //
 
 import WCDBSwift
+import RxSwift
 
 // MARK: 数据库对象
 class ZHDataStore: NSObject {
@@ -24,10 +25,9 @@ class ZHDataStore: NSObject {
         createRestaurantTable()
     }
     
-    
     /// 食物表
     private let FoodTable = "FoodTable"
-    /// 餐馆表
+    /// 餐厅表
     private let DiningRoomTable = "DiningRoomTable"
     
 }
@@ -44,12 +44,54 @@ extension ZHDataStore {
         }
     }
     
-    /// 创建餐馆表
+    /// 创建餐厅表
     func createRestaurantTable() {
         do {
             try db.create(table: DiningRoomTable, of: ZHDiningRoom.self)
         } catch  {
             print("创建数据表Restaurant失败")
         }
+    }
+}
+
+// MARK: - 数据库操作 - Food
+extension ZHDataStore {
+    
+    func insertFood(food: ZHFood) {
+        try! db.insert(objects: food, intoTable: FoodTable)
+    }
+    
+    func insertFoods(foods: [ZHFood]) {
+        try! db.insert(objects: foods, intoTable: FoodTable)
+    }
+    
+    func deleteFood(food: ZHFood) {
+        try! db.delete(fromTable: FoodTable, where: ZHFood.Properties.name.is(food.name!))
+    }
+    
+    func searchAllFoods() -> [ZHFood] {
+        let foods: [ZHFood] = try! db.getObjects(fromTable: FoodTable)
+        return foods
+    }
+}
+
+// MARK: - 数据库操作 - DiningRoom
+extension ZHDataStore {
+    
+    func insertDiningRoom(diningroom: ZHDiningRoom) {
+        try! db.insert(objects: diningroom, intoTable: DiningRoomTable)
+    }
+    
+    func insertDiningRooms(diningrooms: [ZHDiningRoom]) {
+        try! db.insert(objects: diningrooms, intoTable: DiningRoomTable)
+    }
+    
+    func deleteDiningRoom(diningroom: ZHDiningRoom) {
+        try! db.delete(fromTable: DiningRoomTable, where: ZHDiningRoom.Properties.name.is(diningroom.name!))
+    }
+    
+    func searchAllDiningRooms() -> [ZHDiningRoom] {
+        let diningrooms: [ZHDiningRoom] = try! db.getObjects(fromTable: DiningRoomTable)
+        return diningrooms
     }
 }
