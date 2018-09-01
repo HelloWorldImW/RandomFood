@@ -16,6 +16,8 @@ class ZHDiningRoomController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = ZHLocationHelper.share.searchAround()
+        ZHLocationHelper.share.searchAround().subscribe(onNext: { (diningroom) in
+            print(diningroom)
+        }).disposed(by: disposebag)
     }
 }

@@ -40,7 +40,7 @@ class ZHLocationHelper: NSObject {
         return searchAPI!
     }()
     
-    var searchObser: AnyObserver<[String]>?
+    var searchObser: AnyObserver<ZHDiningRoom>?
     
     let disposeBag = DisposeBag()
     
@@ -48,14 +48,14 @@ class ZHLocationHelper: NSObject {
         super.init()
     }
     
-    func searchAround() -> Observable<[String]> {
+    func searchAround() -> Observable<ZHDiningRoom> {
         getLocation().subscribe(onNext: {[weak self] location in
             self?.searchAround(location: location)
         }, onError: { error in
             print("Error")
         }).disposed(by: disposeBag)
         
-        return Observable<[String]>.create({ (observer) -> Disposable in
+        return Observable<ZHDiningRoom>.create({ (observer) -> Disposable in
             self.searchObser = observer
             return Disposables.create()
         })
@@ -102,14 +102,10 @@ extension ZHLocationHelper: AMapSearchDelegate {
             return
         }
         let pois = response.pois
-        var poiNames:Array<String> = []
         pois?.forEach({ poi in
-            poiNames.append(poi.name)
-            let info = poi.extensionInfo
-            print("人均消费\(info?.cost)")
-            print("评分\(info?.rating)")
+            let diningroom = ZHDiningRoom(poi: poi)
+            searchObser?.onNext(diningroom)
         })
-        searchObser?.onNext(poiNames)
         searchObser?.onCompleted()
         searchObser = nil
     }
