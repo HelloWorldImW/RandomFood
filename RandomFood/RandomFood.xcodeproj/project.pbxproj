@@ -72,6 +72,8 @@
 		BE996EFB213AD63700B2D450 /* ZHFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EFA213AD63700B2D450 /* ZHFood.swift */; };
 		BE996EFE213ADE3900B2D450 /* ZHRandomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */; };
 		BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */; };
+		BE996F03213D760A00B2D450 /* ZHRandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F02213D760A00B2D450 /* ZHRandomView.swift */; };
+		BE996F05213D761900B2D450 /* ZHRandomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE996F04213D761900B2D450 /* ZHRandomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -201,6 +203,8 @@
 		BE996EFA213AD63700B2D450 /* ZHFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHFood.swift; sourceTree = "<group>"; };
 		BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomController.swift; sourceTree = "<group>"; };
 		BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDK20181227120814372t7f1vq4n2ehu.txt; sourceTree = "<group>"; };
+		BE996F02213D760A00B2D450 /* ZHRandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomView.swift; sourceTree = "<group>"; };
+		BE996F04213D761900B2D450 /* ZHRandomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHRandomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -613,9 +617,19 @@
 		BE996EFC213ADE1900B2D450 /* Random */ = {
 			isa = PBXGroup;
 			children = (
+				BE996F01213D75F000B2D450 /* View */,
 				BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */,
 			);
 			path = Random;
+			sourceTree = "<group>";
+		};
+		BE996F01213D75F000B2D450 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE996F02213D760A00B2D450 /* ZHRandomView.swift */,
+				BE996F04213D761900B2D450 /* ZHRandomView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -695,6 +709,7 @@
 				BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */,
 				BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */,
 				BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */,
+				BE996F05213D761900B2D450 /* ZHRandomView.xib in Resources */,
 				BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,6 +769,7 @@
 				BE64E60A21343A63009E6BF6 /* AdViewController.m in Sources */,
 				BE996EFB213AD63700B2D450 /* ZHFood.swift in Sources */,
 				BE64E60921343A63009E6BF6 /* AdViewToolX.mm in Sources */,
+				BE996F03213D760A00B2D450 /* ZHRandomView.swift in Sources */,
 				BE996EFE213ADE3900B2D450 /* ZHRandomController.swift in Sources */,
 				BE64F40D21359849009E6BF6 /* AdViewAdapterGDTMob.m in Sources */,
 				BE64F556213942A1009E6BF6 /* ZHDiningRoomView.swift in Sources */,
