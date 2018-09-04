@@ -14,7 +14,6 @@ class ZHDiningRoomController: UIViewController {
     
     let disposebag = DisposeBag()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white

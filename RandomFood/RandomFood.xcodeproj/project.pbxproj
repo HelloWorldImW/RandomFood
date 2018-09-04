@@ -74,6 +74,8 @@
 		BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */; };
 		BE996F03213D760A00B2D450 /* ZHRandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F02213D760A00B2D450 /* ZHRandomView.swift */; };
 		BE996F05213D761900B2D450 /* ZHRandomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE996F04213D761900B2D450 /* ZHRandomView.xib */; };
+		BE996F07213EB4AC00B2D450 /* ZHFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F06213EB4AC00B2D450 /* ZHFoodView.swift */; };
+		BE996F09213EB4B500B2D450 /* ZHFoodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE996F08213EB4B500B2D450 /* ZHFoodView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -205,6 +207,8 @@
 		BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDK20181227120814372t7f1vq4n2ehu.txt; sourceTree = "<group>"; };
 		BE996F02213D760A00B2D450 /* ZHRandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomView.swift; sourceTree = "<group>"; };
 		BE996F04213D761900B2D450 /* ZHRandomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHRandomView.xib; sourceTree = "<group>"; };
+		BE996F06213EB4AC00B2D450 /* ZHFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHFoodView.swift; sourceTree = "<group>"; };
+		BE996F08213EB4B500B2D450 /* ZHFoodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHFoodView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,6 +596,8 @@
 		BE64F54E2139421A009E6BF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE996F06213EB4AC00B2D450 /* ZHFoodView.swift */,
+				BE996F08213EB4B500B2D450 /* ZHFoodView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -708,6 +714,7 @@
 				BE64E59F21343A63009E6BF6 /* README.txt in Resources */,
 				BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */,
 				BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */,
+				BE996F09213EB4B500B2D450 /* ZHFoodView.xib in Resources */,
 				BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */,
 				BE996F05213D761900B2D450 /* ZHRandomView.xib in Resources */,
 				BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */,
@@ -766,6 +773,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE996F07213EB4AC00B2D450 /* ZHFoodView.swift in Sources */,
 				BE64E60A21343A63009E6BF6 /* AdViewController.m in Sources */,
 				BE996EFB213AD63700B2D450 /* ZHFood.swift in Sources */,
 				BE64E60921343A63009E6BF6 /* AdViewToolX.mm in Sources */,
