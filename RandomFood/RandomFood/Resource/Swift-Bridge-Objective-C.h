@@ -14,6 +14,8 @@
 #import "AdViewConfigStore.h"
 #import "AdSpreadScreenManager.h"
 #import "AdSpreadScreenManagerDelegate.h"
+#import "AdVideoManager.h"
+#import "AdVideoManagerDelegate.h"
 
 /// 高德SDK
 #import <AMapFoundationKit/AMapFoundationKit.h>

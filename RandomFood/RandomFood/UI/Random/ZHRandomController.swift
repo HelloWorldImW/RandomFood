@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZHRandomController: UIViewController {
+class ZHRandomController: ZHBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

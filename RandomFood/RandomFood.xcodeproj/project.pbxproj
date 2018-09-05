@@ -76,6 +76,7 @@
 		BE996F05213D761900B2D450 /* ZHRandomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE996F04213D761900B2D450 /* ZHRandomView.xib */; };
 		BE996F07213EB4AC00B2D450 /* ZHFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F06213EB4AC00B2D450 /* ZHFoodView.swift */; };
 		BE996F09213EB4B500B2D450 /* ZHFoodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE996F08213EB4B500B2D450 /* ZHFoodView.xib */; };
+		BE996F0C213F5DB600B2D450 /* ZHBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -209,6 +210,7 @@
 		BE996F04213D761900B2D450 /* ZHRandomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHRandomView.xib; sourceTree = "<group>"; };
 		BE996F06213EB4AC00B2D450 /* ZHFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHFoodView.swift; sourceTree = "<group>"; };
 		BE996F08213EB4B500B2D450 /* ZHFoodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHFoodView.xib; sourceTree = "<group>"; };
+		BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHBaseController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +361,7 @@
 		BE64E152213285B9009E6BF6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BE996F0A213F5D9A00B2D450 /* Base */,
 				BE996EFC213ADE1900B2D450 /* Random */,
 				BE64F54F2139425D009E6BF6 /* DiningRoom  */,
 				BE64F54621382BEA009E6BF6 /* Food */,
@@ -638,6 +641,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BE996F0A213F5D9A00B2D450 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -791,6 +802,7 @@
 				BE64F55221394280009E6BF6 /* ZHDiningRoomController.swift in Sources */,
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,
 				BE64F40B21359849009E6BF6 /* AdInstlAdapterGDTMob.m in Sources */,
+				BE996F0C213F5DB600B2D450 /* ZHBaseController.swift in Sources */,
 				BE64E5AC21343A63009E6BF6 /* AdInstlAdapterYouMi.m in Sources */,
 				BE64E151213271BB009E6BF6 /* ZHDataStore.swift in Sources */,
 				BE64E13E21311995009E6BF6 /* AppDelegate.swift in Sources */,

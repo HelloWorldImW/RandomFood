@@ -10,9 +10,7 @@ import UIKit
 import SnapKit
 import RxSwift
 
-class ZHDiningRoomController: UIViewController {
-    
-    let disposebag = DisposeBag()
+class ZHDiningRoomController: ZHBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
