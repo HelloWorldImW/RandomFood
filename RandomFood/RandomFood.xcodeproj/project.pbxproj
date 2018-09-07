@@ -77,6 +77,8 @@
 		BE996F07213EB4AC00B2D450 /* ZHFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F06213EB4AC00B2D450 /* ZHFoodView.swift */; };
 		BE996F09213EB4B500B2D450 /* ZHFoodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE996F08213EB4B500B2D450 /* ZHFoodView.xib */; };
 		BE996F0C213F5DB600B2D450 /* ZHBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */; };
+		BE996F4A214208AA00B2D450 /* ZHNavTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F49214208AA00B2D450 /* ZHNavTitleView.swift */; };
+		BE996F4C214208B200B2D450 /* ZHNavTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE996F4B214208B200B2D450 /* ZHNavTitleView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -211,6 +213,8 @@
 		BE996F06213EB4AC00B2D450 /* ZHFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHFoodView.swift; sourceTree = "<group>"; };
 		BE996F08213EB4B500B2D450 /* ZHFoodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHFoodView.xib; sourceTree = "<group>"; };
 		BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHBaseController.swift; sourceTree = "<group>"; };
+		BE996F49214208AA00B2D450 /* ZHNavTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHNavTitleView.swift; sourceTree = "<group>"; };
+		BE996F4B214208B200B2D450 /* ZHNavTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHNavTitleView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -644,9 +648,19 @@
 		BE996F0A213F5D9A00B2D450 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				BE996F482142088300B2D450 /* TitleView */,
 				BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		BE996F482142088300B2D450 /* TitleView */ = {
+			isa = PBXGroup;
+			children = (
+				BE996F49214208AA00B2D450 /* ZHNavTitleView.swift */,
+				BE996F4B214208B200B2D450 /* ZHNavTitleView.xib */,
+			);
+			path = TitleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -726,6 +740,7 @@
 				BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */,
 				BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */,
 				BE996F09213EB4B500B2D450 /* ZHFoodView.xib in Resources */,
+				BE996F4C214208B200B2D450 /* ZHNavTitleView.xib in Resources */,
 				BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */,
 				BE996F05213D761900B2D450 /* ZHRandomView.xib in Resources */,
 				BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */,
@@ -801,6 +816,7 @@
 				BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */,
 				BE64F55221394280009E6BF6 /* ZHDiningRoomController.swift in Sources */,
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,
+				BE996F4A214208AA00B2D450 /* ZHNavTitleView.swift in Sources */,
 				BE64F40B21359849009E6BF6 /* AdInstlAdapterGDTMob.m in Sources */,
 				BE996F0C213F5DB600B2D450 /* ZHBaseController.swift in Sources */,
 				BE64E5AC21343A63009E6BF6 /* AdInstlAdapterYouMi.m in Sources */,

@@ -8,6 +8,8 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+
 
 class ZHBaseController: UIViewController {
 
@@ -17,11 +19,9 @@ class ZHBaseController: UIViewController {
         super.viewDidLoad()
         self.title = "hello"
         self.navigationController?.navigationBar.barTintColor = UIColor.white
-        let titleBtn = UIButton(type: .custom)
-        titleBtn.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
-        titleBtn.setTitle("测试", for: .normal)
-        titleBtn.setTitleColor(UIColor.black, for: .normal)
-        navigationItem.titleView = titleBtn
+        let titleView = ZHNavTitleView.createView()
+        titleView.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
+        navigationItem.titleView = titleView
         
         self.navigationController?.navigationBar.shadowImage = UIImage()
         view.backgroundColor = UIColor.white
