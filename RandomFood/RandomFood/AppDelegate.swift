@@ -8,9 +8,6 @@
 
 import UIKit
 
-let ZHScreenWidth = UIScreen.main.bounds.size.width
-let ZHScreenHeight = UIScreen.main.bounds.size.height
-
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate, AdSpreadScreenManagerDelegate {
@@ -22,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AdSpreadScreenManagerDele
         
         window = UIWindow(frame: CGRect(x: 0, y: 0, width: ZHScreenWidth, height: ZHScreenHeight))
         
-        let homeVC = ZHBaseController()
+        let homeVC = ZHRandomController()
         let nav = UINavigationController(rootViewController: homeVC)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()

@@ -15,20 +15,47 @@
             <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVN-1c-d8S">
-                    <rect key="frame" x="166" y="17" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="吃什么" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVN-1c-d8S">
+                    <rect key="frame" x="161.5" y="17.5" width="52" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="26" id="8yW-Su-k8z"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="z3F-A1-MMr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav_pull_down" translatesAutoresizingMaskIntoConstraints="NO" id="G7I-eA-cRJ">
+                    <rect key="frame" x="218.5" y="25" width="10" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="Mlf-ML-Obc"/>
+                        <constraint firstAttribute="height" constant="5" id="ucE-XD-F84"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
             <constraints>
+                <constraint firstItem="G7I-eA-cRJ" firstAttribute="leading" secondItem="KVN-1c-d8S" secondAttribute="trailing" constant="5" id="8Mh-BR-a9U"/>
                 <constraint firstItem="KVN-1c-d8S" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iMu-SE-c3J"/>
+                <constraint firstItem="G7I-eA-cRJ" firstAttribute="centerY" secondItem="KVN-1c-d8S" secondAttribute="centerY" id="oN7-Ic-p6v"/>
                 <constraint firstItem="KVN-1c-d8S" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ww9-cg-FCu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleAttachIcon" destination="G7I-eA-cRJ" id="87o-Am-k00"/>
+                <outlet property="titleLabel" destination="KVN-1c-d8S" id="c3Z-M3-ah9"/>
+                <outletCollection property="gestureRecognizers" destination="lOk-SM-LQ2" appends="YES" id="p4U-2Y-tUn"/>
+            </connections>
             <point key="canvasLocation" x="33" y="-252.5"/>
         </view>
+        <tapGestureRecognizer id="lOk-SM-LQ2">
+            <connections>
+                <action selector="titleViewClicked:" destination="iN0-l3-epB" id="jaK-cx-vS5"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="nav_pull_down" width="5" height="2"/>
+    </resources>
 </document>
