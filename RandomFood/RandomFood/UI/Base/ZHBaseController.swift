@@ -21,6 +21,7 @@ class ZHBaseController: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor(white: 1.0, alpha: 0.99)
         return tableView
     }()
     
