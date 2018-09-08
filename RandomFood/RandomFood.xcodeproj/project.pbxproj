@@ -11,6 +11,7 @@
 		BE5FAFE4214399F000F8A566 /* ZHShowItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FAFE2214399F000F8A566 /* ZHShowItemCell.swift */; };
 		BE5FAFE5214399F000F8A566 /* ZHShowItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5FAFE3214399F000F8A566 /* ZHShowItemCell.xib */; };
 		BE5FAFE82143A1B500F8A566 /* ZHRandomFoodDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FAFE72143A1B500F8A566 /* ZHRandomFoodDefine.swift */; };
+		BE5FAFED2143CCD600F8A566 /* ZHSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FAFEC2143CCD600F8A566 /* ZHSettingController.swift */; };
 		BE64E13E21311995009E6BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E13D21311995009E6BF6 /* AppDelegate.swift */; };
 		BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14421311996009E6BF6 /* Assets.xcassets */; };
 		BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14621311996009E6BF6 /* LaunchScreen.storyboard */; };
@@ -91,6 +92,7 @@
 		BE5FAFE2214399F000F8A566 /* ZHShowItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHShowItemCell.swift; sourceTree = "<group>"; };
 		BE5FAFE3214399F000F8A566 /* ZHShowItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHShowItemCell.xib; sourceTree = "<group>"; };
 		BE5FAFE72143A1B500F8A566 /* ZHRandomFoodDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomFoodDefine.swift; sourceTree = "<group>"; };
+		BE5FAFEC2143CCD600F8A566 /* ZHSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHSettingController.swift; sourceTree = "<group>"; };
 		BE64E13A21311995009E6BF6 /* RandomFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE64E13D21311995009E6BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE64E14421311996009E6BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -344,6 +346,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		BE5FAFEB2143CCB400F8A566 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				BE5FAFEC2143CCD600F8A566 /* ZHSettingController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		BE64E13121311994009E6BF6 = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +399,7 @@
 		BE64E152213285B9009E6BF6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BE5FAFEB2143CCB400F8A566 /* Setting */,
 				BE996F0A213F5D9A00B2D450 /* Base */,
 				BE996EFC213ADE1900B2D450 /* Random */,
 				BE64F54F2139425D009E6BF6 /* DiningRoom  */,
@@ -837,6 +848,7 @@
 				BE64F54D21391DE2009E6BF6 /* ZHLocationHelper.swift in Sources */,
 				BE996EF9213AD5FD00B2D450 /* ZHDiningRoom.swift in Sources */,
 				BE64E59C21343A63009E6BF6 /* AdViewAdapterAdMob.m in Sources */,
+				BE5FAFED2143CCD600F8A566 /* ZHSettingController.swift in Sources */,
 				BE64F54921382C07009E6BF6 /* ZHRandomFoodController.swift in Sources */,
 				BE64E60E21343A63009E6BF6 /* SimMethod.cpp in Sources */,
 				BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */,

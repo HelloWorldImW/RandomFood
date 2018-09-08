@@ -24,17 +24,17 @@ class ZHRandomController: ZHBaseController {
         sharkImageView.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(-80)
-            make.width.equalTo(96)
-            make.height.equalTo(110)
+            make.width.equalTo(109)
+            make.height.equalTo(96)
         }
         
         sharkTitleImageView.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(80)
-            make.width.equalTo(96)
-            make.height.equalTo(110)
+            make.width.equalTo(99)
+            make.height.equalTo(40)
         }
-        
+        sharkImageView.animationDuration = 0.5
         
     }
     

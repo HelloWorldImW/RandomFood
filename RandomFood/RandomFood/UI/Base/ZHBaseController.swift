@@ -25,68 +25,75 @@ class ZHBaseController: UIViewController {
         return tableView
     }()
     
+    lazy var randoms:Array<String> = {
+        return ["去哪吃","吃什么"]
+    }()
+    
+    lazy var randomsResource:Dictionary<String,UIImage> = {
+        return ["去哪吃":#imageLiteral(resourceName: "nav_location"),"吃什么":#imageLiteral(resourceName: "nav_food")]
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        createNav()
+        view.backgroundColor = UIColor.white
+        createNavItem()
     }
     
-    private func showNavSelectView() {
-        view.addSubview(navSelectTableView)
-        self.navSelectTableView.snp.makeConstraints { (make) in
-            make.left.top.width.height.equalToSuperview()
+    private func showNavSelectView(show: Bool) {
+        if show {
+            view.addSubview(navSelectTableView)
+            self.navSelectTableView.snp.makeConstraints { (make) in
+                make.left.top.width.height.equalToSuperview()
+            }
+        } else {
+            navSelectTableView.removeFromSuperview()
         }
     }
     
-    
-    private func createNav() {
+    private func createNavItem() {
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         let titleView = ZHNavTitleView.createView()
         
-        titleView.event.subscribe(onNext: {[weak self] in
-            self?.showNavSelectView()
+        titleView.event.subscribe(onNext: { isSelected in
+            self.showNavSelectView(show: isSelected)
         }).disposed(by: disposebag)
         
         navigationItem.titleView = titleView
         titleView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.width.equalTo(100)
-            make.height.equalTo(40)
+            make.height.equalTo(44)
         }
         
-        let rbtn = UIButton(type: .custom)
-        rbtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        rbtn.setImage(#imageLiteral(resourceName: "setting"), for: .normal)
-        rbtn.setTitleColor(UIColor.black, for: .normal)
-        let ritem = UIBarButtonItem(customView: rbtn)
-        navigationItem.rightBarButtonItem = ritem
-        
-        let lbtn = UIButton(type: .custom)
-        lbtn.frame = CGRect(x: 0, y: 0, width: 21, height: 7)
-        lbtn.setImage(#imageLiteral(resourceName: "more"), for: .normal)
-        lbtn.setTitleColor(UIColor.black, for: .normal)
-        let litem = UIBarButtonItem(customView: lbtn)
-        navigationItem.leftBarButtonItem = litem
+        let settingBtn = UIButton(type: .custom)
+        settingBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        settingBtn.setImage(#imageLiteral(resourceName: "setting"), for: .normal)
+        settingBtn.setTitleColor(UIColor.black, for: .normal)
+        settingBtn.rx.tap.asObservable().subscribe(onNext: {
+            self.navigationController?.pushViewController(ZHSettingController(), animated: true)
+        }).disposed(by: disposebag)
+        let settingItem = UIBarButtonItem(customView: settingBtn)
+        navigationItem.rightBarButtonItem = settingItem
         
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        view.backgroundColor = UIColor.white
     }
 }
 
 extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "adadsds")
-        cell.textLabel?.text = "Test"
-        cell.imageView?.image = #imageLiteral(resourceName: "nav_food")
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "randomSelected")
+        let title = randoms[indexPath.row]
+        cell.textLabel?.text = title
+        cell.imageView?.image = randomsResource[title]
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return randoms.count
     }
-    
-    
 }
 
 

@@ -13,10 +13,11 @@ class ZHNavTitleView: UIView {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleAttachIcon: UIImageView!
+    private var isSelected = false
     
-    private let eventSubject = PublishSubject<Void>()
+    private let eventSubject = PublishSubject<Bool>()
     
-    var event: Observable<Void> {
+    var event: Observable<Bool> {
         return eventSubject.asObservable()
     }
     
@@ -25,14 +26,10 @@ class ZHNavTitleView: UIView {
         let titleView = titleBundle?.first as! ZHNavTitleView
         return titleView
     }
-    
-    override func removeFromSuperview() {
-        super.removeFromSuperview()
-        eventSubject.onCompleted()
-    }
-    
+        
     @IBAction func titleViewClicked(_ sender: UITapGestureRecognizer) {
-        eventSubject.onNext(())
+        isSelected = !isSelected
+        eventSubject.onNext(isSelected)
     }
     
 }
