@@ -11,6 +11,11 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
+enum ZHNavSelectedType: Int {
+    case diningroom = 0
+    case food
+}
+
 class ZHBaseController: UIViewController {
 
     let disposebag = DisposeBag()
@@ -37,7 +42,6 @@ class ZHBaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        createNavItem()
     }
     
     private func showNavSelectView(show: Bool) {
@@ -51,7 +55,10 @@ class ZHBaseController: UIViewController {
         }
     }
     
-    private func createNavItem() {
+    func createNavItem() {
+        guard self.navigationController != nil else {
+            return
+        }
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         let titleView = ZHNavTitleView.createView()
         
@@ -65,18 +72,25 @@ class ZHBaseController: UIViewController {
             make.width.equalTo(100)
             make.height.equalTo(44)
         }
-        
-        let settingBtn = UIButton(type: .custom)
-        settingBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        settingBtn.setImage(#imageLiteral(resourceName: "setting"), for: .normal)
-        settingBtn.rx.tap.asObservable().subscribe(onNext: {
+        addNavRightBtn(title: nil, image: #imageLiteral(resourceName: "setting")) {
             self.navigationController?.pushViewController(ZHSettingController(), animated: true)
-        }).disposed(by: disposebag)
-        let settingItem = UIBarButtonItem(customView: settingBtn)
-        navigationItem.rightBarButtonItem = settingItem
-        
+        }
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
+    
+    func addNavRightBtn(title: String?, image: UIImage?, action: @escaping ()->Void) {
+        let rightBtn = UIButton(type: .custom)
+        rightBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        rightBtn.setImage(image, for: .normal)
+        rightBtn.setTitle(title, for: .normal)
+        rightBtn.setTitleColor(UIColor.black, for: .normal)
+        rightBtn.rx.tap.asObservable().subscribe(onNext: {
+            action()
+        }).disposed(by: disposebag)
+        let rightItem = UIBarButtonItem(customView: rightBtn)
+        navigationItem.rightBarButtonItem = rightItem
+    }
+    
 }
 
 extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
@@ -87,12 +101,40 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = title
         cell.imageView?.image = randomsResource[title]
         cell.selectionStyle = .none
+        cell.accessoryType = .detailButton
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return randoms.count
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let type: ZHNavSelectedType = ZHNavSelectedType(rawValue: indexPath.row)!
+        switch type {
+        case .diningroom:
+            print("")
+        case .food:
+            print("")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let type: ZHNavSelectedType = ZHNavSelectedType(rawValue: indexPath.row)!
+        switch type {
+        case .diningroom:
+            DispatchQueue.main.async {
+                let nav = UINavigationController(rootViewController: ZHDiningRoomController())
+                self.present(nav, animated: true, completion: nil)
+            }
+        case .food:
+            DispatchQueue.main.async {
+                let nav = UINavigationController(rootViewController: ZHRandomFoodController())
+                self.present(nav, animated: true, completion: nil)
+            }
+        }
+    }
+    
 }
 
 

@@ -14,6 +14,9 @@ class ZHDiningRoomController: ZHBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+        self.title = "去哪吃"
+        addNavRightBtn(title: "取消", image: nil) {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

@@ -29,12 +29,16 @@ class ZHRandomController: ZHBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createNavItem()
         createUI()
         diningrooms = ZHDataStore.share.searchAllDiningRooms()
     }
     
-    
-    
+    private func random<T>(for items: Array<T>) -> T {
+        let random = arc4random_uniform(UInt32(items.count))
+        let item = items[Int(random)]
+        return item
+    }
     
 }
 
@@ -50,14 +54,15 @@ extension ZHRandomController {
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if let diningrooms = diningrooms {
-            let random = arc4random_uniform(UInt32(diningrooms.count))
-            let diningroom = diningrooms[Int(random)]
-            print(diningroom)
-        }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
             self.sharkImageView.stopAnimating()
+            let room = self.random(for: self.diningrooms!)
+            print(room.name!)
         }
+    }
+    
+    override func motionCancelled(_ motion: UIEventSubtype, with event: UIEvent?) {
+        print("取消")
     }
 }
 
