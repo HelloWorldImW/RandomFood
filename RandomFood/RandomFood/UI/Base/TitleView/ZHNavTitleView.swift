@@ -11,8 +11,8 @@ import RxSwift
 
 class ZHNavTitleView: UIView {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var titleAttachIcon: UIImageView!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var titleAttachIcon: UIImageView!
     private var isSelected = false
     
     private let eventSubject = PublishSubject<Bool>()

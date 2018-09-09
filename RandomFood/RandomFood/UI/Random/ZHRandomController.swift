@@ -38,4 +38,14 @@ class ZHRandomController: ZHBaseController {
         
     }
     
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        sharkImageView.startAnimating()
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
+            self.sharkImageView.stopAnimating()
+        }
+    }
+    
 }

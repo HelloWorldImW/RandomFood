@@ -69,7 +69,6 @@ class ZHBaseController: UIViewController {
         let settingBtn = UIButton(type: .custom)
         settingBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         settingBtn.setImage(#imageLiteral(resourceName: "setting"), for: .normal)
-        settingBtn.setTitleColor(UIColor.black, for: .normal)
         settingBtn.rx.tap.asObservable().subscribe(onNext: {
             self.navigationController?.pushViewController(ZHSettingController(), animated: true)
         }).disposed(by: disposebag)

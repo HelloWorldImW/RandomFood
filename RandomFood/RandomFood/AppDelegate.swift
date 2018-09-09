@@ -10,7 +10,7 @@ import UIKit
 
 @UIApplicationMain
 
-class AppDelegate: UIResponder, UIApplicationDelegate, AdSpreadScreenManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var manager: AdSpreadScreenManager?
@@ -27,16 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AdSpreadScreenManagerDele
         /// 配置第三方库
         configThirdLib()
         
-        manager = AdSpreadScreenManager.manager(withAdSpreadScreenKey: "SDK20181227120814372t7f1vq4n2ehu", with: self) as? AdSpreadScreenManager
-        manager?.requestAdSpreadScreenView(window?.rootViewController)
-        
         return true
     }
     
-    func adSpreadScreenWindow() -> UIWindow! {
-        return window
+    func showScreenAd() {
+        manager = AdSpreadScreenManager.manager(withAdSpreadScreenKey: "SDK20181227120814372t7f1vq4n2ehu", with: self) as? AdSpreadScreenManager
+        manager?.requestAdSpreadScreenView(window?.rootViewController)
     }
-     
+    
     private func configThirdLib() {
         /// 高德地图
         AMapServices.shared().apiKey = "3f8c688ca34735a2eda4332699e0ca82"
@@ -51,6 +49,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AdSpreadScreenManagerDele
     
     func applicationWillTerminate(_ application: UIApplication) {
         
+    }
+}
+
+extension AppDelegate: AdSpreadScreenManagerDelegate {
+    func adSpreadScreenWindow() -> UIWindow! {
+        return window
     }
 }
 
