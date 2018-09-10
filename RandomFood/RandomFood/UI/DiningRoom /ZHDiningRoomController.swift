@@ -7,14 +7,12 @@
 //
 
 import UIKit
-import SnapKit
-import RxSwift
 
 class ZHDiningRoomController: ZHBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "去哪吃"
+        setNavTitle(title: "去哪吃", action: nil).attachIconHiden = true
         addNavRightBtn(title: "取消", image: nil) {
             self.dismiss(animated: true, completion: nil)
         }

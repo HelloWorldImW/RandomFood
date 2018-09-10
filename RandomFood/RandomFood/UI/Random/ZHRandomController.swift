@@ -29,7 +29,14 @@ class ZHRandomController: ZHBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createNavItem()
+        var title: String? = UserDefaults.standard.value(forKey: ZHRandomTitleKey) as? String
+        if title == nil {
+            title = "吃什么"
+        }
+        setNavTitle(title: title!) { titleView, isSelected in
+            self.showNavSelectView(show: isSelected)
+            titleView.attachIconHiden = isSelected
+        }
         createUI()
         diningrooms = ZHDataStore.share.searchAllDiningRooms()
     }

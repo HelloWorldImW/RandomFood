@@ -9,12 +9,14 @@
 import UIKit
 import RxSwift
 
-class ZHRandomFoodController: UIViewController {
-    
-    let disposebag = DisposeBag()
+class ZHRandomFoodController: ZHBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavTitle(title: "吃什么", action: nil).attachIconHiden = true
+        addNavRightBtn(title: "取消", image: nil) {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 
 }

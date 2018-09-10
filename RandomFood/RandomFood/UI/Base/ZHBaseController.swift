@@ -44,9 +44,11 @@ class ZHBaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
-    private func showNavSelectView(show: Bool) {
+    func showNavSelectView(show: Bool) {
         if show {
             view.addSubview(navSelectTableView)
             self.navSelectTableView.snp.makeConstraints { (make) in
@@ -58,33 +60,27 @@ class ZHBaseController: UIViewController {
         }
     }
     
-    func createNavItem() {
-        guard self.navigationController != nil else {
-            return
-        }
-        self.navigationController?.navigationBar.barTintColor = UIColor.white
+    @discardableResult
+    func setNavTitle(title: String, action:((ZHNavTitleView, Bool)->Void)?) -> ZHNavTitleView {
+        
         let titleView = ZHNavTitleView.createView()
-        
-        let title: String? = UserDefaults.standard.value(forKey: ZHRandomTitleKey) as? String
-        if let title = title {
-            titleView.title = title
-        } else {
-            titleView.title = "吃什么"
-        }
-        
+        titleView.title = title
         titleView.event.subscribe(onNext: { isSelected in
-            self.showNavSelectView(show: isSelected)
-            self.titleView?.attachIconHiden = isSelected
+            if let action = action {
+                action(titleView, isSelected)
+            }
         }).disposed(by: disposebag)
         
         navigationItem.titleView = titleView
-        titleView.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-            make.width.equalTo(100)
-            make.height.equalTo(44)
+        if titleView.superview != nil {
+            titleView.snp.makeConstraints { (make) in
+                make.center.equalToSuperview()
+                make.width.equalTo(100)
+                make.height.equalTo(44)
+            }
         }
         self.titleView = titleView
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        return titleView
     }
     
     func addNavRightBtn(title: String?, image: UIImage?, action: @escaping ()->Void) {
