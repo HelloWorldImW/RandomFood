@@ -91,7 +91,7 @@ class ZHLocationHelper: NSObject {
         request.requireExtension = true
         request.city = location.city
         request.sortrule = 0
-        request.offset = 50
+        request.offset = 20
         request.radius = 2000
         request.requireSubPOIs = true
         request.location = AMapGeoPoint.location(withLatitude: CGFloat(location.latitude), longitude: CGFloat(location.longitude))

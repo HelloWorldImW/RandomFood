@@ -26,6 +26,7 @@ class ZHBaseController: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+        tableView.rowHeight = 22+36
         tableView.backgroundColor = UIColor(white: 1.0, alpha: 0.99)
         return tableView
     }()
@@ -34,10 +35,11 @@ class ZHBaseController: UIViewController {
         return ["去哪吃","吃什么"]
     }()
     
-    lazy var randomsResource:Dictionary<String,UIImage> = {
-        return ["去哪吃":#imageLiteral(resourceName: "nav_location"),"吃什么":#imageLiteral(resourceName: "nav_food")]
+    lazy var randomsResource:Dictionary<String,String> = {
+        return ["去哪吃":"nav_location","吃什么":"nav_food"]
     }()
     
+    private var titleView: ZHNavTitleView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,7 @@ class ZHBaseController: UIViewController {
             self.navSelectTableView.snp.makeConstraints { (make) in
                 make.left.top.width.height.equalToSuperview()
             }
+            navSelectTableView.reloadData()
         } else {
             navSelectTableView.removeFromSuperview()
         }
@@ -62,8 +65,16 @@ class ZHBaseController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         let titleView = ZHNavTitleView.createView()
         
+        let title: String? = UserDefaults.standard.value(forKey: ZHRandomTitleKey) as? String
+        if let title = title {
+            titleView.title = title
+        } else {
+            titleView.title = "吃什么"
+        }
+        
         titleView.event.subscribe(onNext: { isSelected in
             self.showNavSelectView(show: isSelected)
+            self.titleView?.attachIconHiden = isSelected
         }).disposed(by: disposebag)
         
         navigationItem.titleView = titleView
@@ -72,9 +83,7 @@ class ZHBaseController: UIViewController {
             make.width.equalTo(100)
             make.height.equalTo(44)
         }
-        addNavRightBtn(title: nil, image: #imageLiteral(resourceName: "setting")) {
-            self.navigationController?.pushViewController(ZHSettingController(), animated: true)
-        }
+        self.titleView = titleView
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
@@ -96,13 +105,26 @@ class ZHBaseController: UIViewController {
 extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "randomSelected")
-        let title = randoms[indexPath.row]
-        cell.textLabel?.text = title
-        cell.imageView?.image = randomsResource[title]
-        cell.selectionStyle = .none
-        cell.accessoryType = .detailButton
-        return cell
+        var cell = tableView.dequeueReusableCell(withIdentifier: "randomSelected")
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "randomSelected")
+        }
+        if let cell = cell {
+            let title = randoms[indexPath.row]
+            var imageName = randomsResource[title]!
+            if title == titleView?.title {
+                cell.textLabel?.textColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1.0)
+                imageName = imageName+"_selected"
+            } else {
+                cell.textLabel?.textColor = UIColor.black
+            }
+            cell.textLabel?.text = title
+            cell.imageView?.image = UIImage(named: imageName)
+            cell.selectionStyle = .none
+            cell.accessoryType = .detailButton
+        }
+        
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,13 +132,11 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let type: ZHNavSelectedType = ZHNavSelectedType(rawValue: indexPath.row)!
-        switch type {
-        case .diningroom:
-            print("")
-        case .food:
-            print("")
-        }
+        let title = randoms[indexPath.row]
+       self.titleView?.title = title
+        UserDefaults.standard.set(title, forKey: ZHRandomTitleKey)
+        self.titleView?.attachIconHiden = false
+        showNavSelectView(show: false)
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {

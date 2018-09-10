@@ -36,7 +36,7 @@ class ZHDiningRoomView: UIView {
     
     func configView(with model: ZHDiningRoom) {
         if let imageUrl = model.image {
-            roomImageView.sd_setImage(with: URL(string: imageUrl))
+            roomImageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: #imageLiteral(resourceName: "img-default"))
         }
         titleLabel.text = model.name
         ratingIcon.image = UIImage(named: "icon_star-\(Int(model.rating))")
@@ -45,9 +45,6 @@ class ZHDiningRoomView: UIView {
         distanceLabel.text = "\(model.distance)m"
         addressLabel.text = model.address
     }
-    
-    
-    
     
     @IBAction private func cancelBtnClcicked(_ sender: UIButton) {
         self.removeFromSuperview()

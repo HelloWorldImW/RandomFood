@@ -21,6 +21,20 @@ class ZHNavTitleView: UIView {
         return eventSubject.asObservable()
     }
     
+    var title:String? {
+        didSet {
+            self.titleLabel.text = title
+        }
+    }
+    
+    var attachIconHiden:Bool = false {
+        didSet {
+            titleAttachIcon.isHidden = attachIconHiden
+            isSelected = attachIconHiden
+        }
+    }
+    
+    
     class func createView() -> ZHNavTitleView {
         let titleBundle = Bundle.main.loadNibNamed("ZHNavTitleView", owner: nil, options: nil)
         let titleView = titleBundle?.first as! ZHNavTitleView
