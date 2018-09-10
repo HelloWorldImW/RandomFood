@@ -16,17 +16,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="吃什么" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVN-1c-d8S">
-                    <rect key="frame" x="161.5" y="17.5" width="52" height="20.5"/>
+                    <rect key="frame" x="158.5" y="16.5" width="58.5" height="23"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="26" id="8yW-Su-k8z"/>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="z3F-A1-MMr"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav_pull_down" translatesAutoresizingMaskIntoConstraints="NO" id="G7I-eA-cRJ">
-                    <rect key="frame" x="218.5" y="25" width="10" height="5"/>
+                    <rect key="frame" x="222" y="25" width="10" height="5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="10" id="Mlf-ML-Obc"/>
                         <constraint firstAttribute="height" constant="5" id="ucE-XD-F84"/>
@@ -56,6 +56,6 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="nav_pull_down" width="5" height="2"/>
+        <image name="nav_pull_down" width="10" height="5"/>
     </resources>
 </document>

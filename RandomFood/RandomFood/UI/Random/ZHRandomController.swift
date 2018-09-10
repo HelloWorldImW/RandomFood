@@ -54,16 +54,21 @@ extension ZHRandomController {
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
-            self.sharkImageView.stopAnimating()
-            let room = self.random(for: self.diningrooms!)
-            print(room.name!)
-        }
+       showResult()
     }
     
     override func motionCancelled(_ motion: UIEventSubtype, with event: UIEvent?) {
-        print("取消")
+        showResult()
     }
+    
+    private func showResult() {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
+            self.sharkImageView.stopAnimating()
+            let room = self.random(for: self.diningrooms!)
+            ZHDiningRoomView.show(with: room)
+        }
+    }
+    
 }
 
 /// UI相关
