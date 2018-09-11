@@ -9,18 +9,23 @@
 import UIKit
 import RxSwift
 
-enum ZHRandomType {
-    case food
-    case diningroom
+enum ZHRandomType: String {
+    case food = "吃什么"
+    case diningroom = "去哪吃"
 }
 
 class ZHRandomController: ZHBaseController {
     
     private let sharkImageView = UIImageView(image: #imageLiteral(resourceName: "shark_0"))
     private let sharkTitleImageView = UIImageView(image: #imageLiteral(resourceName: "shart_title"))
-    private var type: ZHRandomType?
+    private var type: ZHRandomType = .diningroom
+    
+    private var diningroomView: ZHDiningRoomView? = nil
+    private var foodView: ZHFoodView?
     
     var diningrooms: Array<ZHDiningRoom>?
+    
+    
     
     convenience init(type randomType: ZHRandomType) {
         self.init()
@@ -29,11 +34,8 @@ class ZHRandomController: ZHBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var title: String? = UserDefaults.standard.value(forKey: ZHRandomTitleKey) as? String
-        if title == nil {
-            title = "吃什么"
-        }
-        setNavTitle(title: title!) { titleView, isSelected in
+        
+        setNavTitle(title: type.rawValue) { titleView, isSelected in
             self.showNavSelectView(show: isSelected)
         }
         createUI()
@@ -54,7 +56,9 @@ class ZHRandomController: ZHBaseController {
 
 ///获取数据
 extension ZHRandomController {
-    
+    func loadData() {
+        
+    }
 }
 
 /// 摇一摇
@@ -66,6 +70,9 @@ extension ZHRandomController {
                 self.present(nav, animated: true)
             }
         } else {
+            if let diningroom = diningroomView {
+                diningroom.hide()
+            }
             sharkImageView.startAnimating()
         }
     }
@@ -85,7 +92,7 @@ extension ZHRandomController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
             self.sharkImageView.stopAnimating()
             let room = self.random(for: self.diningrooms!)
-            ZHDiningRoomView.show(with: room)
+            self.diningroomView = ZHDiningRoomView.show(with: room)
         }
     }
     

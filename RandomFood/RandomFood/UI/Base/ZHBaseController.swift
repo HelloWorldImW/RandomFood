@@ -145,7 +145,9 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
         switch type {
         case .diningroom:
             DispatchQueue.main.async {
-                let nav = UINavigationController(rootViewController: ZHDiningRoomController())
+                let diningroom = ZHDiningRoomController()
+                diningroom.isEdit = true
+                let nav = UINavigationController(rootViewController: diningroom)
                 self.present(nav, animated: true) {
                     self.showNavSelectView(show: false)
                 }

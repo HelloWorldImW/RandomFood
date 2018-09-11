@@ -16,6 +16,8 @@
 		BE5FB00C214754A400F8A566 /* ZHProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB00B214754A400F8A566 /* ZHProgressHUD.swift */; };
 		BE5FB00E214754AB00F8A566 /* ZHProgressHUD.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB00D214754AB00F8A566 /* ZHProgressHUD.xib */; };
 		BE5FB01121475E3600F8A566 /* DispatchTime+Catagory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB01021475E3600F8A566 /* DispatchTime+Catagory.swift */; };
+		BE5FB0142147A36700F8A566 /* ZHAddNewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB0122147A36700F8A566 /* ZHAddNewItemCell.swift */; };
+		BE5FB0152147A36700F8A566 /* ZHAddNewItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB0132147A36700F8A566 /* ZHAddNewItemCell.xib */; };
 		BE64E13E21311995009E6BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E13D21311995009E6BF6 /* AppDelegate.swift */; };
 		BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14421311996009E6BF6 /* Assets.xcassets */; };
 		BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14621311996009E6BF6 /* LaunchScreen.storyboard */; };
@@ -99,6 +101,8 @@
 		BE5FB00B214754A400F8A566 /* ZHProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHProgressHUD.swift; sourceTree = "<group>"; };
 		BE5FB00D214754AB00F8A566 /* ZHProgressHUD.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHProgressHUD.xib; sourceTree = "<group>"; };
 		BE5FB01021475E3600F8A566 /* DispatchTime+Catagory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchTime+Catagory.swift"; sourceTree = "<group>"; };
+		BE5FB0122147A36700F8A566 /* ZHAddNewItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHAddNewItemCell.swift; sourceTree = "<group>"; };
+		BE5FB0132147A36700F8A566 /* ZHAddNewItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHAddNewItemCell.xib; sourceTree = "<group>"; };
 		BE64E13A21311995009E6BF6 /* RandomFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE64E13D21311995009E6BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE64E14421311996009E6BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -349,6 +353,8 @@
 			children = (
 				BE5FAFE2214399F000F8A566 /* ZHShowItemCell.swift */,
 				BE5FAFE3214399F000F8A566 /* ZHShowItemCell.xib */,
+				BE5FB0122147A36700F8A566 /* ZHAddNewItemCell.swift */,
+				BE5FB0132147A36700F8A566 /* ZHAddNewItemCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -794,6 +800,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5FB00E214754AB00F8A566 /* ZHProgressHUD.xib in Resources */,
+				BE5FB0152147A36700F8A566 /* ZHAddNewItemCell.xib in Resources */,
 				BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */,
 				BE5FAFE5214399F000F8A566 /* ZHShowItemCell.xib in Resources */,
 				BE64E59F21343A63009E6BF6 /* README.txt in Resources */,
@@ -884,6 +891,7 @@
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,
 				BE5FAFE4214399F000F8A566 /* ZHShowItemCell.swift in Sources */,
 				BE996F4A214208AA00B2D450 /* ZHNavTitleView.swift in Sources */,
+				BE5FB0142147A36700F8A566 /* ZHAddNewItemCell.swift in Sources */,
 				BE64F40B21359849009E6BF6 /* AdInstlAdapterGDTMob.m in Sources */,
 				BE996F0C213F5DB600B2D450 /* ZHBaseController.swift in Sources */,
 				BE5FAFE82143A1B500F8A566 /* ZHRandomFoodDefine.swift in Sources */,

@@ -25,6 +25,11 @@ class ZHDiningRoomView: UIView {
         return diningRoomView
     }
     
+    func hide() {
+        self.removeFromSuperview()
+    }
+    
+    
     @IBOutlet weak private var roomImageView: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var ratingIcon: UIImageView!
@@ -34,7 +39,7 @@ class ZHDiningRoomView: UIView {
     @IBOutlet weak private var addressLabel: UILabel!
     
     
-    func configView(with model: ZHDiningRoom) {
+    private func configView(with model: ZHDiningRoom) {
         if let imageUrl = model.image {
             roomImageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: #imageLiteral(resourceName: "img-default"))
         }

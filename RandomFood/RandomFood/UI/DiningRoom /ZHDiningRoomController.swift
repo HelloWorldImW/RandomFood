@@ -21,6 +21,10 @@ class ZHDiningRoomController: ZHBaseController {
         let table = UITableView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .plain)
         table.delegate = self
         table.dataSource = self
+        table.rowHeight = 80.0
+        table.showsVerticalScrollIndicator = false
+        table.showsHorizontalScrollIndicator = false
+        table.separatorStyle = .none
         table.tableFooterView = UIView()
         table.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreData))
         return table
@@ -66,7 +70,9 @@ class ZHDiningRoomController: ZHBaseController {
     
     private func configUI() {
         if isEdit {
-            
+            tableView.mj_footer.isHidden = true
+            self.diningrooms = ZHDataStore.share.searchAllDiningRooms()
+            self.tableView.reloadData()
         } else {
             let hud = ZHProgressHUD.show(in: view, title: "正在检索周边餐厅...")
             tableView.mj_footer.isHidden = diningrooms.count < 20
@@ -92,9 +98,15 @@ class ZHDiningRoomController: ZHBaseController {
 
 extension ZHDiningRoomController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "diningroomCell")
+        let cell = ZHShowItemCell.cell(for: tableView, isEdit: isEdit)
         let diningroom = diningrooms[indexPath.row]
-        cell.textLabel?.text = diningroom.name
+        cell.addDeleteEvent { (indexpath) in
+            if let index = indexpath {
+                self.diningrooms.remove(at: index.row)
+                tableView.deleteRows(at: [index], with: .fade)
+            }
+        }
+        cell.title = diningroom.name
         if diningroom.isSelected {
             cell.accessoryType = .checkmark
         } else {
@@ -109,6 +121,9 @@ extension ZHDiningRoomController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard !isEdit else {
+            return
+        }
         let room = diningrooms[indexPath.row]
         room.isSelected = !room.isSelected
         if room.isSelected {
