@@ -61,6 +61,7 @@ class ZHDiningRoomController: ZHBaseController {
         tableView.snp.makeConstraints { (make) in
             make.left.top.width.height.equalToSuperview()
         }
+        
         doneBtn = addNavRightBtn(title: "完成", image: nil) {
             ZHDataStore.share.insertDiningRooms(diningrooms: self.selectedrooms)
             self.dismiss(animated: true, completion: nil)
@@ -138,5 +139,15 @@ extension ZHDiningRoomController {
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
             ZHAlertView.show(title: "最多只能选10项")
         }
+    }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = ZHAddNewItemView.createView()
+        footer.addAddEvent {
+            tableView.insertRows(at: [IndexPath(row: self.diningrooms.count, section: 0)], with: .fade)
+        }
+        return footer
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 80.0
     }
 }
