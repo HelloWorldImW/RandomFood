@@ -48,9 +48,9 @@ class ZHLocationHelper: NSObject {
         super.init()
     }
     
-    func searchAround() -> Observable<[ZHDiningRoom]> {
+    func searchAround(page: Int = 1) -> Observable<[ZHDiningRoom]> {
         getLocation().subscribe(onNext: {[weak self] location in
-            self?.searchAround(location: location)
+            self?.searchAround(location: location, page: page)
         }, onError: { error in
             self.searchObser?.onError(error)
         }).disposed(by: disposeBag)
@@ -85,15 +85,16 @@ class ZHLocationHelper: NSObject {
         })
     }
     
-    private func searchAround(location: ZHLocation) {
+    private func searchAround(location: ZHLocation, page: Int = 1) {
         let request = AMapPOIAroundSearchRequest()
-        request.keywords = "餐厅|快餐|食品|吃饭"
+        request.keywords = "餐厅"
         request.requireExtension = true
         request.city = location.city
         request.sortrule = 0
         request.offset = 20
         request.radius = 2000
         request.requireSubPOIs = true
+        request.page = page
         request.location = AMapGeoPoint.location(withLatitude: CGFloat(location.latitude), longitude: CGFloat(location.longitude))
         search.aMapPOIAroundSearch(request)
     }

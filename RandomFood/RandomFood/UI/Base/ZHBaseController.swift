@@ -83,8 +83,8 @@ class ZHBaseController: UIViewController {
         self.titleView = titleView
         return titleView
     }
-    
-    func addNavRightBtn(title: String?, image: UIImage?, action: @escaping ()->Void) {
+    @discardableResult
+    func addNavRightBtn(title: String?, image: UIImage?, action: @escaping ()->Void) -> UIButton {
         let rightBtn = UIButton(type: .custom)
         rightBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         rightBtn.setImage(image, for: .normal)
@@ -95,6 +95,7 @@ class ZHBaseController: UIViewController {
         }).disposed(by: disposebag)
         let rightItem = UIBarButtonItem(customView: rightBtn)
         navigationItem.rightBarButtonItem = rightItem
+        return rightBtn
     }
     
 }

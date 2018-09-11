@@ -59,14 +59,7 @@ extension ZHRandomController {
         if diningrooms!.isEmpty {
             ZHAlertView.show(title: "本地无数据", message: "是否开启定位获取周围餐厅") {
                 let nav = UINavigationController(rootViewController: ZHDiningRoomController())
-                self.present(nav, animated: true){
-                    let hud = ZHProgressHUD.show(title: "正在检索周边餐厅...")
-                    ZHLocationHelper.share.searchAround().subscribe(onNext: { (diningrooms) in
-                        hud.success(title: "检索成功")
-                    }, onError: { error in
-                        hud.error(title: "检索失败，请检查网络")
-                    }).disposed(by: self.disposebag)
-                }
+                self.present(nav, animated: true)
             }
         } else {
             sharkImageView.startAnimating()

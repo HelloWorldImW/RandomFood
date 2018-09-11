@@ -11,4 +11,6 @@ target 'RandomFood' do
     pod 'AMapSearch'
     pod 'AMapLocation'
     pod 'SnapKit'
+    pod 'MJRefresh'
+    pod 'SDWebImage'
 end

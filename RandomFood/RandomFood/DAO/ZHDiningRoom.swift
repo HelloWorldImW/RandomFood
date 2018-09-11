@@ -16,7 +16,10 @@ class ZHDiningRoom: WCDBSwift.TableCodable {
     var distance: Int = 0 //!< 距离
     var image: String? //!< 图片
     var rating: Float = 0.0 //!< 评分
-    var cost: Float = 0.0//!< 人均消费
+    var cost: Float = 0.0 //!< 人均消费
+    
+    var isSelected = false //!<是否被选中，不入库
+    
     
     enum CodingKeys: String, CodingTableKey {
         typealias Root = ZHDiningRoom

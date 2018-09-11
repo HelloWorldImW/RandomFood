@@ -25,14 +25,14 @@
                                 <constraint firstAttribute="width" secondItem="eGC-w2-OoS" secondAttribute="height" multiplier="1:1" id="kvx-ci-cae"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lV-7r-QH9">
-                            <rect key="frame" x="100.5" y="140" width="0.0" height="0.0"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lV-7r-QH9">
+                            <rect key="frame" x="88" y="140" width="25" height="17"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="0ZR-gd-EhE"/>
                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="DjV-3T-ls8"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -47,7 +47,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.078233506940000003" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Bf7-Cr-lhM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="87.5" id="DuB-F4-CqY"/>
                 <constraint firstAttribute="trailing" secondItem="Bf7-Cr-lhM" secondAttribute="trailing" constant="87.5" id="RcD-Oa-v5P"/>
