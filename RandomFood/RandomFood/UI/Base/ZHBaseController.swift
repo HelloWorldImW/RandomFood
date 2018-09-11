@@ -26,8 +26,8 @@ class ZHBaseController: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
-        tableView.rowHeight = 22+36
-        tableView.backgroundColor = UIColor(white: 1.0, alpha: 0.99)
+        tableView.rowHeight = 50
+        tableView.backgroundColor = UIColor(white: 1.0, alpha: 0.96)
         return tableView
     }()
     
@@ -105,6 +105,9 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
         var cell = tableView.dequeueReusableCell(withIdentifier: "randomSelected")
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: "randomSelected")
+            cell?.textLabel?.font = UIFont.systemFont(ofSize: 16)
+            cell?.selectionStyle = .none
+            cell?.accessoryType = .detailButton
         }
         if let cell = cell {
             let title = randoms[indexPath.row]
@@ -117,8 +120,7 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
             }
             cell.textLabel?.text = title
             cell.imageView?.image = UIImage(named: imageName)
-            cell.selectionStyle = .none
-            cell.accessoryType = .detailButton
+           
         }
         
         return cell!

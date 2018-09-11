@@ -56,7 +56,21 @@ extension ZHRandomController {
 /// 摇一摇
 extension ZHRandomController {
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        sharkImageView.startAnimating()
+        if diningrooms!.isEmpty {
+            ZHAlertView.show(title: "本地无数据", message: "是否开启定位获取周围餐厅") {
+                let nav = UINavigationController(rootViewController: ZHDiningRoomController())
+                self.present(nav, animated: true){
+                    let hud = ZHProgressHUD.show(title: "正在检索周边餐厅...")
+                    ZHLocationHelper.share.searchAround().subscribe(onNext: { (diningrooms) in
+                        hud.success(title: "检索成功")
+                    }, onError: { error in
+                        hud.error(title: "检索失败，请检查网络")
+                    }).disposed(by: self.disposebag)
+                }
+            }
+        } else {
+            sharkImageView.startAnimating()
+        }
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -68,6 +82,9 @@ extension ZHRandomController {
     }
     
     private func showResult() {
+        guard !diningrooms!.isEmpty else {
+            return
+        }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
             self.sharkImageView.stopAnimating()
             let room = self.random(for: self.diningrooms!)
