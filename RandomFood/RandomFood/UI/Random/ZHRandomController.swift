@@ -35,7 +35,6 @@ class ZHRandomController: ZHBaseController {
         }
         setNavTitle(title: title!) { titleView, isSelected in
             self.showNavSelectView(show: isSelected)
-            titleView.attachIconHiden = isSelected
         }
         createUI()
         diningrooms = ZHDataStore.share.searchAllDiningRooms()

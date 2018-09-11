@@ -49,6 +49,7 @@ class ZHBaseController: UIViewController {
     }
     
     func showNavSelectView(show: Bool) {
+        self.titleView?.attachIconHiden = show
         if show {
             view.addSubview(navSelectTableView)
             self.navSelectTableView.snp.makeConstraints { (make) in
@@ -131,7 +132,6 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
         let title = randoms[indexPath.row]
        self.titleView?.title = title
         UserDefaults.standard.set(title, forKey: ZHRandomTitleKey)
-        self.titleView?.attachIconHiden = false
         showNavSelectView(show: false)
     }
     
@@ -141,12 +141,16 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
         case .diningroom:
             DispatchQueue.main.async {
                 let nav = UINavigationController(rootViewController: ZHDiningRoomController())
-                self.present(nav, animated: true, completion: nil)
+                self.present(nav, animated: true) {
+                    self.showNavSelectView(show: false)
+                }
             }
         case .food:
             DispatchQueue.main.async {
                 let nav = UINavigationController(rootViewController: ZHRandomFoodController())
-                self.present(nav, animated: true, completion: nil)
+                self.present(nav, animated: true) {
+                    self.showNavSelectView(show: false)
+                }
             }
         }
     }
