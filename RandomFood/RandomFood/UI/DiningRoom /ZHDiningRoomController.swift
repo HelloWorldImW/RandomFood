@@ -25,7 +25,6 @@ class ZHDiningRoomController: ZHBaseController {
         table.showsVerticalScrollIndicator = false
         table.showsHorizontalScrollIndicator = false
         table.separatorStyle = .none
-        table.tableFooterView = UIView()
         table.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreData))
         return table
     }()
@@ -63,9 +62,30 @@ class ZHDiningRoomController: ZHBaseController {
         }
         
         doneBtn = addNavRightBtn(title: "完成", image: nil) {
-            ZHDataStore.share.insertDiningRooms(diningrooms: self.selectedrooms)
+            if self.isEdit {
+                ZHDataStore.share.deleteAllDiningRooms()
+                ZHDataStore.share.insertDiningRooms(diningrooms: self.diningrooms)
+            } else {
+                ZHDataStore.share.insertDiningRooms(diningrooms: self.selectedrooms)
+            }
             self.dismiss(animated: true, completion: nil)
         }
+        
+//        let footer = ZHAddNewItemView.createView()
+//        footer.addAddEvent {
+//            ZHAddItemEditView.show().setAddEvent(event: { (title) in
+//                let room = ZHDiningRoom()
+//                room.name = title
+//                self.diningrooms.append(room)
+//                let indexPath = IndexPath(row: self.diningrooms.count-1, section: 0)
+//                self.tableView.insertRows(at: [indexPath], with: .fade)
+//                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+//            })
+//            
+//        }
+//        tableView.tableFooterView = footer
+        
+        
         doneBtn?.isHidden = true
     }
     
@@ -140,23 +160,5 @@ extension ZHDiningRoomController {
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
             ZHAlertView.show(title: "最多只能选10项")
         }
-    }
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footer = ZHAddNewItemView.createView()
-        footer.addAddEvent {
-            ZHAddItemEditView.show().setAddEvent(event: { (title) in
-                let room = ZHDiningRoom()
-                room.name = title
-                self.diningrooms.append(room)
-                let indexPath = IndexPath(row: self.diningrooms.count-1, section: 0)
-                tableView.insertRows(at: [indexPath], with: .fade)
-                tableView.scrollToRow(at: indexPath, at: .top, animated: true)
-            })
-            
-        }
-        return footer
-    }
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 80.0
     }
 }

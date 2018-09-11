@@ -69,6 +69,10 @@ extension ZHDataStore {
         try! db.delete(fromTable: FoodTable, where: ZHFood.Properties.name.is(food.name!))
     }
     
+    func deleteAllFoods() {
+        try! db.delete(fromTable: FoodTable)
+    }
+    
     func searchAllFoods() -> [ZHFood] {
         let foods: [ZHFood] = try! db.getObjects(fromTable: FoodTable)
         return foods
@@ -88,6 +92,10 @@ extension ZHDataStore {
     
     func deleteDiningRoom(diningroom: ZHDiningRoom) {
         try! db.delete(fromTable: DiningRoomTable, where: ZHDiningRoom.Properties.name.is(diningroom.name!))
+    }
+    
+    func deleteAllDiningRooms() {
+        try! db.delete(fromTable: DiningRoomTable)
     }
     
     func searchAllDiningRooms() -> [ZHDiningRoom] {
