@@ -12,12 +12,18 @@ class ZHAlertView: UIAlertView {
     
     private var okcallback:(()->Void)?
     
-    class func show(title: String, message: String, okBlock: (()->Void)?) {
+    class func show(title: String, message: String, okBlock: (()->Void)? = nil) {
         let alert = ZHAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "取消", otherButtonTitles: "确定")
         alert.delegate = alert
         alert.okcallback = okBlock
         alert.show()
     }
+    
+    class func show(title: String ) {
+        let alert = ZHAlertView(title: title, message: nil, delegate: nil, cancelButtonTitle: "确定")
+        alert.show()
+    }
+    
 }
 
 extension ZHAlertView: UIAlertViewDelegate {

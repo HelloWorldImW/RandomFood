@@ -88,8 +88,10 @@ class ZHBaseController: UIViewController {
         let rightBtn = UIButton(type: .custom)
         rightBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         rightBtn.setImage(image, for: .normal)
+        rightBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         rightBtn.setTitle(title, for: .normal)
-        rightBtn.setTitleColor(UIColor.black, for: .normal)
+        rightBtn.setTitleColor(UIColor(red: 0.0, green: 122/255.0, blue: 1.0, alpha: 1.0), for: .normal)
+        rightBtn.setTitleColor(UIColor.gray, for: .disabled)
         rightBtn.rx.tap.asObservable().subscribe(onNext: {
             action()
         }).disposed(by: disposebag)

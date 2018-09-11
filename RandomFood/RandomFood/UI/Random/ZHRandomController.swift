@@ -37,6 +37,10 @@ class ZHRandomController: ZHBaseController {
             self.showNavSelectView(show: isSelected)
         }
         createUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         diningrooms = ZHDataStore.share.searchAllDiningRooms()
     }
     

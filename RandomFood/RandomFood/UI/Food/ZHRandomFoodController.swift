@@ -14,8 +14,8 @@ class ZHRandomFoodController: ZHBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavTitle(title: "吃什么", action: nil).attachIconHiden = true
-        addNavRightBtn(title: "取消", image: nil) {
-            self.dismiss(animated: true, completion: nil)
+        addNavRightBtn(title: "取消", image: nil) {[weak self] in
+            self?.dismiss(animated: true, completion: nil)
         }
     }
 
