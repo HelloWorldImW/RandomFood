@@ -72,6 +72,7 @@ class ZHDiningRoomController: ZHBaseController {
     private func configUI() {
         if isEdit {
             tableView.mj_footer.isHidden = true
+            doneBtn?.isHidden = false
             self.diningrooms = ZHDataStore.share.searchAllDiningRooms()
             self.tableView.reloadData()
         } else {
@@ -143,7 +144,15 @@ extension ZHDiningRoomController {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footer = ZHAddNewItemView.createView()
         footer.addAddEvent {
-            tableView.insertRows(at: [IndexPath(row: self.diningrooms.count, section: 0)], with: .fade)
+            ZHAddItemEditView.show().setAddEvent(event: { (title) in
+                let room = ZHDiningRoom()
+                room.name = title
+                self.diningrooms.append(room)
+                let indexPath = IndexPath(row: self.diningrooms.count-1, section: 0)
+                tableView.insertRows(at: [indexPath], with: .fade)
+                tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+            })
+            
         }
         return footer
     }
