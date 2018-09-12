@@ -17,17 +17,7 @@ class ZHDiningRoomController: ZHBaseController {
     
     private var doneBtn: UIButton?
     
-    lazy var tableView:UITableView = {
-        let table = UITableView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .plain)
-        table.delegate = self
-        table.dataSource = self
-        table.rowHeight = 80.0
-        table.showsVerticalScrollIndicator = false
-        table.showsHorizontalScrollIndicator = false
-        table.separatorStyle = .none
-        table.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreData))
-        return table
-    }()
+    let tableView: UITableView = UITableView(frame: CGRect(x: 0, y: 0, width: ZHScreenWidth, height: ZHScreenHeight), style: .plain)
     
     var diningrooms:Array<ZHDiningRoom> = []
     var selectedrooms:Array<ZHDiningRoom> = []
@@ -56,6 +46,34 @@ class ZHDiningRoomController: ZHBaseController {
     
     private func createUI() {
         setNavTitle(title: "去哪吃", action: nil).attachIconHiden = true
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 80.0
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.separatorStyle = .none
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreData))
+        
+        if isEdit {
+            let footer = ZHAddNewItemView.createView()
+            footer.addAddEvent {
+                ZHAddItemEditView.show().setAddEvent(event: { (title) in
+                    let room = ZHDiningRoom()
+                    room.name = title
+                    self.diningrooms.append(room)
+                    let indexPath = IndexPath(row: self.diningrooms.count-1, section: 0)
+                    self.tableView.insertRows(at: [indexPath], with: .fade)
+                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                })
+                
+            }
+            footer.frame = CGRect(x: 0, y: 0, width: ZHScreenWidth, height: 80)
+            tableView.tableFooterView = footer
+        } else {
+            tableView.tableFooterView = UIView()
+        }
+        
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.left.top.width.height.equalToSuperview()
@@ -70,22 +88,6 @@ class ZHDiningRoomController: ZHBaseController {
             }
             self.dismiss(animated: true, completion: nil)
         }
-        
-//        let footer = ZHAddNewItemView.createView()
-//        footer.addAddEvent {
-//            ZHAddItemEditView.show().setAddEvent(event: { (title) in
-//                let room = ZHDiningRoom()
-//                room.name = title
-//                self.diningrooms.append(room)
-//                let indexPath = IndexPath(row: self.diningrooms.count-1, section: 0)
-//                self.tableView.insertRows(at: [indexPath], with: .fade)
-//                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
-//            })
-//            
-//        }
-//        tableView.tableFooterView = footer
-        
-        
         doneBtn?.isHidden = true
     }
     

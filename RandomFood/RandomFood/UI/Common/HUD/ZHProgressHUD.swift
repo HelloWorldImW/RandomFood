@@ -7,25 +7,11 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ZHProgressHUD: UIView {
     
     @discardableResult
-    class func show(title: String?) -> ZHProgressHUD {
-        let progressBundle = Bundle.main.loadNibNamed("ZHProgressHUD", owner: nil, options: nil)
-        let progressHUD = progressBundle?.first as! ZHProgressHUD
-        let rootView = UIApplication.shared.keyWindow
-        rootView?.addSubview(progressHUD)
-        progressHUD.snp.makeConstraints { (make) in
-            make.left.top.width.height.equalToSuperview()
-        }
-        progressHUD.animationImageView.animationImages = [#imageLiteral(resourceName: "animation_location0"),#imageLiteral(resourceName: "animation_location1")]
-        progressHUD.animationImageView.animationDuration = 0.8
-        progressHUD.animationImageView.startAnimating()
-        progressHUD.titleLabel.text = title
-        return progressHUD
-    }
-    
     class func show(in superView: UIView, title: String?) -> ZHProgressHUD {
         let progressBundle = Bundle.main.loadNibNamed("ZHProgressHUD", owner: nil, options: nil)
         let progressHUD = progressBundle?.first as! ZHProgressHUD
@@ -33,9 +19,9 @@ class ZHProgressHUD: UIView {
         progressHUD.snp.makeConstraints { (make) in
             make.left.top.width.height.equalToSuperview()
         }
-        progressHUD.animationImageView.animationImages = [#imageLiteral(resourceName: "animation_location0"),#imageLiteral(resourceName: "animation_location1")]
-        progressHUD.animationImageView.animationDuration = 0.8
-        progressHUD.animationImageView.startAnimating()
+        let path = Bundle.main.path(forResource: "animation_location.gif", ofType: "")
+        let imgData = NSData(contentsOfFile: path!)!
+        progressHUD.animationImageView.image = UIImage.sd_animatedGIF(with: imgData as Data?)
         progressHUD.titleLabel.text = title
         return progressHUD
     }
