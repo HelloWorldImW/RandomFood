@@ -74,7 +74,21 @@ extension ZHDataStore {
     }
     
     func searchAllFoods() -> [ZHFood] {
-        let foods: [ZHFood] = try! db.getObjects(fromTable: FoodTable)
+        var foods: [ZHFood] = try! db.getObjects(fromTable: FoodTable)
+        if foods.isEmpty {
+            let path = Bundle.main.path(forResource: "foodImage", ofType: "plist")
+            let foodDic = NSDictionary(contentsOfFile: path!)
+            if let foodDic = foodDic {
+                foods = []
+                foodDic.forEach({ (name, image) in
+                    let food = ZHFood()
+                    food.name = name as? String
+                    food.image = image as? String
+                    foods.append(food)
+                })
+                self.insertFoods(foods: foods)
+            }
+        }
         return foods
     }
 }

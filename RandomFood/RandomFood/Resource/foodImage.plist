@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>苹果</key>
+	<string>apple</string>
+	<key>烧烤</key>
+	<string>chuanchuan</string>
+	<key>汉堡</key>
+	<string>hamburger</string>
+	<key>热狗</key>
+	<string>hotdog</string>
+	<key>胡萝卜</key>
+	<string>huluobo</string>
+	<key>冰淇淋</key>
+	<string>ice</string>
+	<key>鸡蛋</key>
+	<string>jidan</string>
+	<key>鸡腿</key>
+	<string>jitui</string>
+	<key>面包</key>
+	<string>mianbao</string>
+	<key>牛奶</key>
+	<string>niunai</string>
+	<key>面条</key>
+	<string>noodle</string>
+	<key>披萨</key>
+	<string>pisa</string>
+	<key>葡萄</key>
+	<string>putao</string>
+	<key>粥</key>
+	<string>tang</string>
+	<key>西餐</key>
+	<string>xican</string>
+	<key>西瓜</key>
+	<string>xigua</string>
+</dict>
+</plist>

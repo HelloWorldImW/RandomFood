@@ -24,8 +24,7 @@ class ZHRandomController: ZHBaseController {
     private var foodView: ZHFoodView?
     
     var diningrooms: Array<ZHDiningRoom>?
-    
-    
+    var foods: Array<ZHFood>?
     
     convenience init(type randomType: ZHRandomType) {
         self.init()
@@ -38,6 +37,16 @@ class ZHRandomController: ZHBaseController {
         setNavTitle(title: type.rawValue) { titleView, isSelected in
             self.showNavSelectView(show: isSelected)
         }
+        
+        typeSubject.asObservable().subscribe(onNext: { (type) in
+            switch type {
+            case .food:
+                self.foods = ZHDataStore.share.searchAllFoods()
+            case .diningroom:
+                self.diningrooms = ZHDataStore.share.searchAllDiningRooms()
+            }
+        }).disposed(by: disposebag)
+        
         createUI()
     }
     

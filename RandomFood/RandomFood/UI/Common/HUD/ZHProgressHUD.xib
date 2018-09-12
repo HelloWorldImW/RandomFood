@@ -19,19 +19,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bf7-Cr-lhM">
                     <rect key="frame" x="87" y="233" width="200" height="200"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animation_location.gif" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-w2-OoS">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animation_location.gif" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-w2-OoS">
                             <rect key="frame" x="60" y="60" width="80" height="80"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="eGC-w2-OoS" secondAttribute="height" multiplier="1:1" id="kvx-ci-cae"/>
+                                <constraint firstAttribute="width" secondItem="eGC-w2-OoS" secondAttribute="height" id="kvx-ci-cae"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在检索" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lV-7r-QH9">
-                            <rect key="frame" x="71.5" y="150" width="57.5" height="17"/>
+                            <rect key="frame" x="67.5" y="150" width="65.5" height="19.5"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="0ZR-gd-EhE"/>
                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="DjV-3T-ls8"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -61,6 +61,6 @@
         </view>
     </objects>
     <resources>
-        <image name="animation_location.gif" width="500" height="500"/>
+        <image name="animation_location.gif" width="160" height="296"/>
     </resources>
 </document>

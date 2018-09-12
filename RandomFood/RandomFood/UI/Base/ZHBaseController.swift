@@ -18,7 +18,10 @@ enum ZHNavSelectedType: Int {
 
 class ZHBaseController: UIViewController {
 
+    private var navType:ZHNavSelectedType?
+
     let disposebag = DisposeBag()
+    var typeSubject = PublishSubject<ZHNavSelectedType>()
     
     lazy var navSelectTableView: UITableView = {
         let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ZHScreenWidth, height: ZHScreenHeight), style: .plain)
@@ -135,9 +138,14 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let title = randoms[indexPath.row]
-       self.titleView?.title = title
+        self.titleView?.title = title
         UserDefaults.standard.set(title, forKey: ZHRandomTitleKey)
         showNavSelectView(show: false)
+        let type = ZHNavSelectedType(rawValue: indexPath.row)!
+        if type != self.navType {
+            self.navType = type
+            typeSubject.onNext(type)
+        }
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
