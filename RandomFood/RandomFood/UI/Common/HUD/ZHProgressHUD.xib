@@ -19,14 +19,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bf7-Cr-lhM">
                     <rect key="frame" x="87" y="233" width="200" height="200"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animation_location1" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-w2-OoS">
-                            <rect key="frame" x="70" y="70" width="60" height="60"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animation_location.gif" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-w2-OoS">
+                            <rect key="frame" x="60" y="60" width="80" height="80"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="eGC-w2-OoS" secondAttribute="height" multiplier="1:1" id="kvx-ci-cae"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lV-7r-QH9">
-                            <rect key="frame" x="88" y="140" width="25" height="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在检索" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lV-7r-QH9">
+                            <rect key="frame" x="71.5" y="150" width="57.5" height="17"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="0ZR-gd-EhE"/>
                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="DjV-3T-ls8"/>
@@ -37,12 +37,12 @@
                         </label>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="eGC-w2-OoS" secondAttribute="trailing" constant="70" id="2ib-Wf-ttN"/>
+                        <constraint firstAttribute="trailing" secondItem="eGC-w2-OoS" secondAttribute="trailing" constant="60" id="2ib-Wf-ttN"/>
                         <constraint firstItem="5lV-7r-QH9" firstAttribute="top" secondItem="eGC-w2-OoS" secondAttribute="bottom" constant="10" id="7qi-Ic-gQk"/>
                         <constraint firstItem="5lV-7r-QH9" firstAttribute="centerX" secondItem="eGC-w2-OoS" secondAttribute="centerX" id="C8z-bU-iKN"/>
                         <constraint firstItem="eGC-w2-OoS" firstAttribute="centerX" secondItem="Bf7-Cr-lhM" secondAttribute="centerX" id="dnH-MU-CmR"/>
                         <constraint firstItem="eGC-w2-OoS" firstAttribute="centerY" secondItem="Bf7-Cr-lhM" secondAttribute="centerY" id="gFC-qk-X91"/>
-                        <constraint firstItem="eGC-w2-OoS" firstAttribute="leading" secondItem="Bf7-Cr-lhM" secondAttribute="leading" constant="70" id="tIY-I4-qGA"/>
+                        <constraint firstItem="eGC-w2-OoS" firstAttribute="leading" secondItem="Bf7-Cr-lhM" secondAttribute="leading" constant="60" id="tIY-I4-qGA"/>
                         <constraint firstAttribute="width" secondItem="Bf7-Cr-lhM" secondAttribute="height" multiplier="1:1" id="wH2-zQ-RrK"/>
                     </constraints>
                 </view>
@@ -61,6 +61,6 @@
         </view>
     </objects>
     <resources>
-        <image name="animation_location1" width="100" height="100"/>
+        <image name="animation_location.gif" width="500" height="500"/>
     </resources>
 </document>
