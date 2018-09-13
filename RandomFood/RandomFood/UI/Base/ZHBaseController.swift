@@ -150,18 +150,21 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         let type: ZHNavSelectedType = ZHNavSelectedType(rawValue: indexPath.row)!
+        var editType: ZHRandomFoodType?
         switch type {
         case .diningroom:
-            DispatchQueue.main.async {
-                let diningroom = ZHDataListController()
-                diningroom.isEdit = true
-                let nav = UINavigationController(rootViewController: diningroom)
-                self.present(nav, animated: true) {
-                    self.showNavSelectView(show: false)
-                }
-            }
+            editType = ZHRandomFoodType.diningroom
         case .food:
-            print("adada")
+            editType = ZHRandomFoodType.food
+        }
+        DispatchQueue.main.async {
+            let diningroom = ZHDataListController()
+            diningroom.isEdit = true
+            diningroom.type = editType!
+            let nav = UINavigationController(rootViewController: diningroom)
+            self.present(nav, animated: true) {
+                self.showNavSelectView(show: false)
+            }
         }
     }
     

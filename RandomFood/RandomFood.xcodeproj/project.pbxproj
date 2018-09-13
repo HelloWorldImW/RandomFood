@@ -397,6 +397,7 @@
 		BE5FB095214A6FE600F8A566 /* DataList */ = {
 			isa = PBXGroup;
 			children = (
+				BE64F55021394280009E6BF6 /* ZHDataListController.swift */,
 			);
 			path = DataList;
 			sourceTree = "<group>";
@@ -699,7 +700,6 @@
 			isa = PBXGroup;
 			children = (
 				BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */,
-				BE64F55021394280009E6BF6 /* ZHDataListController.swift */,
 			);
 			path = Random;
 			sourceTree = "<group>";

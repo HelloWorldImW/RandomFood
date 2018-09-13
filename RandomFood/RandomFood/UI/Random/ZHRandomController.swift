@@ -9,24 +9,19 @@
 import UIKit
 import RxSwift
 
-enum ZHRandomType: String {
-    case food = "吃什么"
-    case diningroom = "去哪吃"
-}
-
 class ZHRandomController: ZHBaseController {
     
     private let sharkImageView = UIImageView(image: #imageLiteral(resourceName: "shark_0"))
     private let sharkTitleImageView = UIImageView(image: #imageLiteral(resourceName: "shart_title"))
-    private var type: ZHRandomType = .diningroom
+    private var type: ZHRandomFoodType = .diningroom
     
     private var diningroomView: ZHDiningRoomView? = nil
-    private var foodView: ZHFoodView?
+    private var foodView: ZHFoodView? = nil
     
     var diningrooms: Array<ZHDiningRoom>?
     var foods: Array<ZHFood>?
     
-    convenience init(type randomType: ZHRandomType) {
+    convenience init(type randomType: ZHRandomFoodType) {
         self.init()
         self.type = randomType
     }
@@ -46,13 +41,17 @@ class ZHRandomController: ZHBaseController {
                 self.diningrooms = ZHDataStore.share.searchAllDiningRooms()
             }
         }).disposed(by: disposebag)
-        
         createUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        diningrooms = ZHDataStore.share.searchAllDiningRooms()
+        switch type {
+        case .diningroom:
+            diningrooms = ZHDataStore.share.searchAllDiningRooms()
+        case .food:
+            foods = ZHDataStore.share.searchAllFoods()
+        }
     }
     
     private func random<T>(for items: Array<T>) -> T {
@@ -63,24 +62,25 @@ class ZHRandomController: ZHBaseController {
     
 }
 
-///获取数据
-extension ZHRandomController {
-    func loadData() {
-        
-    }
-}
-
 /// 摇一摇
 extension ZHRandomController {
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if diningrooms!.isEmpty {
-            ZHAlertView.show(title: "本地无数据", message: "是否开启定位获取周围餐厅") {
-                let nav = UINavigationController(rootViewController: ZHDataListController())
-                self.present(nav, animated: true)
+        switch type {
+        case .diningroom:
+            if diningrooms!.isEmpty {
+                ZHAlertView.show(title: "本地无数据", message: "是否开启定位获取周围餐厅") {
+                    let nav = UINavigationController(rootViewController: ZHDataListController())
+                    self.present(nav, animated: true)
+                }
+            } else {
+                if let diningroom = diningroomView {
+                    diningroom.hide()
+                }
+                sharkImageView.startAnimating()
             }
-        } else {
-            if let diningroom = diningroomView {
-                diningroom.hide()
+        case .food:
+            if let food = foodView {
+                food.hide()
             }
             sharkImageView.startAnimating()
         }
@@ -95,13 +95,22 @@ extension ZHRandomController {
     }
     
     private func showResult() {
-        guard !diningrooms!.isEmpty else {
-            return
-        }
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
-            self.sharkImageView.stopAnimating()
-            let room = self.random(for: self.diningrooms!)
-            self.diningroomView = ZHDiningRoomView.show(with: room)
+        switch type {
+        case .diningroom:
+            guard !diningrooms!.isEmpty else {
+                return
+            }
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
+                self.sharkImageView.stopAnimating()
+                let room = self.random(for: self.diningrooms!)
+                self.diningroomView = ZHDiningRoomView.show(with: room)
+            }
+        case .food:
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
+                self.sharkImageView.stopAnimating()
+                let food = self.random(for: self.foods!)
+                self.foodView = ZHFoodView.show(with: food)
+            }
         }
     }
     

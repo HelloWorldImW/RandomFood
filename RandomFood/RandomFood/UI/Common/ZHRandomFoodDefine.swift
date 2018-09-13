@@ -12,3 +12,8 @@ let ZHScreenWidth = UIScreen.main.bounds.size.width
 let ZHScreenHeight = UIScreen.main.bounds.size.height
 
 let ZHRandomTitleKey = "randomTitleKey"
+
+enum ZHRandomFoodType: String {
+    case food = "吃什么"
+    case diningroom = "去哪吃"
+}

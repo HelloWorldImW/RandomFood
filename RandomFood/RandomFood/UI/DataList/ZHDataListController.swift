@@ -12,6 +12,7 @@ import MJRefresh
 class ZHDataListController: ZHBaseController {
     
     var isEdit = false
+    var type: ZHRandomFoodType = .diningroom
     
     private var page = 1
     
@@ -22,8 +23,9 @@ class ZHDataListController: ZHBaseController {
     var diningrooms:Array<ZHDiningRoom> = []
     var selectedrooms:Array<ZHDiningRoom> = []
     
-    var footerView: ZHAddNewItemView?
+    var foods:Array<ZHFood> = []
     
+    var footerView: ZHAddNewItemView?
     var selectIndex: IndexPath?
     
     
@@ -67,7 +69,11 @@ class ZHDataListController: ZHBaseController {
     }
     
     private func createUI() {
-        setNavTitle(title: "去哪吃", action: nil).attachIconHiden = true
+        if isEdit {
+            setNavTitle(title: type.rawValue, action: nil).attachIconHiden = true
+        } else {
+            setNavTitle(title: "去哪吃", action: nil).attachIconHiden = true
+        }
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -80,12 +86,20 @@ class ZHDataListController: ZHBaseController {
         if isEdit {
             let footer = ZHAddNewItemView.createView()
             footer.addAddEvent {
-                let room = ZHDiningRoom()
-                self.diningrooms.append(room)
-                let indexPath = IndexPath(row: self.diningrooms.count-1, section: 0)
-                self.selectIndex = indexPath
-                self.tableView.insertRows(at: [indexPath], with: .fade)
-                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                let indexpath: IndexPath?
+                switch self.type {
+                case .diningroom:
+                    let room = ZHDiningRoom()
+                    self.diningrooms.append(room)
+                    indexpath = IndexPath(row: self.diningrooms.count-1, section: 0)
+                case .food:
+                    let food = ZHFood()
+                    self.foods.append(food)
+                    indexpath = IndexPath(row: self.foods.count-1, section: 0)
+                }
+                self.selectIndex = indexpath!
+                self.tableView.insertRows(at: [indexpath!], with: .fade)
+                self.tableView.scrollToRow(at: indexpath!, at: .top, animated: true)
             }
             footer.frame = CGRect(x: 0, y: 0, width: ZHScreenWidth, height: 80)
             tableView.tableFooterView = footer
@@ -99,8 +113,15 @@ class ZHDataListController: ZHBaseController {
         
         doneBtn = addNavRightBtn(title: "完成", image: nil) {
             if self.isEdit {
-                ZHDataStore.share.deleteAllDiningRooms()
-                ZHDataStore.share.insertDiningRooms(diningrooms: self.diningrooms)
+                switch self.type {
+                case .diningroom:
+                    ZHDataStore.share.deleteAllDiningRooms()
+                    ZHDataStore.share.insertDiningRooms(diningrooms: self.diningrooms)
+                case .food:
+                    ZHDataStore.share.deleteAllFoods()
+                    ZHDataStore.share.insertFoods(foods: self.foods)
+                }
+                
             } else {
                 ZHDataStore.share.insertDiningRooms(diningrooms: self.selectedrooms)
             }
@@ -113,7 +134,12 @@ class ZHDataListController: ZHBaseController {
         if isEdit {
             tableView.mj_footer.isHidden = true
             doneBtn?.isHidden = false
-            self.diningrooms = ZHDataStore.share.searchAllDiningRooms()
+            switch type {
+            case .diningroom:
+                self.diningrooms = ZHDataStore.share.searchAllDiningRooms()
+            case .food:
+                self.foods = ZHDataStore.share.searchAllFoods()
+            }
             self.tableView.reloadData()
         } else {
             let hud = ZHProgressHUD.show(in: view, title: "正在检索周边餐厅...")
@@ -141,11 +167,16 @@ class ZHDataListController: ZHBaseController {
 extension ZHDataListController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ZHShowItemCell.cell(for: tableView, isEdit: isEdit)
-        let diningroom = diningrooms[indexPath.row]
+        cell.accessoryType = .none
         cell.addDeleteEvent { (cell) in
             let indexpath = tableView.indexPath(for: cell)
             if let index = indexpath {
-                self.diningrooms.remove(at: index.row)
+                switch self.type {
+                case .diningroom:
+                    self.diningrooms.remove(at: index.row)
+                case .food:
+                    self.foods.remove(at: index.row)
+                }
                 tableView.deleteRows(at: [index], with: .fade)
                 self.doneBtn?.isEnabled = true
             }
@@ -163,30 +194,51 @@ extension ZHDataListController {
                 return
             }
             guard !text.isEmpty else {
-                self.diningrooms.remove(at: indexpath!.row)
+                switch self.type {
+                case .diningroom:
+                    self.diningrooms.remove(at: indexpath!.row)
+                case .food:
+                    self.foods.remove(at: indexpath!.row)
+                }
                 tableView.deleteRows(at: [indexpath!], with: .fade)
                 return
             }
-            let room = self.diningrooms[indexpath!.row]
-            room.name = text
+            switch self.type {
+            case .diningroom:
+                self.diningrooms[indexpath!.row].name = text
+            case .food:
+                self.foods[indexpath!.row].name = text
+            }
         }
-        if diningroom.name == nil {
+        let title: String?
+        switch type {
+        case .diningroom:
+            title = diningrooms[indexPath.row].name
+            if diningrooms[indexPath.row].isSelected {
+                cell.accessoryType = .checkmark
+            }
+        case .food:
+            title = foods[indexPath.row].name
+        }
+        if title == nil {
             DispatchQueue.main.async {
                 cell.becomeActive()
             }
         }
-        cell.title = diningroom.name
-        if diningroom.isSelected {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
+        cell.title = title
         cell.canEdit = isEdit
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return diningrooms.count
+        var count: Int = 0
+        switch type {
+        case .diningroom:
+            count = self.diningrooms.count
+        case .food:
+            count = self.foods.count
+        }
+        return count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
