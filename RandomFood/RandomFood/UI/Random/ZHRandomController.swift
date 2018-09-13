@@ -36,8 +36,10 @@ class ZHRandomController: ZHBaseController {
         typeSubject.asObservable().subscribe(onNext: { (type) in
             switch type {
             case .food:
+                self.type = ZHRandomFoodType.food
                 self.foods = ZHDataStore.share.searchAllFoods()
             case .diningroom:
+                self.type = ZHRandomFoodType.diningroom
                 self.diningrooms = ZHDataStore.share.searchAllDiningRooms()
             }
         }).disposed(by: disposebag)
