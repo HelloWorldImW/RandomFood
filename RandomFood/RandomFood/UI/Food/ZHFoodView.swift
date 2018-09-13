@@ -31,7 +31,9 @@ class ZHFoodView: UIView {
     }
     
     private func configView(with food: ZHFood) {
-        self.iconImageView.image = UIImage(named: food.image!)
+        if let image = food.image {
+            self.iconImageView.image = UIImage(named: image)            
+        }
         self.titleLabel.text = food.name
     }
     
