@@ -24,6 +24,8 @@ class ZHDiningRoomController: ZHBaseController {
     
     var footerView: ZHAddNewItemView?
     
+    var selectIndex: Int = 0
+    
     
     @objc func loadMoreData() {
         self.page += 1
@@ -45,6 +47,30 @@ class ZHDiningRoomController: ZHBaseController {
         super.viewDidLoad()
         createUI()
         configUI()
+        NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillShow).subscribe(onNext: { (notify) in
+            let kbValue = notify.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
+            let kbheight = kbValue.cgRectValue.height
+            var surplusHeight = ZHScreenHeight - kbheight
+            let tableRealHeight = self.selectIndex * 80
+            surplusHeight = surplusHeight - CGFloat(tableRealHeight)
+            if surplusHeight > 0 {
+                return
+            }
+            UIView.animate(withDuration: 0.5, animations: {
+                self.tableView.snp.updateConstraints({ (make) in
+                    make.top.equalToSuperview().offset(-kbheight)
+                })
+                self.view.layoutIfNeeded()
+            })
+        }).disposed(by: disposebag)
+        NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillHide).subscribe(onNext: { (value) in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.tableView.snp.updateConstraints({ (make) in
+                    make.top.equalToSuperview()
+                })
+                self.view.layoutIfNeeded()
+            })
+        }).disposed(by: disposebag)
     }
     
     private func createUI() {
@@ -63,6 +89,7 @@ class ZHDiningRoomController: ZHBaseController {
             footer.addAddEvent {
                 let room = ZHDiningRoom()
                 self.diningrooms.append(room)
+                self.selectIndex = self.diningrooms.count
                 let indexPath = IndexPath(row: self.diningrooms.count-1, section: 0)
                 self.tableView.insertRows(at: [indexPath], with: .fade)
                 self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
@@ -134,12 +161,13 @@ extension ZHDiningRoomController {
         }
         cell.addEditEvent { (editEnd, cell, text) in
             self.doneBtn?.isEnabled = editEnd
+            let indexpath = tableView.indexPath(for: cell)
             guard editEnd else {
+                self.selectIndex = indexPath.row+1
                 self.footerView?.disable = true;
                 return
             }
             self.footerView?.disable = false;
-            let indexpath = tableView.indexPath(for: cell)
             guard indexpath != nil else {
                 return
             }
@@ -162,7 +190,7 @@ extension ZHDiningRoomController {
         } else {
             cell.accessoryType = .none
         }
-        cell.canEdit = true
+        cell.canEdit = isEdit
         return cell
     }
     
