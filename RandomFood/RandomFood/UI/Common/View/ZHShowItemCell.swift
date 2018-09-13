@@ -12,9 +12,8 @@ class ZHShowItemCell: UITableViewCell {
     
     @IBOutlet weak private var titleTextField: UITextField!
     @IBOutlet weak private var deleteBtn: UIButton!
-    weak private var tableView: UITableView?
-    private var deleteEvent: ((IndexPath?)->Void)?
-    private var editEvent: ((Bool, IndexPath?, String)->Void)?
+    private var deleteEvent: ((ZHShowItemCell)->Void)?
+    private var editEvent: ((Bool, ZHShowItemCell, String)->Void)?
     private var isDelete: Bool = false
     
     var title: String? {
@@ -44,19 +43,18 @@ class ZHShowItemCell: UITableViewCell {
             cell?.deleteBtn.removeFromSuperview()
         }
         cell?.isDelete = false
-        cell?.tableView = tableView
         cell?.selectionStyle = .none
         return cell!
     }
     
     @discardableResult
-    func addDeleteEvent(event: ((IndexPath?)->Void)?) -> ZHShowItemCell {
+    func addDeleteEvent(event: ((ZHShowItemCell)->Void)?) -> ZHShowItemCell {
         deleteEvent = event
         return self
     }
     
     @discardableResult
-    func addEditEvent(event: ((Bool, IndexPath?, String)->Void)?) -> ZHShowItemCell {
+    func addEditEvent(event: ((Bool, ZHShowItemCell, String)->Void)?) -> ZHShowItemCell {
         editEvent = event
         return self
     }
@@ -67,11 +65,8 @@ class ZHShowItemCell: UITableViewCell {
     
     @IBAction private func deleteBtnClicked(_ sender: UIButton) {
         if let event = deleteEvent {
-            if let tableView = tableView {
-                let indexpath = tableView.indexPath(for: self)
-                isDelete = true
-                event(indexpath)
-            }
+            isDelete = true
+            event(self)
         }
     }
 }
@@ -88,7 +83,7 @@ extension ZHShowItemCell: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if let event = editEvent {
-            event(false, nil, "")
+            event(false, self, "")
         }
     }
     
@@ -96,10 +91,7 @@ extension ZHShowItemCell: UITextFieldDelegate {
         textField.resignFirstResponder()
         if let event = editEvent,
             !isDelete {
-            if let tableView = tableView {
-                let indexpath = tableView.indexPath(for: self)
-                event(true, indexpath, textField.text!)
-            }
+            event(true, self, textField.text!)
         }
     }
 }

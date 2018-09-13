@@ -27,24 +27,22 @@
                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUY-n1-Ca2">
+                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" highlightedImage="add_disable" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vtt-We-Xr6">
                             <rect key="frame" x="18" y="0.0" width="22" height="79"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="22" id="MJw-DR-B53"/>
+                                <constraint firstAttribute="width" constant="22" id="5td-AX-guH"/>
                             </constraints>
-                            <state key="normal" image="add"/>
-                        </button>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.94117647059999998" green="0.93725490199999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     <gestureRecognizers/>
                     <constraints>
-                        <constraint firstItem="uUY-n1-Ca2" firstAttribute="top" secondItem="Lb5-Hj-3z3" secondAttribute="top" id="Cun-1H-gh0"/>
-                        <constraint firstItem="HI0-Fm-9mw" firstAttribute="centerY" secondItem="Lb5-Hj-3z3" secondAttribute="centerY" id="Jq6-Zu-8o4"/>
-                        <constraint firstItem="HI0-Fm-9mw" firstAttribute="leading" secondItem="uUY-n1-Ca2" secondAttribute="trailing" constant="15" id="Kpc-UV-kGG"/>
-                        <constraint firstItem="HI0-Fm-9mw" firstAttribute="leading" secondItem="Lb5-Hj-3z3" secondAttribute="leading" priority="750" constant="18" id="QWB-id-mJz"/>
-                        <constraint firstAttribute="bottom" secondItem="uUY-n1-Ca2" secondAttribute="bottom" id="a0l-Iw-kUu"/>
+                        <constraint firstItem="HI0-Fm-9mw" firstAttribute="leading" secondItem="Vtt-We-Xr6" secondAttribute="trailing" constant="15" id="4Un-rP-ovD"/>
+                        <constraint firstItem="HI0-Fm-9mw" firstAttribute="centerY" secondItem="Lb5-Hj-3z3" secondAttribute="centerY" id="IDX-cY-Vod"/>
+                        <constraint firstItem="Vtt-We-Xr6" firstAttribute="leading" secondItem="Lb5-Hj-3z3" secondAttribute="leading" constant="18" id="RCx-Ia-XSV"/>
                         <constraint firstAttribute="trailing" secondItem="HI0-Fm-9mw" secondAttribute="trailing" constant="18" id="bcW-3p-jAh"/>
-                        <constraint firstItem="uUY-n1-Ca2" firstAttribute="leading" secondItem="Lb5-Hj-3z3" secondAttribute="leading" constant="18" id="g03-bX-Nwx"/>
+                        <constraint firstItem="Vtt-We-Xr6" firstAttribute="top" secondItem="Lb5-Hj-3z3" secondAttribute="top" id="clh-gM-uVG"/>
+                        <constraint firstAttribute="bottom" secondItem="Vtt-We-Xr6" secondAttribute="bottom" id="ww9-b9-Sfc"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -62,6 +60,8 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="iconImageView" destination="Vtt-We-Xr6" id="NJQ-V8-InP"/>
+                <outlet property="titleLabel" destination="HI0-Fm-9mw" id="KRA-d9-6Td"/>
                 <outletCollection property="gestureRecognizers" destination="YTM-nI-VU0" appends="YES" id="x5d-0h-gIb"/>
             </connections>
             <point key="canvasLocation" x="71" y="-230.5"/>
@@ -74,5 +74,6 @@
     </objects>
     <resources>
         <image name="add" width="22" height="22"/>
+        <image name="add_disable" width="22" height="22"/>
     </resources>
 </document>

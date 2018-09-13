@@ -22,6 +22,9 @@ class ZHDiningRoomController: ZHBaseController {
     var diningrooms:Array<ZHDiningRoom> = []
     var selectedrooms:Array<ZHDiningRoom> = []
     
+    var footerView: ZHAddNewItemView?
+    
+    
     @objc func loadMoreData() {
         self.page += 1
         ZHLocationHelper.share.searchAround(page: self.page).subscribe(onNext: { [weak self] (rooms) in
@@ -66,6 +69,7 @@ class ZHDiningRoomController: ZHBaseController {
             }
             footer.frame = CGRect(x: 0, y: 0, width: ZHScreenWidth, height: 80)
             tableView.tableFooterView = footer
+            footerView = footer
         } else {
             tableView.tableFooterView = UIView()
         }
@@ -120,29 +124,32 @@ extension ZHDiningRoomController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ZHShowItemCell.cell(for: tableView, isEdit: isEdit)
         let diningroom = diningrooms[indexPath.row]
-        cell.addDeleteEvent { (indexpath) in
+        cell.addDeleteEvent { (cell) in
+            let indexpath = tableView.indexPath(for: cell)
             if let index = indexpath {
                 self.diningrooms.remove(at: index.row)
                 tableView.deleteRows(at: [index], with: .fade)
                 self.doneBtn?.isEnabled = true
             }
         }
-        cell.addEditEvent { (editEnd,indexpath, text) in
+        cell.addEditEvent { (editEnd, cell, text) in
             self.doneBtn?.isEnabled = editEnd
             guard editEnd else {
+                self.footerView?.disable = true;
                 return
             }
-            guard !indexPath.isEmpty else {
+            self.footerView?.disable = false;
+            let indexpath = tableView.indexPath(for: cell)
+            guard indexpath != nil else {
                 return
             }
             guard !text.isEmpty else {
-                self.diningrooms.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                self.diningrooms.remove(at: indexpath!.row)
+                tableView.deleteRows(at: [indexpath!], with: .fade)
                 return
             }
-            let room = self.diningrooms[indexPath.row]
+            let room = self.diningrooms[indexpath!.row]
             room.name = text
-            
         }
         if diningroom.name == nil {
             DispatchQueue.main.async {
