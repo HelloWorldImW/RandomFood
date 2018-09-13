@@ -15,6 +15,7 @@ class ZHFood: WCDBSwift.TableCodable {
     var eatTime: Int?
     var image: String?
     
+    var canEdit = false //!< 是否可被编辑
     
     enum CodingKeys: String, CodingTableKey {
         typealias Root = ZHFood

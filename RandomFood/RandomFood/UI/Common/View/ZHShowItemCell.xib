@@ -21,15 +21,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixL-H2-trq">
                         <rect key="frame" x="15" y="15" width="326" height="83"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选项" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPg-La-pCx">
-                                <rect key="frame" x="55" y="32.5" width="253" height="19.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Nqb-1z-gTp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXR-8z-fzh">
                                 <rect key="frame" x="18" y="0.0" width="22" height="83"/>
                                 <constraints>
@@ -40,16 +31,28 @@
                                     <action selector="deleteBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4Gq-dk-LMU"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="选项" textAlignment="natural" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Nr-vw-lmw">
+                                <rect key="frame" x="55" y="31.5" width="253" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="0Fe-pl-CC9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="LLN-2Q-fej"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.93725490199999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="rPg-La-pCx" firstAttribute="centerY" secondItem="ixL-H2-trq" secondAttribute="centerY" id="FR0-Gw-8fo"/>
-                            <constraint firstItem="rPg-La-pCx" firstAttribute="leading" secondItem="oXR-8z-fzh" secondAttribute="trailing" constant="15" id="Jz3-mI-xzN"/>
+                            <constraint firstItem="4Nr-vw-lmw" firstAttribute="centerY" secondItem="ixL-H2-trq" secondAttribute="centerY" id="6LA-r7-bUl"/>
+                            <constraint firstItem="4Nr-vw-lmw" firstAttribute="leading" secondItem="ixL-H2-trq" secondAttribute="leading" priority="750" constant="18" id="MPL-iq-RUC"/>
                             <constraint firstItem="oXR-8z-fzh" firstAttribute="leading" secondItem="ixL-H2-trq" secondAttribute="leading" constant="18" id="Uin-mA-bxy"/>
+                            <constraint firstAttribute="trailing" secondItem="4Nr-vw-lmw" secondAttribute="trailing" priority="750" constant="18" id="V8w-Ql-9AS"/>
                             <constraint firstItem="oXR-8z-fzh" firstAttribute="top" secondItem="ixL-H2-trq" secondAttribute="top" id="jG7-iy-aQJ"/>
-                            <constraint firstItem="rPg-La-pCx" firstAttribute="leading" secondItem="ixL-H2-trq" secondAttribute="leading" priority="750" constant="18" id="qlQ-FN-sec"/>
+                            <constraint firstItem="4Nr-vw-lmw" firstAttribute="leading" secondItem="oXR-8z-fzh" secondAttribute="trailing" constant="15" id="qPE-Qk-Gmu"/>
                             <constraint firstAttribute="bottom" secondItem="oXR-8z-fzh" secondAttribute="bottom" id="s4u-pv-ZLi"/>
-                            <constraint firstAttribute="trailing" secondItem="rPg-La-pCx" secondAttribute="trailing" constant="18" id="vTN-yY-gcr"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -68,7 +71,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="deleteBtn" destination="oXR-8z-fzh" id="Iqg-O6-pyo"/>
-                <outlet property="titleLabel" destination="rPg-La-pCx" id="zbm-s5-fyk"/>
+                <outlet property="titleTextField" destination="4Nr-vw-lmw" id="1rY-HQ-dlN"/>
             </connections>
             <point key="canvasLocation" x="52" y="85.5"/>
         </tableViewCell>

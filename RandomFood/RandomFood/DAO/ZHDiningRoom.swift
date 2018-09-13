@@ -19,7 +19,7 @@ class ZHDiningRoom: WCDBSwift.TableCodable {
     var cost: Float = 0.0 //!< 人均消费
     
     var isSelected = false //!<是否被选中，不入库
-    
+    var canEdit = false //!< 是否可被编辑
     
     enum CodingKeys: String, CodingTableKey {
         typealias Root = ZHDiningRoom

@@ -58,15 +58,11 @@ class ZHDiningRoomController: ZHBaseController {
         if isEdit {
             let footer = ZHAddNewItemView.createView()
             footer.addAddEvent {
-                ZHAddItemEditView.show().setAddEvent(event: { (title) in
-                    let room = ZHDiningRoom()
-                    room.name = title
-                    self.diningrooms.append(room)
-                    let indexPath = IndexPath(row: self.diningrooms.count-1, section: 0)
-                    self.tableView.insertRows(at: [indexPath], with: .fade)
-                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
-                })
-                
+                let room = ZHDiningRoom()
+                self.diningrooms.append(room)
+                let indexPath = IndexPath(row: self.diningrooms.count-1, section: 0)
+                self.tableView.insertRows(at: [indexPath], with: .fade)
+                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
             }
             footer.frame = CGRect(x: 0, y: 0, width: ZHScreenWidth, height: 80)
             tableView.tableFooterView = footer
@@ -128,6 +124,29 @@ extension ZHDiningRoomController {
             if let index = indexpath {
                 self.diningrooms.remove(at: index.row)
                 tableView.deleteRows(at: [index], with: .fade)
+                self.doneBtn?.isEnabled = true
+            }
+        }
+        cell.addEditEvent { (editEnd,indexpath, text) in
+            self.doneBtn?.isEnabled = editEnd
+            guard editEnd else {
+                return
+            }
+            guard !indexPath.isEmpty else {
+                return
+            }
+            guard !text.isEmpty else {
+                self.diningrooms.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                return
+            }
+            let room = self.diningrooms[indexPath.row]
+            room.name = text
+            
+        }
+        if diningroom.name == nil {
+            DispatchQueue.main.async {
+                cell.becomeActive()
             }
         }
         cell.title = diningroom.name
@@ -136,7 +155,7 @@ extension ZHDiningRoomController {
         } else {
             cell.accessoryType = .none
         }
-        cell.selectionStyle = .none
+        cell.canEdit = true
         return cell
     }
     
