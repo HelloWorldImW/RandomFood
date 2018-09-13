@@ -51,10 +51,7 @@ class ZHDataListController: ZHBaseController {
             let kbValue = notify.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
             let kbheight = kbValue.cgRectValue.height
             var tframe = self.tableView.frame
-            if tframe.height != self.view.frame.height {
-                return
-            }
-            tframe.size.height -= kbheight
+            tframe.size.height = self.view.frame.height - kbheight
             UIView.animate(withDuration: 0.5, animations: {
                 self.tableView.frame = tframe
                 if let index = self.selectIndex {
