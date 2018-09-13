@@ -75,7 +75,7 @@ extension ZHRandomController {
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         if diningrooms!.isEmpty {
             ZHAlertView.show(title: "本地无数据", message: "是否开启定位获取周围餐厅") {
-                let nav = UINavigationController(rootViewController: ZHDiningRoomController())
+                let nav = UINavigationController(rootViewController: ZHDataListController())
                 self.present(nav, animated: true)
             }
         } else {

@@ -153,7 +153,7 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
         switch type {
         case .diningroom:
             DispatchQueue.main.async {
-                let diningroom = ZHDiningRoomController()
+                let diningroom = ZHDataListController()
                 diningroom.isEdit = true
                 let nav = UINavigationController(rootViewController: diningroom)
                 self.present(nav, animated: true) {
@@ -161,12 +161,7 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
                 }
             }
         case .food:
-            DispatchQueue.main.async {
-                let nav = UINavigationController(rootViewController: ZHRandomFoodController())
-                self.present(nav, animated: true) {
-                    self.showNavSelectView(show: false)
-                }
-            }
+            print("adada")
         }
     }
     

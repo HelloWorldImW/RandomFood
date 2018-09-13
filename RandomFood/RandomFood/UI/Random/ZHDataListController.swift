@@ -9,7 +9,7 @@
 import UIKit
 import MJRefresh
 
-class ZHDiningRoomController: ZHBaseController {
+class ZHDataListController: ZHBaseController {
     
     var isEdit = false
     
@@ -24,7 +24,7 @@ class ZHDiningRoomController: ZHBaseController {
     
     var footerView: ZHAddNewItemView?
     
-    var selectIndex: Int = 0
+    var selectIndex: IndexPath?
     
     
     @objc func loadMoreData() {
@@ -50,25 +50,21 @@ class ZHDiningRoomController: ZHBaseController {
         NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillShow).subscribe(onNext: { (notify) in
             let kbValue = notify.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
             let kbheight = kbValue.cgRectValue.height
-            var surplusHeight = ZHScreenHeight - kbheight
-            let tableRealHeight = self.selectIndex * 80
-            surplusHeight = surplusHeight - CGFloat(tableRealHeight)
-            if surplusHeight > 0 {
+            var tframe = self.tableView.frame
+            if tframe.height != self.view.frame.height {
                 return
             }
+            tframe.size.height -= kbheight
             UIView.animate(withDuration: 0.5, animations: {
-                self.tableView.snp.updateConstraints({ (make) in
-                    make.top.equalToSuperview().offset(-kbheight)
-                })
-                self.view.layoutIfNeeded()
+                self.tableView.frame = tframe
+                if let index = self.selectIndex {
+                    self.tableView.scrollToRow(at: index, at: .top, animated: false)
+                }
             })
         }).disposed(by: disposebag)
         NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillHide).subscribe(onNext: { (value) in
             UIView.animate(withDuration: 0.5, animations: {
-                self.tableView.snp.updateConstraints({ (make) in
-                    make.top.equalToSuperview()
-                })
-                self.view.layoutIfNeeded()
+                self.tableView.frame = self.view.frame
             })
         }).disposed(by: disposebag)
     }
@@ -89,8 +85,8 @@ class ZHDiningRoomController: ZHBaseController {
             footer.addAddEvent {
                 let room = ZHDiningRoom()
                 self.diningrooms.append(room)
-                self.selectIndex = self.diningrooms.count
                 let indexPath = IndexPath(row: self.diningrooms.count-1, section: 0)
+                self.selectIndex = indexPath
                 self.tableView.insertRows(at: [indexPath], with: .fade)
                 self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
             }
@@ -102,9 +98,7 @@ class ZHDiningRoomController: ZHBaseController {
         }
         
         view.addSubview(tableView)
-        tableView.snp.makeConstraints { (make) in
-            make.left.top.width.height.equalToSuperview()
-        }
+        tableView.frame = view.frame
         
         doneBtn = addNavRightBtn(title: "完成", image: nil) {
             if self.isEdit {
@@ -147,7 +141,7 @@ class ZHDiningRoomController: ZHBaseController {
     
 }
 
-extension ZHDiningRoomController {
+extension ZHDataListController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ZHShowItemCell.cell(for: tableView, isEdit: isEdit)
         let diningroom = diningrooms[indexPath.row]
@@ -163,7 +157,7 @@ extension ZHDiningRoomController {
             self.doneBtn?.isEnabled = editEnd
             let indexpath = tableView.indexPath(for: cell)
             guard editEnd else {
-                self.selectIndex = indexPath.row+1
+                self.selectIndex = indexPath
                 self.footerView?.disable = true;
                 return
             }
