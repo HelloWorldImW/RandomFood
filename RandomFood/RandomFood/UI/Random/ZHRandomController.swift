@@ -29,11 +29,11 @@ class ZHRandomController: ZHBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNavTitle(title: type.rawValue) { titleView, isSelected in
+        setNavTitle(title: type.rawValue) { [unowned self] titleView, isSelected in
             self.showNavSelectView(show: isSelected)
         }
         
-        typeSubject.asObservable().subscribe(onNext: { (type) in
+        typeSubject.asObservable().subscribe(onNext: { [unowned self] (type) in
             switch type {
             case .food:
                 self.type = ZHRandomFoodType.food
@@ -70,7 +70,7 @@ extension ZHRandomController {
         switch type {
         case .diningroom:
             if diningrooms!.isEmpty {
-                ZHAlertView.show(title: "本地无数据", message: "是否开启定位获取周围餐厅") {
+                ZHAlertView.show(title: "本地无数据", message: "是否开启定位获取周围餐厅") {[unowned self] in
                     let nav = UINavigationController(rootViewController: ZHDataListController())
                     self.present(nav, animated: true)
                 }

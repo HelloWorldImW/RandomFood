@@ -23,5 +23,7 @@
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 
+/// Bugly
+#import <Bugly/Bugly.h>
 
 #endif /* Swift_Bridge_Objective_C_h */

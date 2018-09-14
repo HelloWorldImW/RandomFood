@@ -31,17 +31,17 @@ class ZHDataListController: ZHBaseController {
     
     @objc func loadMoreData() {
         self.page += 1
-        ZHLocationHelper.share.searchAround(page: self.page).subscribe(onNext: { [weak self] (rooms) in
-            self?.diningrooms.append(contentsOf: rooms)
+        ZHLocationHelper.share.searchAround(page: self.page).subscribe(onNext: { [unowned self] (rooms) in
+            self.diningrooms.append(contentsOf: rooms)
             if rooms.count < 20 {
-                self?.tableView.mj_footer.endRefreshingWithNoMoreData()
+                self.tableView.mj_footer.endRefreshingWithNoMoreData()
             } else {
-                self?.tableView.mj_footer.endRefreshing()
+                self.tableView.mj_footer.endRefreshing()
             }
-            self?.tableView.reloadData()
-        }, onError: {[weak self] (error) in
-            self?.page -= 1
-            self?.tableView.mj_footer.endRefreshing()
+            self.tableView.reloadData()
+        }, onError: {[unowned self] (error) in
+            self.page -= 1
+            self.tableView.mj_footer.endRefreshing()
         }).disposed(by: disposebag)
     }
     
@@ -49,7 +49,7 @@ class ZHDataListController: ZHBaseController {
         super.viewDidLoad()
         createUI()
         configUI()
-        NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillShow).subscribe(onNext: { (notify) in
+        NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillShow).subscribe(onNext: {[unowned self] (notify) in
             let kbValue = notify.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
             let kbheight = kbValue.cgRectValue.height
             var tframe = self.tableView.frame
@@ -61,7 +61,7 @@ class ZHDataListController: ZHBaseController {
                 }
             })
         }).disposed(by: disposebag)
-        NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillHide).subscribe(onNext: { (value) in
+        NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillHide).subscribe(onNext: {[unowned self] (value) in
             UIView.animate(withDuration: 0.5, animations: {
                 self.tableView.frame = self.view.frame
             })
@@ -85,7 +85,7 @@ class ZHDataListController: ZHBaseController {
         
         if isEdit {
             let footer = ZHAddNewItemView.createView()
-            footer.addAddEvent {
+            footer.addAddEvent { [unowned self] in
                 let indexpath: IndexPath?
                 switch self.type {
                 case .diningroom:
@@ -111,7 +111,7 @@ class ZHDataListController: ZHBaseController {
         view.addSubview(tableView)
         tableView.frame = view.frame
         
-        doneBtn = addNavRightBtn(title: "完成", image: nil) {
+        doneBtn = addNavRightBtn(title: "完成", image: nil) {[unowned self] in
             if self.isEdit {
                 switch self.type {
                 case .diningroom:
@@ -168,7 +168,7 @@ extension ZHDataListController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ZHShowItemCell.cell(for: tableView, isEdit: isEdit)
         cell.accessoryType = .none
-        cell.addDeleteEvent { (cell) in
+        cell.addDeleteEvent { [unowned self] (cell) in
             let indexpath = tableView.indexPath(for: cell)
             if let index = indexpath {
                 switch self.type {
@@ -179,13 +179,14 @@ extension ZHDataListController {
                 }
                 tableView.deleteRows(at: [index], with: .fade)
                 self.doneBtn?.isEnabled = true
+                self.footerView?.disable = false;
             }
         }
-        cell.addEditEvent { (editEnd, cell, text) in
+        cell.addEditEvent { [unowned self] (editEnd, cell, text) in
             self.doneBtn?.isEnabled = editEnd
             let indexpath = tableView.indexPath(for: cell)
             guard editEnd else {
-                self.selectIndex = indexPath
+                self.selectIndex = indexpath
                 self.footerView?.disable = true;
                 return
             }

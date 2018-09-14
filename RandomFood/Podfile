@@ -13,4 +13,5 @@ target 'RandomFood' do
     pod 'SnapKit'
     pod 'MJRefresh'
     pod 'SDWebImage'
+    pod 'Bugly'
 end

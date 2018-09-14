@@ -45,7 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config?.requestConfig(["SDK20181227120814372t7f1vq4n2ehu"], sdkType: AdViewSDKType_Banner)
         config?.requestConfig(["SDK20181227120814372t7f1vq4n2ehu"], sdkType: AdViewSDKType_Instl)
         config?.requestConfig(["SDK20181227120814372t7f1vq4n2ehu"], sdkType: AdViewSDKType_SpreadScreen)
-        
+        /// Bugly
+        Bugly.start(withAppId: "2e9ef610ad")
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
@@ -56,6 +57,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: AdSpreadScreenManagerDelegate {
     func adSpreadScreenWindow() -> UIWindow! {
         return window
+    }
+    func adSpreadScreenLogoImgName() -> String! {
+        return ""
     }
 }
 

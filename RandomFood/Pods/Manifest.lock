@@ -4,6 +4,7 @@ PODS:
     - AMapFoundation (~> 1.4)
   - AMapSearch (6.1.1):
     - AMapFoundation (~> 1.4)
+  - Bugly (2.5.0)
   - MJRefresh (3.1.15.6)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
@@ -19,6 +20,7 @@ PODS:
 DEPENDENCIES:
   - AMapLocation
   - AMapSearch
+  - Bugly
   - MJRefresh
   - RxCocoa
   - RxSwift
@@ -31,6 +33,7 @@ SPEC REPOS:
     - AMapFoundation
     - AMapLocation
     - AMapSearch
+    - Bugly
     - MJRefresh
     - RxCocoa
     - RxSwift
@@ -42,6 +45,7 @@ SPEC CHECKSUMS:
   AMapFoundation: 58f883c80754c659cf626deb3150936bfe8f1772
   AMapLocation: cf024b53dc03663efb4ea4bcce27d4cce58bb97a
   AMapSearch: 3dcbf85c403a2a0fe0eda5318caabc272b31f5e1
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
@@ -49,6 +53,6 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   WCDB.swift: 4f0f3e19085546ef85a69b5087ec5e1dec0f88b1
 
-PODFILE CHECKSUM: e8223c75a77a9479559046825c6aeb7553c907b0
+PODFILE CHECKSUM: 58d1051f5632934f42dc873a4c13db27da7b8c97
 
 COCOAPODS: 1.5.3
