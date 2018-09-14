@@ -113,6 +113,9 @@ extension ZHRandomController {
     }
     
     private func showResult() {
+        guard isShaking else {
+            return
+        }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
             switch self.type {
             case .diningroom:
