@@ -18,6 +18,7 @@ class ZHRandomController: ZHBaseController {
     
     private var diningroomView: ZHDiningRoomView? = nil
     private var foodView: ZHFoodView? = nil
+    private var isShaking = false
     
     var diningrooms: Array<ZHDiningRoom>?
     var foods: Array<ZHFood>?
@@ -68,6 +69,9 @@ class ZHRandomController: ZHBaseController {
 /// 摇一摇
 extension ZHRandomController {
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        guard !isShaking else {
+            return
+        }
         switch type {
         case .diningroom:
             if diningrooms!.isEmpty {
@@ -88,6 +92,7 @@ extension ZHRandomController {
             sharkImageView.startAnimating()
         }
         playAudio()
+        isShaking = true
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -124,6 +129,7 @@ extension ZHRandomController {
             }
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+            self.isShaking = false
         }
     }
     
