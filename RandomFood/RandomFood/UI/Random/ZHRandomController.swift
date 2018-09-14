@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import AudioToolbox.AudioServices
 
 class ZHRandomController: ZHBaseController {
     
@@ -86,6 +87,7 @@ extension ZHRandomController {
             }
             sharkImageView.startAnimating()
         }
+        playAudio()
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -96,23 +98,32 @@ extension ZHRandomController {
         showResult()
     }
     
+    func playAudio() {
+        let path = Bundle.main.path(forResource: "shake", ofType: "wav")
+        var soundID: SystemSoundID = 0
+        if let path = path {
+            AudioServicesCreateSystemSoundID(URL(fileURLWithPath: path) as CFURL, &soundID)
+            AudioServicesPlaySystemSound(soundID);
+        }
+    }
+    
     private func showResult() {
-        switch type {
-        case .diningroom:
-            guard !diningrooms!.isEmpty else {
-                return
-            }
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
+            switch self.type {
+            case .diningroom:
+                guard !self.diningrooms!.isEmpty else {
+                    return
+                }
                 self.sharkImageView.stopAnimating()
                 let room = self.random(for: self.diningrooms!)
                 self.diningroomView = ZHDiningRoomView.show(with: room)
-            }
-        case .food:
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.0) {
+            case .food:
                 self.sharkImageView.stopAnimating()
                 let food = self.random(for: self.foods!)
                 self.foodView = ZHFoodView.show(with: food)
             }
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
         }
     }
     

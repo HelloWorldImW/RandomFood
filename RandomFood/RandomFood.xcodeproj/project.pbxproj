@@ -20,6 +20,7 @@
 		BE5FB0192147B9BE00F8A566 /* ZHAddNewItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB0182147B9BE00F8A566 /* ZHAddNewItemView.xib */; };
 		BE5FB01F2148AF2700F8A566 /* animation_location.gif in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB01E2148AF2700F8A566 /* animation_location.gif */; };
 		BE5FB02D2148F94000F8A566 /* foodImage.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB02C2148F94000F8A566 /* foodImage.plist */; };
+		BE5FB0D6214BBF7700F8A566 /* shake.wav in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB0D5214BBF7600F8A566 /* shake.wav */; };
 		BE64E13E21311995009E6BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64E13D21311995009E6BF6 /* AppDelegate.swift */; };
 		BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14421311996009E6BF6 /* Assets.xcassets */; };
 		BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE64E14621311996009E6BF6 /* LaunchScreen.storyboard */; };
@@ -106,6 +107,7 @@
 		BE5FB0182147B9BE00F8A566 /* ZHAddNewItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHAddNewItemView.xib; sourceTree = "<group>"; };
 		BE5FB01E2148AF2700F8A566 /* animation_location.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation_location.gif; sourceTree = "<group>"; };
 		BE5FB02C2148F94000F8A566 /* foodImage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = foodImage.plist; sourceTree = "<group>"; };
+		BE5FB0D5214BBF7600F8A566 /* shake.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake.wav; sourceTree = "<group>"; };
 		BE64E13A21311995009E6BF6 /* RandomFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE64E13D21311995009E6BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE64E14421311996009E6BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE64E63721343F0C009E6BF6 /* AudioToolbox.framework in Frameworks */,
 				BE64E65521343F9F009E6BF6 /* libz.1.2.5.tbd in Frameworks */,
 				BE64E65321343F92009E6BF6 /* WebKit.framework in Frameworks */,
 				BE64E65121343F8A009E6BF6 /* Accounts.framework in Frameworks */,
@@ -258,7 +261,6 @@
 				BE64E63B21343F26009E6BF6 /* CoreGraphics.framework in Frameworks */,
 				BE64E63921343F1C009E6BF6 /* AVFoundation.framework in Frameworks */,
 				BE64E61421343DA7009E6BF6 /* AddressBook.framework in Frameworks */,
-				BE64E63721343F0C009E6BF6 /* AudioToolbox.framework in Frameworks */,
 				BE64E63521343F04009E6BF6 /* Social.framework in Frameworks */,
 				BE64E63121343EF1009E6BF6 /* MobileCoreServices.framework in Frameworks */,
 				BE64E62F21343EE4009E6BF6 /* MapKit.framework in Frameworks */,
@@ -463,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				BE5FB01E2148AF2700F8A566 /* animation_location.gif */,
+				BE5FB0D5214BBF7600F8A566 /* shake.wav */,
 				BE64E14421311996009E6BF6 /* Assets.xcassets */,
 				BE64E14921311996009E6BF6 /* Info.plist */,
 				BE64E659213440E2009E6BF6 /* Swift-Bridge-Objective-C.h */,
@@ -795,6 +798,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5FB02D2148F94000F8A566 /* foodImage.plist in Resources */,
+				BE5FB0D6214BBF7700F8A566 /* shake.wav in Resources */,
 				BE5FB00E214754AB00F8A566 /* ZHProgressHUD.xib in Resources */,
 				BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */,
 				BE5FAFE5214399F000F8A566 /* ZHShowItemCell.xib in Resources */,

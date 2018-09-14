@@ -60,8 +60,13 @@ extension AppDelegate: AdSpreadScreenManagerDelegate {
     func adSpreadScreenWindow() -> UIWindow! {
         return window
     }
+    
     func adSpreadScreenLogoImgName() -> String! {
         return "adImage"
+    }
+    
+    func adSpreadUsingSKStoreProductViewController() -> Bool {
+        return true
     }
 }
 
