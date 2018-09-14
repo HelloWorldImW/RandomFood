@@ -179,7 +179,7 @@ extension ZHDataListController {
                     self.foods.remove(at: index.row)
                 }
                 tableView.deleteRows(at: [index], with: .fade)
-                self.doneBtn?.isEnabled = self.endEdit
+                self.doneBtn?.isEnabled = index == self.selectIndex ? true : self.endEdit
                 self.footerView?.disable = false;
             }
         }
