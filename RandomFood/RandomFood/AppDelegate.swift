@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /// 配置第三方库
         configThirdLib()
         
+        showScreenAd()
+        
         return true
     }
     
@@ -59,7 +61,7 @@ extension AppDelegate: AdSpreadScreenManagerDelegate {
         return window
     }
     func adSpreadScreenLogoImgName() -> String! {
-        return ""
+        return "adImage"
     }
 }
 
