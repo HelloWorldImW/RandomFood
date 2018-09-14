@@ -13,6 +13,7 @@ class ZHDataListController: ZHBaseController {
     
     var isEdit = false
     var type: ZHRandomFoodType = .diningroom
+    var endEdit = true
     
     private var page = 1
     
@@ -178,16 +179,19 @@ extension ZHDataListController {
                     self.foods.remove(at: index.row)
                 }
                 tableView.deleteRows(at: [index], with: .fade)
-                self.doneBtn?.isEnabled = true
+                self.doneBtn?.isEnabled = self.endEdit
                 self.footerView?.disable = false;
             }
         }
         cell.addEditEvent { [unowned self] (editEnd, cell, text) in
             self.doneBtn?.isEnabled = editEnd
             let indexpath = tableView.indexPath(for: cell)
+            self.endEdit = editEnd
             guard editEnd else {
                 self.selectIndex = indexpath
-                self.footerView?.disable = true;
+                if cell.title == nil {
+                    self.footerView?.disable = true;
+                }
                 return
             }
             self.footerView?.disable = false;
@@ -211,6 +215,20 @@ extension ZHDataListController {
                 self.foods[indexpath!.row].name = text
             }
         }
+        
+        cell.addTextInputEvent { [unowned self] (cell, text) in
+            let indexpath = tableView.indexPath(for: cell)
+            if let index = indexpath {
+                switch self.type {
+                case .diningroom:
+                    self.diningrooms[index.row].name = text
+                case .food:
+                    self.foods[index.row].name = text
+                }
+                self.footerView?.disable = text.isEmpty;
+            }
+        }
+        
         let title: String?
         switch type {
         case .diningroom:

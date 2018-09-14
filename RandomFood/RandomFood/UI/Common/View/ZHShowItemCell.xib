@@ -40,6 +40,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
+                                    <action selector="textFiledEditingChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="qFW-gJ-5BL"/>
                                     <outlet property="delegate" destination="KGk-i7-Jjw" id="LLN-2Q-fej"/>
                                 </connections>
                             </textField>

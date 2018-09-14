@@ -14,6 +14,7 @@ class ZHShowItemCell: UITableViewCell {
     @IBOutlet weak private var deleteBtn: UIButton!
     private var deleteEvent: ((ZHShowItemCell)->Void)?
     private var editEvent: ((Bool, ZHShowItemCell, String)->Void)?
+    private var inputEvent: ((ZHShowItemCell, String)->Void)?
     private var isDelete: Bool = false
     
     var title: String? {
@@ -59,8 +60,21 @@ class ZHShowItemCell: UITableViewCell {
         return self
     }
     
+    @discardableResult
+    func addTextInputEvent(event: ((ZHShowItemCell, String)->Void)?) -> ZHShowItemCell {
+        inputEvent = event
+        return self
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    @IBAction func textFiledEditingChanged(_ textField: UITextField) {
+        if let event = inputEvent,
+            !isDelete {
+            event(self, textField.text!)
+        }
     }
     
     @IBAction private func deleteBtnClicked(_ sender: UIButton) {
@@ -86,6 +100,8 @@ extension ZHShowItemCell: UITextFieldDelegate {
             event(false, self, "")
         }
     }
+    
+   
     
     private func doneCallback(with textField: UITextField) {
         textField.resignFirstResponder()

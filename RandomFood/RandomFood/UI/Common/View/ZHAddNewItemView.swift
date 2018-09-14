@@ -18,6 +18,7 @@ class ZHAddNewItemView: UIView {
     class func createView() -> ZHAddNewItemView {
         let addItemBundle = Bundle.main.loadNibNamed("ZHAddNewItemView", owner: nil, options: nil)
         let addItemView = addItemBundle?.first as! ZHAddNewItemView
+        addItemView.titleLabel.textColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1.0)
         return addItemView
     }
     
