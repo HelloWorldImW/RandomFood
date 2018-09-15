@@ -57,7 +57,7 @@ class ZHBaseController: UIViewController {
     }
     
     func showNavSelectView(show: Bool) {
-        self.titleView?.attachIconHiden = show
+        self.titleView?.attachIconHiden = false
         if show {
             view.addSubview(navSelectTableView)
             self.navSelectTableView.snp.makeConstraints { (make) in
