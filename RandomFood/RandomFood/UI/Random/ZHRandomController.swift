@@ -79,20 +79,22 @@ extension ZHRandomController {
                     let nav = UINavigationController(rootViewController: ZHDataListController())
                     self.present(nav, animated: true)
                 }
+                self.isShaking = false
             } else {
                 if let diningroom = diningroomView {
                     diningroom.hide()
                 }
+                isShaking = true
                 sharkImageView.startAnimating()
             }
         case .food:
             if let food = foodView {
                 food.hide()
             }
+            isShaking = true
             sharkImageView.startAnimating()
         }
         playAudio()
-        isShaking = true
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {

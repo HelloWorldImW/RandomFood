@@ -30,7 +30,12 @@ class ZHBaseController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
         tableView.rowHeight = 50
-        tableView.backgroundColor = UIColor(white: 1.0, alpha: 0.96)
+        let bgImageView = UIImageView(image: #imageLiteral(resourceName: "navSelectBg"))
+        bgImageView.contentMode = .bottom
+        tableView.backgroundView = bgImageView
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tableViewClicked(_:)))
+        tap.delegate = self
+        tableView.addGestureRecognizer(tap)
         return tableView
     }()
     
@@ -102,6 +107,9 @@ class ZHBaseController: UIViewController {
         navigationItem.rightBarButtonItem = rightItem
         return rightBtn
     }
+    @objc func tableViewClicked(_ tap: UITapGestureRecognizer) {
+        showNavSelectView(show: false)
+    }
     
 }
 
@@ -114,6 +122,7 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
             cell?.textLabel?.font = UIFont.systemFont(ofSize: 16)
             cell?.selectionStyle = .none
             cell?.accessoryType = .detailButton
+            cell?.backgroundColor = UIColor.clear
         }
         if let cell = cell {
             let title = randoms[indexPath.row]
@@ -167,13 +176,15 @@ extension ZHBaseController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-    
 }
 
-
-
-
-
-
-
-
+extension ZHBaseController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if let view = touch.view,
+            let superview = view.superview,
+            superview.isKind(of: UITableViewCell.self) {
+            return false
+        }
+        return true
+    }
+}

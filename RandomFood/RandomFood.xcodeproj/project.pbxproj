@@ -1034,6 +1034,7 @@
 			baseConfigurationReference = 7DF4B565849C8ACCB1BA223F /* Pods-RandomFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = PP6FP338VS;
 				ENABLE_BITCODE = NO;
@@ -1120,6 +1121,7 @@
 			baseConfigurationReference = B4A0ED4A3736E9E11C38A886 /* Pods-RandomFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = PP6FP338VS;
 				ENABLE_BITCODE = NO;
@@ -1193,8 +1195,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangzh.RandomFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ca6c2dae-9050-479f-bc7b-a8f3ea8c7f9b";
-				PROVISIONING_PROFILE_SPECIFIER = randomFood_dev_0827;
+				PROVISIONING_PROFILE = "fb7c0ffb-1bd3-4d03-859a-f04acfc7d7c0";
+				PROVISIONING_PROFILE_SPECIFIER = random_0827_appstore;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RandomFood/Resource/Swift-Bridge-Objective-C.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
