@@ -80,14 +80,9 @@
 		BE64F556213942A1009E6BF6 /* ZHDiningRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */; };
 		BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */; };
 		BE996EF9213AD5FD00B2D450 /* ZHDiningRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */; };
-		BE996EFB213AD63700B2D450 /* ZHFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EFA213AD63700B2D450 /* ZHFood.swift */; };
 		BE996EFE213ADE3900B2D450 /* ZHRandomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */; };
 		BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */; };
-		BE996F07213EB4AC00B2D450 /* ZHFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F06213EB4AC00B2D450 /* ZHFoodView.swift */; };
-		BE996F09213EB4B500B2D450 /* ZHFoodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE996F08213EB4B500B2D450 /* ZHFoodView.xib */; };
 		BE996F0C213F5DB600B2D450 /* ZHBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */; };
-		BE996F4A214208AA00B2D450 /* ZHNavTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F49214208AA00B2D450 /* ZHNavTitleView.swift */; };
-		BE996F4C214208B200B2D450 /* ZHNavTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE996F4B214208B200B2D450 /* ZHNavTitleView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -225,14 +220,9 @@
 		BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoomView.swift; sourceTree = "<group>"; };
 		BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHDiningRoomView.xib; sourceTree = "<group>"; };
 		BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoom.swift; sourceTree = "<group>"; };
-		BE996EFA213AD63700B2D450 /* ZHFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHFood.swift; sourceTree = "<group>"; };
 		BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomController.swift; sourceTree = "<group>"; };
 		BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDK20181227120814372t7f1vq4n2ehu.txt; sourceTree = "<group>"; };
-		BE996F06213EB4AC00B2D450 /* ZHFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHFoodView.swift; sourceTree = "<group>"; };
-		BE996F08213EB4B500B2D450 /* ZHFoodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHFoodView.xib; sourceTree = "<group>"; };
 		BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHBaseController.swift; sourceTree = "<group>"; };
-		BE996F49214208AA00B2D450 /* ZHNavTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHNavTitleView.swift; sourceTree = "<group>"; };
-		BE996F4B214208B200B2D450 /* ZHNavTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHNavTitleView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,7 +429,6 @@
 			children = (
 				BE64E150213271BB009E6BF6 /* ZHDataStore.swift */,
 				BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */,
-				BE996EFA213AD63700B2D450 /* ZHFood.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -452,7 +441,6 @@
 				BE996F0A213F5D9A00B2D450 /* Base */,
 				BE996EFC213ADE1900B2D450 /* Random */,
 				BE64F54F2139425D009E6BF6 /* DiningRoom  */,
-				BE64F54621382BEA009E6BF6 /* Food */,
 				BE64F54B21391DC9009E6BF6 /* Helpers */,
 				BE5FAFE12143991900F8A566 /* Common */,
 			);
@@ -670,15 +658,6 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
-		BE64F54621382BEA009E6BF6 /* Food */ = {
-			isa = PBXGroup;
-			children = (
-				BE996F08213EB4B500B2D450 /* ZHFoodView.xib */,
-				BE996F06213EB4AC00B2D450 /* ZHFoodView.swift */,
-			);
-			path = Food;
-			sourceTree = "<group>";
-		};
 		BE64F54B21391DC9009E6BF6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,19 +686,9 @@
 		BE996F0A213F5D9A00B2D450 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				BE996F482142088300B2D450 /* TitleView */,
 				BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		BE996F482142088300B2D450 /* TitleView */ = {
-			isa = PBXGroup;
-			children = (
-				BE996F49214208AA00B2D450 /* ZHNavTitleView.swift */,
-				BE996F4B214208B200B2D450 /* ZHNavTitleView.xib */,
-			);
-			path = TitleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -803,8 +772,6 @@
 				BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */,
 				BE5FB01F2148AF2700F8A566 /* animation_location.gif in Resources */,
 				BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */,
-				BE996F09213EB4B500B2D450 /* ZHFoodView.xib in Resources */,
-				BE996F4C214208B200B2D450 /* ZHNavTitleView.xib in Resources */,
 				BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */,
 				BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */,
 			);
@@ -866,9 +833,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE996F07213EB4AC00B2D450 /* ZHFoodView.swift in Sources */,
 				BE64E60A21343A63009E6BF6 /* AdViewController.m in Sources */,
-				BE996EFB213AD63700B2D450 /* ZHFood.swift in Sources */,
 				BE64E60921343A63009E6BF6 /* AdViewToolX.mm in Sources */,
 				BE996EFE213ADE3900B2D450 /* ZHRandomController.swift in Sources */,
 				BE64F40D21359849009E6BF6 /* AdViewAdapterGDTMob.m in Sources */,
@@ -887,7 +852,6 @@
 				BE64F55221394280009E6BF6 /* ZHDataListController.swift in Sources */,
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,
 				BE5FAFE4214399F000F8A566 /* ZHShowItemCell.swift in Sources */,
-				BE996F4A214208AA00B2D450 /* ZHNavTitleView.swift in Sources */,
 				BE64F40B21359849009E6BF6 /* AdInstlAdapterGDTMob.m in Sources */,
 				BE996F0C213F5DB600B2D450 /* ZHBaseController.swift in Sources */,
 				BE5FAFE82143A1B500F8A566 /* ZHRandomFoodDefine.swift in Sources */,

@@ -21,12 +21,9 @@ class ZHDataStore: NSObject {
     
     private override init() {
         super.init()
-        createFoodTable()
         createRestaurantTable()
     }
     
-    /// 食物表
-    private let FoodTable = "FoodTable"
     /// 餐厅表
     private let DiningRoomTable = "DiningRoomTable"
     
@@ -34,16 +31,6 @@ class ZHDataStore: NSObject {
 
 /// 创建数据表
 extension ZHDataStore {
-    
-    /// 创建食物表
-    func createFoodTable() {
-        do {
-            try db.create(table: FoodTable, of: ZHFood.self)
-        } catch  {
-            print("创建数据表Food失败")
-        }
-    }
-    
     /// 创建餐厅表
     func createRestaurantTable() {
         do {
@@ -51,45 +38,6 @@ extension ZHDataStore {
         } catch  {
             print("创建数据表Restaurant失败")
         }
-    }
-}
-
-// MARK: - 数据库操作 - Food
-extension ZHDataStore {
-    
-    func insertFood(food: ZHFood) {
-        try! db.insert(objects: food, intoTable: FoodTable)
-    }
-    
-    func insertFoods(foods: [ZHFood]) {
-        try! db.insert(objects: foods, intoTable: FoodTable)
-    }
-    
-    func deleteFood(food: ZHFood) {
-        try! db.delete(fromTable: FoodTable, where: ZHFood.Properties.name.is(food.name!))
-    }
-    
-    func deleteAllFoods() {
-        try! db.delete(fromTable: FoodTable)
-    }
-    
-    func searchAllFoods() -> [ZHFood] {
-        var foods: [ZHFood] = try! db.getObjects(fromTable: FoodTable)
-        if foods.isEmpty {
-            let path = Bundle.main.path(forResource: "foodImage", ofType: "plist")
-            let foodDic = NSDictionary(contentsOfFile: path!)
-            if let foodDic = foodDic {
-                foods = []
-                foodDic.forEach({ (name, image) in
-                    let food = ZHFood()
-                    food.name = name as? String
-                    food.image = image as? String
-                    foods.append(food)
-                })
-                self.insertFoods(foods: foods)
-            }
-        }
-        return foods
     }
 }
 

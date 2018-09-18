@@ -26,7 +26,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="mnr-wZ-d0i"/>
                                 </constraints>
-                                <state key="normal" image="delete"/>
                                 <connections>
                                     <action selector="deleteBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4Gq-dk-LMU"/>
                                 </connections>
@@ -77,7 +76,4 @@
             <point key="canvasLocation" x="52" y="85.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="delete" width="22" height="23"/>
-    </resources>
 </document>

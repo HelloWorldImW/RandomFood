@@ -18,17 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: CGRect(x: 0, y: 0, width: ZHScreenWidth, height: ZHScreenHeight))
-        let typep: String? = UserDefaults.standard.value(forKey: ZHRandomTitleKey) as? String
-        let type: String = typep == nil ? "去哪吃" : typep!
-        let homeVC = ZHRandomController(type: ZHRandomFoodType(rawValue: type)!)
+        let homeVC = ZHRandomController()
         let nav = UINavigationController(rootViewController: homeVC)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
         /// 配置第三方库
         configThirdLib()
-        
-        showScreenAd()
         
         return true
     }

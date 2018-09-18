@@ -30,7 +30,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQG-h7-3qg">
                     <rect key="frame" x="25" y="146" width="325" height="375"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_image_result" translatesAutoresizingMaskIntoConstraints="NO" id="sew-Jv-r2z">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no photo" translatesAutoresizingMaskIntoConstraints="NO" id="sew-Jv-r2z">
                             <rect key="frame" x="0.0" y="0.0" width="325" height="200"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="sew-Jv-r2z" secondAttribute="height" multiplier="13:8" id="FOR-4w-jsS"/>
@@ -154,7 +154,7 @@
     </objects>
     <resources>
         <image name="button_cancel" width="84" height="84"/>
-        <image name="icon_star-5" width="116" height="20"/>
-        <image name="no_image_result" width="325" height="200"/>
+        <image name="icon_star-5" width="58" height="10"/>
+        <image name="no photo" width="325" height="200"/>
     </resources>
 </document>
