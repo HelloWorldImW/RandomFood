@@ -83,7 +83,6 @@
 		BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */; };
 		BEE0BD542152077200927C0E /* ZHHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0BD522152077200927C0E /* ZHHomeViewController.swift */; };
 		BEE0BD592152089F00927C0E /* ZHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0BD572152089F00927C0E /* ZHBaseViewController.swift */; };
-		BEE0BD5A2152089F00927C0E /* ZHBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEE0BD582152089F00927C0E /* ZHBaseViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -224,7 +223,6 @@
 		BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDK20181227120814372t7f1vq4n2ehu.txt; sourceTree = "<group>"; };
 		BEE0BD522152077200927C0E /* ZHHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHHomeViewController.swift; sourceTree = "<group>"; };
 		BEE0BD572152089F00927C0E /* ZHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHBaseViewController.swift; sourceTree = "<group>"; };
-		BEE0BD582152089F00927C0E /* ZHBaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHBaseViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -681,7 +679,6 @@
 			isa = PBXGroup;
 			children = (
 				BEE0BD572152089F00927C0E /* ZHBaseViewController.swift */,
-				BEE0BD582152089F00927C0E /* ZHBaseViewController.xib */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -775,7 +772,6 @@
 				BE64E61021343A63009E6BF6 /* AdViewRes.bundle in Resources */,
 				BE5FB01F2148AF2700F8A566 /* animation_location.gif in Resources */,
 				BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */,
-				BEE0BD5A2152089F00927C0E /* ZHBaseViewController.xib in Resources */,
 				BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */,
 				BE64E14521311996009E6BF6 /* Assets.xcassets in Resources */,
 			);
