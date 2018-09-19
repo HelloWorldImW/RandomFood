@@ -1,8 +1,8 @@
 //
-//  ZHRandomController.swift
+//  ZHHomeViewController.swift
 //  RandomFood
 //
-//  Created by DarrenW on 2018/9/1.
+//  Created by DarrenW on 2018/9/19.
 //  Copyright © 2018年 Darren. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import AudioToolbox.AudioServices
 
-class ZHRandomController: ZHBaseController {
+class ZHHomeViewController: ZHBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +21,16 @@ class ZHRandomController: ZHBaseController {
         let item = items[Int(random)]
         return item
     }
-    
 }
 
 /// 摇一摇
-extension ZHRandomController {
+extension ZHHomeViewController {
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         playAudio()
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-       showResult()
+        showResult()
     }
     
     override func motionCancelled(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -50,7 +49,6 @@ extension ZHRandomController {
     private func showResult() {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-        
     }
     
 }

@@ -19,8 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: CGRect(x: 0, y: 0, width: ZHScreenWidth, height: ZHScreenHeight))
         let homeVC = ZHRandomController()
-        let nav = UINavigationController(rootViewController: homeVC)
-        window?.rootViewController = nav
+        window?.rootViewController = homeVC
         window?.makeKeyAndVisible()
         
         /// 配置第三方库

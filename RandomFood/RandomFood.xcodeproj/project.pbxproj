@@ -80,9 +80,10 @@
 		BE64F556213942A1009E6BF6 /* ZHDiningRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */; };
 		BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */; };
 		BE996EF9213AD5FD00B2D450 /* ZHDiningRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */; };
-		BE996EFE213ADE3900B2D450 /* ZHRandomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */; };
 		BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */; };
 		BE996F0C213F5DB600B2D450 /* ZHBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */; };
+		BEE0BD542152077200927C0E /* ZHHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0BD522152077200927C0E /* ZHHomeViewController.swift */; };
+		BEE0BD552152077200927C0E /* ZHHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEE0BD532152077200927C0E /* ZHHomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,9 +221,10 @@
 		BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoomView.swift; sourceTree = "<group>"; };
 		BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHDiningRoomView.xib; sourceTree = "<group>"; };
 		BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoom.swift; sourceTree = "<group>"; };
-		BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHRandomController.swift; sourceTree = "<group>"; };
 		BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDK20181227120814372t7f1vq4n2ehu.txt; sourceTree = "<group>"; };
 		BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHBaseController.swift; sourceTree = "<group>"; };
+		BEE0BD522152077200927C0E /* ZHHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHHomeViewController.swift; sourceTree = "<group>"; };
+		BEE0BD532152077200927C0E /* ZHHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHHomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -436,10 +438,10 @@
 		BE64E152213285B9009E6BF6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BEE0BD56215207D200927C0E /* Home */,
 				BE5FB095214A6FE600F8A566 /* DataList */,
 				BE5FAFEB2143CCB400F8A566 /* Setting */,
 				BE996F0A213F5D9A00B2D450 /* Base */,
-				BE996EFC213ADE1900B2D450 /* Random */,
 				BE64F54F2139425D009E6BF6 /* DiningRoom  */,
 				BE64F54B21391DC9009E6BF6 /* Helpers */,
 				BE5FAFE12143991900F8A566 /* Common */,
@@ -675,20 +677,21 @@
 			path = "DiningRoom ";
 			sourceTree = "<group>";
 		};
-		BE996EFC213ADE1900B2D450 /* Random */ = {
-			isa = PBXGroup;
-			children = (
-				BE996EFD213ADE3900B2D450 /* ZHRandomController.swift */,
-			);
-			path = Random;
-			sourceTree = "<group>";
-		};
 		BE996F0A213F5D9A00B2D450 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				BE996F0B213F5DB600B2D450 /* ZHBaseController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		BEE0BD56215207D200927C0E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0BD522152077200927C0E /* ZHHomeViewController.swift */,
+				BEE0BD532152077200927C0E /* ZHHomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -766,6 +769,7 @@
 				BE5FB0D6214BBF7700F8A566 /* shake.wav in Resources */,
 				BE5FB00E214754AB00F8A566 /* ZHProgressHUD.xib in Resources */,
 				BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */,
+				BEE0BD552152077200927C0E /* ZHHomeViewController.xib in Resources */,
 				BE5FAFE5214399F000F8A566 /* ZHShowItemCell.xib in Resources */,
 				BE5FB0192147B9BE00F8A566 /* ZHAddNewItemView.xib in Resources */,
 				BE64E59F21343A63009E6BF6 /* README.txt in Resources */,
@@ -835,7 +839,6 @@
 			files = (
 				BE64E60A21343A63009E6BF6 /* AdViewController.m in Sources */,
 				BE64E60921343A63009E6BF6 /* AdViewToolX.mm in Sources */,
-				BE996EFE213ADE3900B2D450 /* ZHRandomController.swift in Sources */,
 				BE64F40D21359849009E6BF6 /* AdViewAdapterGDTMob.m in Sources */,
 				BE5FB00C214754A400F8A566 /* ZHProgressHUD.swift in Sources */,
 				BE64F556213942A1009E6BF6 /* ZHDiningRoomView.swift in Sources */,
@@ -850,6 +853,7 @@
 				BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */,
 				BE5FB0172147B9B000F8A566 /* ZHAddNewItemView.swift in Sources */,
 				BE64F55221394280009E6BF6 /* ZHDataListController.swift in Sources */,
+				BEE0BD542152077200927C0E /* ZHHomeViewController.swift in Sources */,
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,
 				BE5FAFE4214399F000F8A566 /* ZHShowItemCell.swift in Sources */,
 				BE64F40B21359849009E6BF6 /* AdInstlAdapterGDTMob.m in Sources */,
