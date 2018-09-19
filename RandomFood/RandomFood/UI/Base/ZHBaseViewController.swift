@@ -14,10 +14,6 @@ import SnapKit
 class ZHBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBackgroundImg(image: #imageLiteral(resourceName: "BackgroundBlur"))
-        createTitle(title: "吃什么", content: "MAKING EATING A FUN THING")
-        createRightBtn(img: #imageLiteral(resourceName: "more"))
-        createMainUI()
     }
 }
 
@@ -63,25 +59,4 @@ extension ZHBaseViewController {
             make.width.height.equalTo(18)
         }
     }
-    
-    func createMainUI() {
-        let mainImage = UIImageView(image: #imageLiteral(resourceName: "Shakephone"))
-        view.addSubview(mainImage)
-        mainImage.snp.makeConstraints { (make) in
-            make.left.equalTo(20)
-            make.right.equalTo(-20)
-            make.top.equalTo(202)
-            make.height.equalTo(mainImage.snp.width).multipliedBy(233.0/336.0)
-        }
-        
-        let mainTitleImage = UIImageView(image: #imageLiteral(resourceName: "Shake"))
-        view.addSubview(mainTitleImage)
-        mainTitleImage.snp.makeConstraints { (make) in
-            make.left.equalTo(108)
-            make.right.equalTo(-108)
-            make.top.equalTo(mainImage.snp.bottom).offset(38)
-            make.height.equalTo(mainTitleImage.snp.width).multipliedBy(47.0/158.0)
-        }
-    }
-    
 }
