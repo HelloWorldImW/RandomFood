@@ -9,7 +9,7 @@
 import UIKit
 import MJRefresh
 
-class ZHDataListController: ZHBaseController {    
+class ZHDataListController: ZHBaseViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

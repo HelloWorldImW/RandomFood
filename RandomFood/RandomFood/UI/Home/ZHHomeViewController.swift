@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import AudioToolbox.AudioServices
 
-class ZHHomeViewController: ZHBaseController {
+class ZHHomeViewController: ZHBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: CGRect(x: 0, y: 0, width: ZHScreenWidth, height: ZHScreenHeight))
-        let homeVC = ZHRandomController()
+        let homeVC = ZHBaseViewController()
         window?.rootViewController = homeVC
         window?.makeKeyAndVisible()
         

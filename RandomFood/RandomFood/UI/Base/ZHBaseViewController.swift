@@ -1,8 +1,8 @@
 //
-//  ZHBaseController.swift
+//  ZHBaseViewController.swift
 //  RandomFood
 //
-//  Created by DarrenW on 2018/9/5.
+//  Created by DarrenW on 2018/9/19.
 //  Copyright © 2018年 Darren. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-class ZHBaseController: UIViewController {
+class ZHBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
@@ -19,3 +19,4 @@ class ZHBaseController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
+
