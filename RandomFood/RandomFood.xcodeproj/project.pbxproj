@@ -14,7 +14,6 @@
 		BE5FAFED2143CCD600F8A566 /* ZHSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FAFEC2143CCD600F8A566 /* ZHSettingController.swift */; };
 		BE5FAFF52145003E00F8A566 /* ZHAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FAFF42145003E00F8A566 /* ZHAlertView.swift */; };
 		BE5FB00C214754A400F8A566 /* ZHProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB00B214754A400F8A566 /* ZHProgressHUD.swift */; };
-		BE5FB00E214754AB00F8A566 /* ZHProgressHUD.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB00D214754AB00F8A566 /* ZHProgressHUD.xib */; };
 		BE5FB01121475E3600F8A566 /* DispatchTime+Catagory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB01021475E3600F8A566 /* DispatchTime+Catagory.swift */; };
 		BE5FB0172147B9B000F8A566 /* ZHAddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB0162147B9B000F8A566 /* ZHAddNewItemView.swift */; };
 		BE5FB0192147B9BE00F8A566 /* ZHAddNewItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB0182147B9BE00F8A566 /* ZHAddNewItemView.xib */; };
@@ -95,7 +94,6 @@
 		BE5FAFEC2143CCD600F8A566 /* ZHSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHSettingController.swift; sourceTree = "<group>"; };
 		BE5FAFF42145003E00F8A566 /* ZHAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHAlertView.swift; sourceTree = "<group>"; };
 		BE5FB00B214754A400F8A566 /* ZHProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHProgressHUD.swift; sourceTree = "<group>"; };
-		BE5FB00D214754AB00F8A566 /* ZHProgressHUD.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHProgressHUD.xib; sourceTree = "<group>"; };
 		BE5FB01021475E3600F8A566 /* DispatchTime+Catagory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchTime+Catagory.swift"; sourceTree = "<group>"; };
 		BE5FB0162147B9B000F8A566 /* ZHAddNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHAddNewItemView.swift; sourceTree = "<group>"; };
 		BE5FB0182147B9BE00F8A566 /* ZHAddNewItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHAddNewItemView.xib; sourceTree = "<group>"; };
@@ -371,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				BE5FB00B214754A400F8A566 /* ZHProgressHUD.swift */,
-				BE5FB00D214754AB00F8A566 /* ZHProgressHUD.xib */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
@@ -764,7 +761,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5FB0D6214BBF7700F8A566 /* shake.wav in Resources */,
-				BE5FB00E214754AB00F8A566 /* ZHProgressHUD.xib in Resources */,
 				BE64E14821311996009E6BF6 /* LaunchScreen.storyboard in Resources */,
 				BE5FAFE5214399F000F8A566 /* ZHShowItemCell.xib in Resources */,
 				BE5FB0192147B9BE00F8A566 /* ZHAddNewItemView.xib in Resources */,
