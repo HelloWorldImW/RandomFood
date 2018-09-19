@@ -14,9 +14,13 @@ import SnapKit
 class ZHBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
-        self.navigationController?.navigationBar.barTintColor = UIColor.white
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        addBackgroundImg(image: #imageLiteral(resourceName: "BackgroundBlur"))
     }
+    
+    func addBackgroundImg(image: UIImage) {
+        view.layer.contents = image.cgImage
+        view.layer.backgroundColor = UIColor.clear.cgColor
+    }
+    
 }
 
