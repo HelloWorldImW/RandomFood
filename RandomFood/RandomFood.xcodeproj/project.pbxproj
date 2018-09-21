@@ -75,7 +75,6 @@
 		BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64F3FF21359849009E6BF6 /* AdSplashAdapterGDTMob.m */; };
 		BE64F40F21359849009E6BF6 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */; };
 		BE64F54D21391DE2009E6BF6 /* ZHLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F54C21391DE2009E6BF6 /* ZHLocationHelper.swift */; };
-		BE64F55221394280009E6BF6 /* ZHDataListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F55021394280009E6BF6 /* ZHDataListController.swift */; };
 		BE64F556213942A1009E6BF6 /* ZHDiningRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */; };
 		BE64F558213942D9009E6BF6 /* ZHDiningRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */; };
 		BE996EF9213AD5FD00B2D450 /* ZHDiningRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */; };
@@ -214,7 +213,6 @@
 		BE64F40921359849009E6BF6 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
 		BE64F40A21359849009E6BF6 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 		BE64F54C21391DE2009E6BF6 /* ZHLocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHLocationHelper.swift; sourceTree = "<group>"; };
-		BE64F55021394280009E6BF6 /* ZHDataListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDataListController.swift; sourceTree = "<group>"; };
 		BE64F555213942A1009E6BF6 /* ZHDiningRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoomView.swift; sourceTree = "<group>"; };
 		BE64F557213942D9009E6BF6 /* ZHDiningRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHDiningRoomView.xib; sourceTree = "<group>"; };
 		BE996EF8213AD5FD00B2D450 /* ZHDiningRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDiningRoom.swift; sourceTree = "<group>"; };
@@ -381,14 +379,6 @@
 			path = Catagory;
 			sourceTree = "<group>";
 		};
-		BE5FB095214A6FE600F8A566 /* DataList */ = {
-			isa = PBXGroup;
-			children = (
-				BE64F55021394280009E6BF6 /* ZHDataListController.swift */,
-			);
-			path = DataList;
-			sourceTree = "<group>";
-		};
 		BE64E13121311994009E6BF6 = {
 			isa = PBXGroup;
 			children = (
@@ -433,10 +423,9 @@
 		BE64E152213285B9009E6BF6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				BEE0BD56215207D200927C0E /* Home */,
-				BE5FB095214A6FE600F8A566 /* DataList */,
-				BE5FAFEB2143CCB400F8A566 /* Setting */,
 				BE996F0A213F5D9A00B2D450 /* Base */,
+				BEE0BD56215207D200927C0E /* Home */,
+				BE5FAFEB2143CCB400F8A566 /* Setting */,
 				BE64F54F2139425D009E6BF6 /* DiningRoom  */,
 				BE64F54B21391DC9009E6BF6 /* Helpers */,
 				BE5FAFE12143991900F8A566 /* Common */,
@@ -844,7 +833,6 @@
 				BE64E60E21343A63009E6BF6 /* SimMethod.cpp in Sources */,
 				BE64F40E21359849009E6BF6 /* AdSplashAdapterGDTMob.m in Sources */,
 				BE5FB0172147B9B000F8A566 /* ZHAddNewItemView.swift in Sources */,
-				BE64F55221394280009E6BF6 /* ZHDataListController.swift in Sources */,
 				BEE0BD542152077200927C0E /* ZHHomeViewController.swift in Sources */,
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,
 				BE5FAFE4214399F000F8A566 /* ZHShowItemCell.swift in Sources */,

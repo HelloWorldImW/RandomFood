@@ -22,7 +22,7 @@
                         <constraint firstAttribute="width" constant="42" id="JtR-va-Amn"/>
                         <constraint firstAttribute="height" constant="42" id="cJ1-hi-1Fa"/>
                     </constraints>
-                    <state key="normal" image="button_cancel"/>
+                    <state key="normal" image="close"/>
                     <connections>
                         <action selector="cancelBtnClcicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="cOJ-5h-90D"/>
                     </connections>
@@ -30,7 +30,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQG-h7-3qg">
                     <rect key="frame" x="25" y="146" width="325" height="375"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no photo" translatesAutoresizingMaskIntoConstraints="NO" id="sew-Jv-r2z">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nophoto" translatesAutoresizingMaskIntoConstraints="NO" id="sew-Jv-r2z">
                             <rect key="frame" x="0.0" y="0.0" width="325" height="200"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="sew-Jv-r2z" secondAttribute="height" multiplier="13:8" id="FOR-4w-jsS"/>
@@ -153,8 +153,8 @@
         </view>
     </objects>
     <resources>
-        <image name="button_cancel" width="84" height="84"/>
+        <image name="close" width="42" height="42"/>
         <image name="icon_star-5" width="58" height="10"/>
-        <image name="no photo" width="325" height="200"/>
+        <image name="nophoto" width="325" height="200"/>
     </resources>
 </document>

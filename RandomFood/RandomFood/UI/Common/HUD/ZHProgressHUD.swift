@@ -14,7 +14,7 @@ class ZHProgressHUD: UIView {
     @discardableResult
     class func show(in superView: UIView, title: String?) -> ZHProgressHUD {
         let progressBundle = Bundle.main.loadNibNamed("ZHProgressHUD", owner: nil, options: nil)
-        let progressHUD = progressBundle?.first as! ZHProgressHUD
+        let progressHUD = progressBundle?.first as! ZHProgressHUDect
         superView.addSubview(progressHUD)
         progressHUD.snp.makeConstraints { (make) in
             make.left.top.width.height.equalToSuperview()
