@@ -18,7 +18,7 @@ class ZHHomeViewController: ZHBaseViewController {
         createTitle(title: "吃什么", content: "MAKING EATING A FUN THING")
         createRightBtn(img: #imageLiteral(resourceName: "more"))
         createMainUI()
-        ZHProgressHUD.show(in: self.view, title: "Test")
+        ZHProgressHUD.show(in: self.view, type: ZHProgressStatus.success)
     }
     
     private func random<T>(for items: Array<T>) -> T {
