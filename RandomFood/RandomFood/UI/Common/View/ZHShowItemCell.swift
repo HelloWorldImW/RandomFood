@@ -10,6 +10,8 @@ import UIKit
 
 class ZHShowItemCell: UITableViewCell {
     
+    static let cellID = "ZHShowItemCell"
+    
     @IBOutlet weak private var titleTextField: UITextField!
     @IBOutlet weak private var deleteBtn: UIButton!
     private var deleteEvent: ((ZHShowItemCell)->Void)?

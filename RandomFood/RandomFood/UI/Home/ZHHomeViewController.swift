@@ -16,10 +16,10 @@ class ZHHomeViewController: ZHBaseViewController {
         super.viewDidLoad()
         addBackgroundImg(image: #imageLiteral(resourceName: "BackgroundBlur"))
         createTitle(title: "吃什么", content: "MAKING EATING A FUN THING")
-        createRightBtn(img: #imageLiteral(resourceName: "more"))
+        createRightBtn(img: #imageLiteral(resourceName: "edit"),handel: { [unowned self] in
+            self.present(ZHEditListViewController(type: .choice), animated: true)
+        })
         createMainUI()
-        let hud = ZHProgressHUD.show(in: self.view, type: ZHProgressStatus.failed)
-        hud.changeToLoading()
     }
     
     private func random<T>(for items: Array<T>) -> T {

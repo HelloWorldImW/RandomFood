@@ -81,6 +81,8 @@
 		BE996F00213AEEC200B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */; };
 		BEE0BD542152077200927C0E /* ZHHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0BD522152077200927C0E /* ZHHomeViewController.swift */; };
 		BEE0BD592152089F00927C0E /* ZHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0BD572152089F00927C0E /* ZHBaseViewController.swift */; };
+		BEE0C47421562C4700927C0E /* ZHEditListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0C47321562C4700927C0E /* ZHEditListViewController.swift */; };
+		BEE0C477215643F600927C0E /* ZHEditListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0C476215643F600927C0E /* ZHEditListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -219,6 +221,8 @@
 		BE996EFF213AEEC100B2D450 /* SDK20181227120814372t7f1vq4n2ehu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDK20181227120814372t7f1vq4n2ehu.txt; sourceTree = "<group>"; };
 		BEE0BD522152077200927C0E /* ZHHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHHomeViewController.swift; sourceTree = "<group>"; };
 		BEE0BD572152089F00927C0E /* ZHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHBaseViewController.swift; sourceTree = "<group>"; };
+		BEE0C47321562C4700927C0E /* ZHEditListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHEditListViewController.swift; sourceTree = "<group>"; };
+		BEE0C476215643F600927C0E /* ZHEditListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHEditListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +405,7 @@
 		BE64E13C21311995009E6BF6 /* RandomFood */ = {
 			isa = PBXGroup;
 			children = (
+				BEE0C475215643D000927C0E /* ViewModel */,
 				BE64E152213285B9009E6BF6 /* UI */,
 				BE64E14F2132718C009E6BF6 /* DAO */,
 				BE64E1A021343A21009E6BF6 /* ADLibrary */,
@@ -425,6 +430,7 @@
 			children = (
 				BE996F0A213F5D9A00B2D450 /* Base */,
 				BEE0BD56215207D200927C0E /* Home */,
+				BEE0C47221562C0B00927C0E /* Edit */,
 				BE5FAFEB2143CCB400F8A566 /* Setting */,
 				BE64F54F2139425D009E6BF6 /* DiningRoom  */,
 				BE64F54B21391DC9009E6BF6 /* Helpers */,
@@ -677,6 +683,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		BEE0C47221562C0B00927C0E /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0C47321562C4700927C0E /* ZHEditListViewController.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		BEE0C475215643D000927C0E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0C476215643F600927C0E /* ZHEditListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -792,6 +814,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-RandomFood/Pods-RandomFood-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -801,6 +824,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -822,6 +846,7 @@
 				BE64E60921343A63009E6BF6 /* AdViewToolX.mm in Sources */,
 				BE64F40D21359849009E6BF6 /* AdViewAdapterGDTMob.m in Sources */,
 				BE5FB00C214754A400F8A566 /* ZHProgressHUD.swift in Sources */,
+				BEE0C47421562C4700927C0E /* ZHEditListViewController.swift in Sources */,
 				BE64F556213942A1009E6BF6 /* ZHDiningRoomView.swift in Sources */,
 				BE64F40C21359849009E6BF6 /* AdNativeAdapterGDTMob.m in Sources */,
 				BE64F54D21391DE2009E6BF6 /* ZHLocationHelper.swift in Sources */,
@@ -837,6 +862,7 @@
 				BE64E59D21343A63009E6BF6 /* AdInstlAdapterAdMob.m in Sources */,
 				BE5FAFE4214399F000F8A566 /* ZHShowItemCell.swift in Sources */,
 				BE64F40B21359849009E6BF6 /* AdInstlAdapterGDTMob.m in Sources */,
+				BEE0C477215643F600927C0E /* ZHEditListViewModel.swift in Sources */,
 				BEE0BD592152089F00927C0E /* ZHBaseViewController.swift in Sources */,
 				BE5FAFE82143A1B500F8A566 /* ZHRandomFoodDefine.swift in Sources */,
 				BE64E5AC21343A63009E6BF6 /* AdInstlAdapterYouMi.m in Sources */,

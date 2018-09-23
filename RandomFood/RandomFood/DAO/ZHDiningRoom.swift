@@ -51,4 +51,9 @@ extension ZHDiningRoom {
         self.cost = Float(poi.extensionInfo.cost)
     }
     
+    convenience init(name: String) {
+        self.init()
+        self.name = name
+    }
+    
 }

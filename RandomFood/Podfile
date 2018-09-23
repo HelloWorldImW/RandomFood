@@ -7,6 +7,7 @@ inhibit_all_warnings!
 target 'RandomFood' do
     pod 'RxSwift'
     pod 'RxCocoa'
+    pod 'RxGesture'
     pod 'WCDB.swift'
     pod 'AMapSearch'
     pod 'AMapLocation'
