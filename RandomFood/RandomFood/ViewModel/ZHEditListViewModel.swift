@@ -8,15 +8,25 @@
 
 import RxSwift
 
+struct ZHEditListSectionModel {
+    var title = ""
+    var data: Array<ZHDiningRoom> = []
+}
+
+
 struct ZHEditListViewModel {
     let data = Observable.just([
-        ZHDiningRoom(name: "1"),
-        ZHDiningRoom(name: "2"),
-        ZHDiningRoom(name: "3"),
-        ZHDiningRoom(name: "4"),
-        ZHDiningRoom(name: "5"),
-        ZHDiningRoom(name: "6"),
-        ZHDiningRoom(name: "7"),
-        ZHDiningRoom(name: "8"),
+        ZHEditListSectionModel(title: "第一个Section", data: [
+            ZHDiningRoom(name: "1"),
+            ZHDiningRoom(name: "2"),
+            ZHDiningRoom(name: "3"),
+            ZHDiningRoom(name: "4")
+            ]),
+        ZHEditListSectionModel(title: "第二个Section", data: [
+            ZHDiningRoom(name: "1"),
+            ZHDiningRoom(name: "2"),
+            ZHDiningRoom(name: "3"),
+            ZHDiningRoom(name: "4")
+            ])
         ])
 }

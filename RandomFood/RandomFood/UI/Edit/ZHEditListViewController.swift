@@ -50,11 +50,6 @@ class ZHEditListViewController: ZHBaseViewController {
             make.top.equalTo(titleView.content.snp.bottom).offset(ZHScreenHeight*0.075)
             make.left.right.bottom.equalToSuperview()
         }
-        listViewModel.data.bind(to: tableView.rx.items) { (tableView, row, element) in
-                let cell = ZHShowItemCell.cell(for: tableView)
-                cell.title = element.name
-                return cell
-            }.disposed(by: disposebag)
     }
 
 }
