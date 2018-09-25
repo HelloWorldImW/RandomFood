@@ -734,6 +734,7 @@
 				TargetAttributes = {
 					BE64E13921311995009E6BF6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.ApplePay = {
 								enabled = 0;
@@ -1081,7 +1082,7 @@
 				PROVISIONING_PROFILE = "ca6c2dae-9050-479f-bc7b-a8f3ea8c7f9b";
 				PROVISIONING_PROFILE_SPECIFIER = randomFood_dev_0827;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RandomFood/Resource/Swift-Bridge-Objective-C.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1168,7 +1169,7 @@
 				PROVISIONING_PROFILE = "fb7c0ffb-1bd3-4d03-859a-f04acfc7d7c0";
 				PROVISIONING_PROFILE_SPECIFIER = random_0827_appstore;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RandomFood/Resource/Swift-Bridge-Objective-C.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
