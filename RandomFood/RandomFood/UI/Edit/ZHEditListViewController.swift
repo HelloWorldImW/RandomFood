@@ -26,7 +26,8 @@ class ZHEditListViewController: ZHBaseViewController {
     private var type = ZHEditListType.edit
     
     private lazy var tableView: UITableView = {
-        let table = UITableView(frame: view.frame, style: .grouped)
+        var table: UITableView
+        table = UITableView(frame: view.frame, style: .grouped)
         table.rowHeight = 70
         table.separatorStyle = .none
         return table
