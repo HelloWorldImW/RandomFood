@@ -9,15 +9,6 @@
 #ifndef Swift_Bridge_Objective_C_h
 #define Swift_Bridge_Objective_C_h
 
-/// 广告SDK
-#import "AdViewView.h"
-#import "AdViewConfigStore.h"
-#import "AdSpreadScreenManager.h"
-#import "AdSpreadScreenManagerDelegate.h"
-#import "AdVideoManager.h"
-#import "AdVideoManagerDelegate.h"
-#import "AdViewController.h"
-
 /// 高德SDK
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>

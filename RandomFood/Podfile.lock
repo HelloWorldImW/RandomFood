@@ -1,18 +1,18 @@
 PODS:
-  - AMapFoundation (1.5.5)
-  - AMapLocation (2.6.1):
+  - AMapFoundation (1.5.7)
+  - AMapLocation (2.6.2):
     - AMapFoundation (~> 1.4)
-  - AMapSearch (6.5.0):
+  - AMapSearch (6.9.0):
     - AMapFoundation (~> 1.4)
   - Bugly (2.5.0)
-  - MJRefresh (3.1.15.7)
-  - SDWebImage (4.4.2):
-    - SDWebImage/Core (= 4.4.2)
-  - SDWebImage/Core (4.4.2)
+  - MJRefresh (3.2.0)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
   - SnapKit (4.2.0)
-  - SQLiteRepairKit (1.2.1):
+  - SQLiteRepairKit (1.2.2):
     - WCDBOptimizedSQLCipher (~> 1.2.0)
-  - WCDB.swift (1.0.7.5):
+  - WCDB.swift (1.0.8.2):
     - SQLiteRepairKit (~> 1.2.0)
     - WCDBOptimizedSQLCipher (~> 1.2.0)
   - WCDBOptimizedSQLCipher (1.2.1)
@@ -40,17 +40,17 @@ SPEC REPOS:
     - WCDBOptimizedSQLCipher
 
 SPEC CHECKSUMS:
-  AMapFoundation: 652bd70ba579f48a98bdf0c74d6e62a89a06ca58
-  AMapLocation: cf024b53dc03663efb4ea4bcce27d4cce58bb97a
-  AMapSearch: c22d8c98e04aad30615834e567781ec1367c4f36
+  AMapFoundation: 216d58448c80356434ac4332250a8fdb2f5c4d1e
+  AMapLocation: 89a7e4eb6040d32ba73c77a4966ecc66e46aa7c3
+  AMapSearch: af02822537e55b85a4752e9df5c19e4b9da82031
   Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
-  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SQLiteRepairKit: 4d21bab9eff6a273f63da6815a0d1659e53f5bde
-  WCDB.swift: 87aee41f5ca3aded9c6f9b68b0ef3e88918a5ee2
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
+  WCDB.swift: 05d509d7a0e60fb6e11c34eb7e4027c0fab5849f
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
 
 PODFILE CHECKSUM: 6620b448b7035b4029b941585933c8804800ba75
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5

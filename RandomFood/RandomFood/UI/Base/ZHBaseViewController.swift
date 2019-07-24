@@ -7,15 +7,9 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
-import RxGesture
 import SnapKit
 
 class ZHBaseViewController: UIViewController {
-    
-    let disposebag = DisposeBag()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -64,11 +58,6 @@ extension ZHBaseViewController {
         let btnImg = UIImageView(image: img)
         btnImg.isUserInteractionEnabled = true
         btnImg.contentMode = .center
-        btnImg.rx.tapGesture().subscribe(onNext: { (tap) in
-            if let handel = handel {
-                handel()
-            }
-        }).disposed(by: disposebag)
         view.addSubview(btnImg)
         btnImg.snp.makeConstraints { (make) in
             make.right.equalTo(0)

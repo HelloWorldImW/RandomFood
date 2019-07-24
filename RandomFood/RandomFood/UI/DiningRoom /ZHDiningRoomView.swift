@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RxSwift
 import SDWebImage
 
 class ZHDiningRoomView: UIView {
